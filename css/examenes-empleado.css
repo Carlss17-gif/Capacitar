@@ -1,0 +1,58 @@
+/* examenes-empleado.css */
+:root {
+  --yellow: #ffde21; --bg: #0f0f0f; --bg2: #1a1a1a;
+  --bg3: #252525; --border: #2e2e2e; --text: #f0f0f0; --muted: #888;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; padding-bottom: 40px; }
+
+.exam-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; background: var(--bg2);
+  border-bottom: 2px solid var(--yellow);
+  position: sticky; top: 0; z-index: 50;
+}
+.header-center { display: flex; align-items: center; gap: 8px; }
+.exam-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--yellow); letter-spacing: 1px; }
+.back-btn {
+  background: transparent; border: 1px solid var(--border); color: var(--muted);
+  padding: 6px 12px; border-radius: 20px; font-size: 13px; cursor: pointer; font-family: 'DM Sans', sans-serif;
+}
+.welcome-chip { font-size: 12px; background: var(--bg3); border: 1px solid var(--border); padding: 4px 10px; border-radius: 20px; color: var(--muted); }
+
+.exam-intro {
+  margin: 14px 16px;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 14px;
+  font-size: 13px; color: var(--muted); line-height: 1.5;
+}
+
+.nivel-section { margin: 14px 16px; }
+
+.nivel-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; border-radius: 10px 10px 0 0;
+  border: 1px solid var(--border); border-bottom: none;
+}
+.nivel-basico { background: rgba(76,175,80,.12); border-color: rgba(76,175,80,.3); }
+.nivel-medio  { background: rgba(255,152,0,.12);  border-color: rgba(255,152,0,.3); }
+.nivel-icon   { font-size: 26px; }
+.nivel-titulo { font-weight: 700; font-size: 15px; }
+.nivel-sub    { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+.chips-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 0 0 10px 10px; padding: 12px;
+}
+
+.exam-chip {
+  background: var(--bg3); border: 1px solid var(--border);
+  color: var(--text); border-radius: 10px; padding: 14px 12px;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  transition: all .15s;
+}
+.exam-chip:hover { border-color: var(--yellow); background: rgba(255,222,33,.08); transform: scale(1.02); }
+.chip-icon  { font-size: 24px; }
+.chip-label { font-size: 12px; font-weight: 600; text-align: center; }

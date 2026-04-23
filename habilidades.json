@@ -1,0 +1,170 @@
+{
+  "feeder": {
+    "area": "Estación del Alimentador (Feeder)",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Escuchar y seguir debidamente las instrucciones del Cocinero",
+      "Colocar los productos de carne y panes en el asador de carbón de acuerdo a los estándares",
+      "Rotar los productos en el recipiente de la carne, el refrigerador pequeño, y la rejilla del pan de acuerdo a los estándares",
+      "Rotar el producto en las vaporeras de acuerdo a los estándares",
+      "Mantener los niveles de producto de acuerdo a la necesidad y monitoreando el tiempo de guardado / conservación",
+      "Manejar todo el equipo de acuerdo a los estándares",
+      "Mantener áreas de trabajo limpias, abastecidas (llenas), y organizadas",
+      "Seguir los estándares de lavarse las manos; y seguir todas las normas de seguridad"
+    ]
+  },
+  "freir": {
+    "area": "Estación de Freír",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Pre-preparar / cocinar / salar / guardar todos los productos de acuerdo a los estándares",
+      "Hacer porciones y empaquetar todos los productos fritos de acuerdo a los estándares",
+      "Rotar y cubrir todos los productos en el congelador",
+      "Rotar todos los productos preparados en el Merco y/o en las rejillas de freír de acuerdo a los estándares",
+      "Mantener el nivel de los productos según se necesiten y monitorear los tiempos de guardado / conservación de acuerdo a los estándares",
+      "Manejar todos los equipos de acuerdo a los estándares",
+      "Mantener las áreas de trabajo limpias, abastecidas y organizadas",
+      "Seguir los estándares de lavar las manos; y seguir todas las normas de seguridad"
+    ]
+  },
+  "cocinero": {
+    "area": "Estación del Cocinero",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Determinar las hamburguesas y sándwiches que debe preparar, rápidamente y con exactitud",
+      "Preparar y armar todos los productos de acuerdo a los estándares del menú",
+      "Envolver, empaquetar y colocar etiquetas a todos los productos debidamente de acuerdo a los estándares del menú",
+      "Coordinar y comunicarse con los otros en las otras estaciones de la cocina para completar las órdenes y mantener los requisitos del tiempo de servir",
+      "Manejar y rotar todos los productos en la vaporera, el refrigerador pequeño, y las charolas de condimentos de acuerdo a los estándares",
+      "Manejar todo el equipo de acuerdo a los estándares",
+      "Mantener las áreas de trabajo limpias, abastecidas (llenas) y organizadas",
+      "Seguir los estándares de lavarse las manos; y siguiendo todas las normas de seguridad"
+    ]
+  },
+  "parrilla": {
+    "area": "Estación de la Parrilla (Parrilla Plana)",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Determinar los productos que debe preparar, rápidamente y con exactitud",
+      "Preparar y empaquetar los productos de acuerdo a los estándares",
+      "Manejar y rotar todos los productos en el refrigerador pequeño y las charolas frías de acuerdo a los estándares",
+      "Coordinar y comunicarse con todas las estaciones de la cocina para terminar las órdenes y mantener los requisitos del tiempo de servicio",
+      "Mantener los niveles de producto de acuerdo a la necesidad y monitorear el tiempo de conservación",
+      "Manejar todo el equipo de acuerdo a los estándares",
+      "Mantener las áreas de trabajo limpias, abastecidas (llenas), y organizadas",
+      "Seguir los estándares de lavarse las manos y seguir todas las normas de seguridad"
+    ]
+  },
+  "pollo": {
+    "area": "Estación de Filetitos de Pollo Empanizados a Mano",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Seguir los estándares de lavado de manos y usar guantes; y seguir todas las directrices de seguridad",
+      "Acomodo correcto de empanizado, huevo líquido, filetitos de pollo y utensilios en la estación antes de empezar las ventas del día",
+      "Demostrar las cantidades correctas de tandas para el huevo líquido",
+      "Demostrar el procedimiento correcto de empanizar los filetitos de pollo",
+      "Seguir los pasos apropiados para tamizar/cernir el empanizado como se requiere",
+      "Mostrar la colocación correcta de los filetitos de pollo en la canasta para freír",
+      "Cocinar el producto de la manera correcta y asegurar que alcancen las temperaturas mínimas de cocción, y monitorear los tiempos de guardado",
+      "Seguir los procedimientos de cierre de la estación"
+    ]
+  },
+  "comedor": {
+    "area": "Estación del Comedor",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Entregar órdenes a los invitados con rapidez y exactitud, seguir los pasos y estándares del guión",
+      "Proveer Servicio Superestrella, asegurar que los invitados estén felices",
+      "Limpiar y mantener el área de la línea frontal y barra de bebidas de acuerdo a los estándares",
+      "Limpiar las mesas, reabastecer el comedor, asegurar que las mesas estén puestas de acuerdo a los estándares",
+      "Limpiar y reabastecer los baños de acuerdo a los estándares",
+      "Mantener todas las áreas de invitados de acuerdo a los estándares",
+      "Atender preguntas de invitados, problemas o quejas, seguir los pasos adecuados",
+      "Seguir los estándares de lavarse las manos, seguir las normas de seguridad; inmediatamente notificar a la Persona a Cargo respecto a los peligros de seguridad"
+    ]
+  },
+  "cajero": {
+    "area": "Estación del Cajero",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Saludar a los invitados enseguida y amablemente. Demostrar habilidades de Servicio Superestrella",
+      "Seguir los guiones apropiados, registrar las órdenes correctamente",
+      "Manejar el efectivo conforme a los estándares, mantener toda custodia del cajón de efectivo",
+      "Dar las gracias al invitado después de tomar su orden",
+      "Proveer indicaciones y explicar a cada invitado como va a recibir su orden",
+      "Atender cualquier pregunta, problema o queja del invitado, seguir los pasos adecuados",
+      "Mantener las áreas de trabajo limpias, abastecidas (llenas), y organizadas",
+      "Seguir los estándares de lavarse las manos, siguiendo las normas de seguridad"
+    ]
+  },
+  "ventanilla": {
+    "area": "Estación de la Ventanilla (Auto Servicio / Drive Thru)",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Saludar a los invitados rápidamente y cortésmente. Demostrar habilidades del Servicio Superestrella",
+      "Registrar las órdenes correctamente, organizarlas en las zonas de preparación como es debido",
+      "Manejar el efectivo de acuerdo a los estándares. Mantener custodia exclusiva del cajón de efectivo",
+      "Realizar un chequeo de la bolsa para verificar la exactitud de la orden; entregar las órdenes correctamente",
+      "Dar las gracias al invitado con una sonrisa diciendo: Gracias, ¡que tenga un buen día!",
+      "Atender cualquier pregunta, problema, o queja de los invitados siguiendo los pasos adecuados",
+      "Mantener las áreas de trabajo limpias, abastecidas (llenas), y organizadas",
+      "Seguir los estándares de lavarse las manos y seguir las normas de seguridad"
+    ]
+  },
+  "quimicos": {
+    "area": "Evaluación de Productos Químicos",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Utiliza los químicos de acuerdo a la descripción de su uso",
+      "Almacena los químicos en el área asignada para ellos",
+      "Al terminar de utilizar el químico lo regresa a su lugar correspondiente",
+      "Conoce la carpeta MSDS y su función",
+      "Se lava las manos al terminar de usar los químicos",
+      "Prepara la solución sanitizante de acuerdo con el proceso",
+      "Al preparar solución desinfectante Vegi Wash verifica la potencia correspondiente",
+      "Lava los utensilios de acuerdo al proceso en la tarja de 3 compartimientos"
+    ]
+  },
+  "vegetales": {
+    "area": "Estación de Preparación de Vegetales",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Utiliza sistema PEPS en la preparación de vegetales",
+      "Utiliza solución desinfectante en la preparación de vegetales",
+      "Utiliza los utensilios de cocina de forma correcta",
+      "Guarda las navajas en el lugar asignado",
+      "Utiliza guantes para realizar la preparación",
+      "Verifica la calidad de los vegetales de acuerdo con el estándar",
+      "Coloca los tiempos de vida en los vegetales de acuerdo al procedimiento",
+      "Al guardar los vegetales preparados utiliza sistema PEPS"
+    ]
+  },
+  "malteadas": {
+    "area": "Estación de Malteadas",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "Realiza la limpieza de la estación de forma correcta después de cada uso",
+      "Verifica las fechas de caducidad en los botes de helado",
+      "Bate la malteada en la velocidad correcta",
+      "Descuenta la tara para medir el peso correcto de helado",
+      "Coloca la cantidad correcta de leche y helado",
+      "Se asegura de batir correctamente y no dejar grumos de helado",
+      "Añade la cantidad correcta de crema batida",
+      "Guarda la leche y crema batida después de cada uso"
+    ]
+  },
+  "ubereats": {
+    "area": "Evaluación Proceso Destino UBER EATS",
+    "puntaje_aprobar": 8,
+    "habilidades": [
+      "El asociado identifica la tableta de acuerdo con el destino que corresponde",
+      "Enciende y revisa el equipo para verificar la cantidad de carga y la red",
+      "Identifica el menú y lo maneja con facilidad y conocimiento",
+      "Está pendiente de las órdenes que aparecen y sabe seguir el consecutivo",
+      "Maneja correctamente el registro de las órdenes en la POS",
+      "Conoce los protocolos de servicio para el destino de Uber Eats",
+      "Marca, arma y entrega las órdenes de acuerdo con el procedimiento",
+      "Ordena de forma correcta la papelería de las órdenes de Uber Eats"
+    ]
+  }
+}

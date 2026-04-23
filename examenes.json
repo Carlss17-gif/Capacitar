@@ -1,0 +1,190 @@
+
+{ 
+  "AutoServicio": {
+    "area": "AutoServicio",
+    "preguntas": [
+      {"tipo":"opcion","texto":"Su meta es saludar al invitado INMEDIATAMENTE que llegue al tablero del menú.","opciones":["Verdadero","Falso"],"correcta":0},
+      {"tipo":"opcion","texto":"¿Qué se le dice a cada invitado para saludarlo en el tablero del menú?   ","opciones":["¿En qué puedo servirle?","Hola, ¿puedo ayudarle ?","Hola, bienvenido a Carl’s Jr. ¿ Le gustaría probar nuestro nuevo (nombre del producto de menú) del día de hoy?"],"correcta":2},
+      {"tipo":"opcion","texto":"Verifique cada orden de Auto Servicio (haga un “chequeo de la bolsa”) para asegurar que esté correcta y completa antes de pasársela al invitado.","opciones":["Verdadero","Falso"],"correcta":0},
+      {"tipo":"opcion","texto":"Una vez que el invitado haga su orden en el tablero del menú ¿Cuánto es el tiempo máximo que debe esperar en Auto Servicio?","opciones":["3:30 minutos o menos","5 minutos","El tiempo que sea necesario"],"correcta":0},
+      {"tipo":"opcion","texto":"¿Cuándo debe usted confirmar la orden con el invitado? ","opciones":["Solo en la pantalla de confirmación de órdenes (parlante del tablero del menú).","Solo en la ventanilla de entrega.","En la pantalla de confirmación de órdenes (parlante) y la ventanilla de entrega."],"correcta":2},
+      {"tipo":"opcion","texto":"Cuando el invitado llega a la ventanilla de entrega, debe saludarlo con una gran sonrisa.","opciones":["Verdadero","Falso"],"correcta":0},
+      {"tipo":"opcion","texto":"¿Cuál es el tiempo de vida del guacamole preparado?","opciones":["“Gracias. Que tenga un buen día. / “Thank you.  Have a great day.”","“Regrese pronto. / Come back again soon.”","“Adiós. / Good bye.”"],"correcta":0},
+      {"tipo":"opcion","texto":"Debe pasarle la bebida al invitado al mismo tiempo que le cobra y le da el cambio.","opciones":["Verdadero","Falso"],"correcta":1},
+      {"tipo":"opcion","texto":"El recibo se coloca dentro de la bolsa cuando se la entrega al invitado(Por política de entrega de tickets tiene que ser visible ante la camara).","opciones":["Verdadero","Falso"],"correcta":1},
+      {"tipo":"opcion","texto":"Nuestra meta del “tiempo en la ventanilla” es de 1 minuto o menos (el tiempo que un invitado pasa en la ventanilla de entrega).","opciones":["Verdadero","Falso"],"correcta":0}
+    ]
+  },
+  "SeguridadAlimentaria": {
+    "area": "Seguridad Alimentaria",
+    "preguntas": [
+      {"tipo":"opcion","texto":"¿Cuáles son las maneras en que se puede contaminar los alimentos?","opciones":["De manera física y química.","De manera química y bacterial.","De manera física, química, y bacterial."],"correcta":2},
+      {"tipo":"opcion","texto":"Su meta es saludar al invitado INMEDIATAMENTE que llegue al tablero del menú.","opciones":["Se utiliza un químico en las superficies de comida.","Algo que no es parte de la comida se encuentra presente (como pelo, uñas, vidrio, metal).","Un invitado se enferma físicamente."],"correcta":1},
+      {"tipo":"opcion","texto":"¿Cómo puede usted ayudar a prevenir la contaminación química en el restaurante?","opciones":["Mantenga los químicos en áreas adecuadas de almacenaje.","Enjuague las verduras antes de usar.","Use químicos debidamente, de acuerdo a las normas de SDS.","Todas las anteriores"],"correcta":3},
+      {"tipo":"opcion","texto":"¿Qué representan las siglas “PHF” en inglés?","opciones":["Alimentos que han sido físicamente tocados. (Physically handled food).","Calor y congelación adecuada. (Proper heating and freezing).","Alimentos que pueden ser dañinos. (Potentially hazardous food)."],"correcta":2},
+      {"tipo":"opcion","texto":"¿A qué distancia del piso se deben almacenar alimentos y cajas?","opciones":["Seis pies.","Seis pulgadas.","Una pulgada."],"correcta":1},
+      {"tipo":"opcion","texto":"¿Cuáles de las siguientes maneras evitan que la bacteria se multiplique?","opciones":["Mantenga el asador de carbón en la temperatura de cocción correcta.","Cocine los alimentos al tiempo completo de cocción y a la temperatura correcta.","Use el sistema de tiempo aprobado para desechar alimentos cocinados que se hayan pasado del tiempo de guardado / conservación.","Todas las anteriores"],"correcta":3},
+      {"tipo":"multiple","texto":"¿Cuál de estos es un “PHF”? (escoja dos)","opciones":["Pepinillos","Huevos", "Queso"],"correcta":[1,2]},
+      {"tipo":"opcion","texto":"¿Dónde se deben colocar productos de pollo crudos para descongelar en el refrigerador?   ","opciones":["En cualquier lugar, mientras estén cubiertos.","En el entrepaño de abajo o el fondo del estante para descongelar, dentro de un recipiente cubierto o uno que no gotee.","En el entrepaño de arriba para que se descongele más pronto."],"correcta":1},
+      {"tipo":"opcion","texto":"¿Cuáles son las causas principales de enfermedades transmitidas por los alimentos?","opciones":["Tiempo y control de temperatura deficiente.","Lavado de manos inadecuado.","No utilizar las tenazas correctas / designadas para manejar productos de comida.","Todas las anteriores"],"correcta":3},
+      {"tipo":"opcion","texto":"Usar guantes plásticos desechables toma el lugar de lavarse las manos debidamente.","opciones":["Verdadero","Falso"],"correcta":1}
+    ]
+    },
+  "Feeder": {
+    "area": "Estación del Alimentador (Feeder)",
+    "preguntas": [
+      {"tipo": "opcion","texto": "Hamburguesas congeladas se colocan a 2 pulgadas de los lados y por lo menos 1 pulgada entre cada hamburguesa sobre la banda del asador – como indica este diagrama","imagen":"/imagenes/Examennn.png","opciones": ["Verdadero", "Falso"],"correcta":0},
+      {"tipo": "opcion","texto": "Cuando se coloque el pan en la banda de panes, las coronas (las partes de arriba) van hacia el lado DERECHO y las partes inferiores (las partes de abajo) de los panes hacia el lado IZQUIERDO de la banda.","opciones": ["Verdadero", "Falso"],"correcta": 0},
+      {"tipo": "opcion","texto": "¿Qué se utiliza para colocar las pechugas de pollo sobre el asador de carbón?","opciones": ["Tenazas “designadas” para el pollo.","Cualquier tipo de tenazas.","Sus dedos."],"correcta": 0},
+      {"tipo": "opcion","texto": "El tiempo de guardado/conservación en el recipiente de guardado para las hamburguesas cocidas es 20 minutos.","opciones": ["Verdadero", "Falso"],"correcta": 0},
+      {"tipo": "opcion","texto": "¿Cuándo se introducen productos en el asador de carbón?","opciones": ["Cuando se lo indica el cocinero.","Cada 30 segundos.","Cuando todas las charolas de vapor estén vacías."],"correcta": 0},
+      {"tipo": "opcion","texto": "Usted debe usar guantes plásticos desechables cuando guarde hamburguesas congeladas en el recipiente de la carne.","opciones": ["Verdadero", "Falso"],"correcta": 0},
+      {"tipo": "opcion","texto": "Las hamburguesas descongeladas se colocan en la banda de carne debajo del primer quemador / escudo de calor del asador de carbón.","opciones": ["Verdadero", "Falso"],"correcta": 0},
+      {"tipo": "opcion","texto": "¿Qué tan alto puede poner las hamburguesas en el recipiente de la carne?","opciones":["Hasta lo más alto del recipiente de la carne.","Hasta la línea de congelación.","Hasta la mitad del recipiente."],"correcta": 1},
+      {"tipo": "opcion","texto": "Cuando coloque las pechugas de pollo BBQ descongeladas sobre la banda de carne, colóquelas al final de la banda.","opciones": ["Verdadero", "Falso"],"correcta": 0},
+      {"tipo": "opcion", "texto": "La rueda de mantequilla se usa para aplicar una capa uniforme de Whirl / Prep sobre algunos panes (como los de masa agria o los panecillos recién horneados).","opciones": ["Verdadero", "Falso"],"correcta": 0}
+    ]
+  },
+
+  "Freír": {
+    "area":"Estación de Freír",
+    "preguntas": [
+      {"tipo": "opcion","texto": "Las papas fritas y los aros de cebolla son los UNICOS productos fritos que se salan.","opciones": ["VERDADERO", "FALSO"],"correcta":0},
+      {"tipo": "abierta","texto": "Escriba el tiempo de guardado / conservación correcto para cada producto cocido:","subitems": ["Papas Fritas","Aros de Cebolla","Jalapeño Poppers","Papas Crisscut"],"respuestas": ["", "", "", ""]},
+      {"tipo": "opcion","texto": "¿Por cuánto tiempo se escurren los productos fritos después de cocinarlos?","opciones": ["5 segundos","10 a 15 segundos","30 segundos"],"correcta":1},
+      {"tipo": "opcion","texto": "El tiempo de cocimiento para las papas fritas es de 2 minutos y 30 segundos.","opciones": ["VERDADERO", "FALSO"],"correcta": 1},
+      {"tipo": "opcion","texto": "¿Cuánto debe llenar cada canasta con papas fritas antes de cocinarlas?","opciones": ["/imagenes/cesta.png", "/imagenes/cest.png"],"correcta":0},
+      {"tipo": "opcion","texto": "Para llenar correctamente el cartón de servir productos fritos, el cartón debe de estar LLENO, pero no lleno en exceso o relleno compacto.","opciones": ["VERDADERO", "FALSO"],"correcta":0},
+      {"tipo": "opcion","texto": "La rejilla ranurada se usa para freír los filetes de pollo.","opciones": ["VERDADERO", "FALSO"],"correcta":0},
+      {"tipo": "opcion","texto": "¿Cuántas veces se debe de sacudir el salero sobre cada ½ canasta de papas fritas?","opciones": ["a. 5","b. 10","c. 2"],"correcta":2},
+      {"tipo": "opcion","texto": "Siempre se llenan las canastas de freír en la estación de preparación, NO sobre las freidoras.","opciones": ["VERDADERO", "FALSO"],"correcta":0},
+      {"tipo": "opcion","texto": "Cuando suena la alarma del tiempo de guardado / conservación, ¿qué se debe de hacer?","opciones": ["a. Volver a poner el reloj de tiempo (temporizador) hasta que la comida se agote.","b. Apagar el reloj de tiempo (temporizador) y tirar el producto.","c. Apagar el reloj de tiempo (temporizador)."],"correcta": 1}
+    ]
+  },
+
+  "Cocinero": {
+  "area": "Estación del Cocinero",
+  "preguntas": [
+      {"tipo": "opcion","texto": "Al preparar hamburguesas y sándwiches de pollo asado, debe colocarlos con las “marcas del asador” hacia ARRIBA.","opciones": ["VERDADERO", "FALSO"],"correcta":0},
+      {"tipo": "opcion","texto": "Escoja el número correcto de rebanadas de cebolla morada que lleva la hamburguesa Big Angus Burger:","opciones": ["3", "4", "2"],"correcta":0},
+      {"tipo": "opcion","texto": "¿Cuál es el tiempo de guardado que se pueden tener los panes tostados en la vaporera?","opciones": ["15 Min.", "10 Min.", "5 Min."],"correcta":2},
+      {"tipo": "opcion","texto": "¿Qué se utiliza para mover las hamburguesas y pechugas de pollo cocidas?","opciones": ["Pinzas de linea caliente", "Pinzas mango rojo", "Pinzas mango amarillo"],"correcta":0},
+      {"tipo": "opcion","texto": "Está bien cocinar pechugas de pollo que no se hayan descongelado por completo.","opciones": ["VERDADERO", "FALSO"],"correcta":1},
+      {"tipo": "opcion","texto": "¿Cuál es la temperatura interna mínima adecuada de las hamburguesas cocidas que estaban congeladas?","opciones": ["160°F", "140°F", "165°F"],"correcta":0},
+      {"tipo": "opcion","texto": "Todas las hamburguesas dobles, Big Angus Burgers y las hamburguesas con productos frescos se envuelven con papel (estilo collar).","opciones": ["VERDADERO", "FALSO"],"correcta":0},
+      {"tipo": "opcion","texto": "¿Cuál es la forma correcta de colocar el tocino en la corona de pan de un Western Bacon Cheeseburger?","opciones": ["/imagenes/tocino.png", "/imagenes/tocinoo.png"],"correcta":1},
+      {"tipo": "opcion","texto": "Siempre es importante identificar las “órdenes especiales” para asegurar exactitud de orden.","opciones": ["VERDADERO", "FALSO"],"correcta":0}
+    ]
+  },
+  "Tenders": {
+  "area": "Estación de los Filetitos de Pollo Empanizados a Mano",
+  "preguntas": [
+      {"tipo": "opcion","texto": "Los filetitos de pollo deben descongelarse por:","opciones": ["24 horas", "36 horas", "48 horas"],"correcta":2},
+      {"tipo": "opcion","texto": "¿En qué sección se deben descongelar los filetitos de pollo en el estante para descongelar?","opciones": ["Superior (de arriba)","Centro (en medio)","Inferior (de abajo)"],"correcta":2},
+      {"tipo": "opcion","texto": "¿Cuál es la receta para una tanda de huevo líquido que se usa al empanizar?","opciones": ["52 oz de agua fría (36°F a 41°F) por una bolsa de buttermilk","32 oz de agua fría (36°F a 41°F) por una bolsa de buttermilk","64 oz de agua fría (36°F a 41°F) por media bolsa de buttermilk"],"correcta":0},
+      {"tipo": "opcion","texto": "Se puede manejar el pollo crudo con sus manos descubiertas mientras que esté limpias.","opciones": ["CIERTO", "FALSO"],"correcta":1},
+      {"tipo": "opcion","texto": "¿Cuál es el tiempo de guardado de los filetitos de pollo cocinados en el estante superior?","opciones": ["15 minutos", "1 hora", "30 minutos"],"correcta":2},
+      {"tipo": "opcion","texto": "Todas las superficies del equipo y los utensilios que están en contacto con los alimentos deben estar lavados, enjuagados y desinfectados cada 4 horas.","opciones": ["CIERTO", "FALSO"],"correcta":0},
+      {"tipo": "opcion","texto": "Debe cocinar los filetitos de pollo hasta una temperatura mínima de:","opciones": ["140°F", "165°F", "180°F"],"correcta":1},
+      {"tipo": "opcion","texto": "Debe tamizar/cernir el empanizado después de preparar ______ bolsas de pollo.","opciones": ["Uno", "Dos", "Tres"],"correcta":1},
+      {"tipo": "opcion","texto": "¿Cuántos filetitos de pollo (máximo) se puede cocinar en una canasta para freír de tamaño regular?","opciones": ["10", "5", "3"],"correcta":0},
+      {"tipo": "opcion","texto": "Debe desechar el empanizado al cierre.","opciones": ["Cierto", "Falso"],"correcta": 1},
+      {"tipo": "opcion","texto": "Debe quitarse los guantes desechables antes de tocar el mango de la canasta para freír.","opciones": ["Cierto", "Falso"],"correcta":0}
+  ]
+},
+
+"Comedor": {
+  "area": "Estación del Comedor",
+  "preguntas": [
+    {"tipo": "opcion","texto": "Al entregar una orden a la mesa del invitado, es importante:","opciones": ["Saludar al invitado con una sonrisa.","Verificar la orden, anunciándola, para asegurarse que esté correcta.","Preguntar al invitado si necesita algo más.","Decir “gracias, disfrute de su comida/ thank you, enjoy your meal” y luego se marcha.","Todas las anteriores"],"correcta":4},
+    {"tipo": "opcion","texto": "Regresar al invitado, ofrecer rellenar su bebida y recoger la mesa para retirar la basura y la charola, todas estas son maneras estupendas de proveer el Servicio Superestrella.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "Utilice una toalla limpia y seca para limpiar los asientos del comedor.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "¿Cuándo se debe revisar los baños para verificar que estén limpios y para reabastecerlos (llenar) de productos?","opciones": ["Al principio y final de cada turno.","Durante el tiempo que trabaja su turno; por lo menos cada hora.","Al final del día."],"correcta":1},
+    {"tipo": "opcion","texto": "La barra de bebidas se limpia y se abastece (llena) a medida que sea necesario durante el turno.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "¿Qué debe hacer si ve un derrame en el piso?","opciones": ["Limpiarlo cuando tenga tiempo.","Decirle a la persona a cargo que hay algo derramado en el piso.","Limpiarlo inmediatamente y utilizar el letrero de “wet floor/piso mojado”."],"correcta":2},
+    {"tipo": "opcion","texto": "Cuando esté manejando una queja de algún invitado es importante escuchar con atención, pedir disculpas, tomar acción inmediata para corregir el problema, y darle las gracias al invitado.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "Es importante tener como prioridad en todo momento el Servicio Superestrella y servir a nuestros invitados como prioridad número uno en todo momento.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "Si usted ve algún obstáculo de seguridad en el comedor usted debe:","opciones": ["Decírselo a su Gerente General o Persona a Cargo inmediatamente.","Hacerse cargo de la situación usted mismo.","Espere que otra persona se dé cuenta y se ocupe de eso."],"correcta":0}
+  ]
+},
+
+  "vegetales": {
+    "area": "Vegetales",
+    "preguntas": [
+      {"tipo":"abierta","texto":"Menciona el procedimiento de desinfección de la lechuga"},
+      {"tipo":"opcion","texto":"¿En cuántas partes se cortan las lechugas?","opciones":["4 partes","6 partes","2 partes"],"correcta":0},
+      {"tipo":"opcion","texto":"¿En qué línea debe estar la rebanadora de cebolla para tener el grosor correcto 3/16?","opciones":["1° línea","2° línea","3° línea"],"correcta":0},
+      {"tipo":"opcion","texto":"Por cuánto tiempo debes dejar remojar la lechuga en la solución de vegi wash","opciones":["3 min","5 min","10 min"],"correcta":0},
+      {"tipo":"abierta","texto":"Menciona la receta completa de salsa fresca"},
+      {"tipo":"opcion","texto":"¿Cuáles son los ingredientes para preparar el guacamole?","opciones":["32 oz de salsa fresca por una bolsa de pulpa de aguacate","1 bolsa de pulpa de aguacate por 2 jarras de salsa fresca.","Jitomate, cebolla, cilantro, jalapeño, sal y aguacate"],"correcta":0},
+      {"tipo":"opcion","texto":"¿Cuál es el tiempo de vida del guacamole preparado?","opciones":["48 horas en línea y 48 horas en refrigeración","24 horas en línea y 36 horas en refrigeración","12 horas en línea y 36 horas en refrigeración"],"correcta":2},
+      {"tipo":"abierta","texto":"¿Al preparar el pepino que herramienta utilizas?"},
+      {"tipo":"opcion","texto":"¿Cómo se prepara la solución desinfectante de vegi wash?","opciones":["40 litros de agua por 1 sobre de vegi wash","10 litros de agua por 1 sobre de vegi wash","40 litros de agua por 2 sobres de vegi wash"],"correcta":1},
+      {"tipo":"opcion","texto":"¿Podemos utilizar agua tibia para enjuagar los vegetales?","opciones":["Verdadero","Falso"],"correcta":1}
+    ]
+  },
+
+  "Cajero": {
+    "area": "Estación del Cajero",
+    "preguntas": [
+    {"tipo": "opcion","texto": "Se saluda a los invitados INMEDIATAMENTE que se acercan a la registradora.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "El saludo apropiado para cada invitado que llega a la registradora:","opciones": ["El próximo en línea por favor","¿Qué desea de comer?","Hola, bienvenido a Carl’s Jr. ¿Le gustaría probar nuestro nuevo (nombre del producto de menú) el día de hoy?"],"correcta":2},
+    {"tipo": "opcion","texto": "Cuando se aleja de su registradora debe:","opciones": ["Asegurar el cajón de efectivo y llevarse la llave.","No hacer nada, solo alejarse.","Decirle a su Gerente General que va a dejar la registradora."],"correcta":2},
+    {"tipo": "opcion","texto": "Es importante repetirle la orden al invitado para asegurar que esté correcta.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "Siempre debe contar el cambio en voz alta frente al invitado, para que pueda oír la cantidad que recibe y asegurarse que esté correcto.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "¿Qué le dicen al invitado que va a comer en el restaurante después de tomar su orden?","opciones": ["El próximo invitado, por favor.","Aquí está su vaso. Sírvase una bebida y condimentos siéntese. Coloque este número al borde de su mesa y le entregaremos su comida en cuanto esté lista. Gracias.","Adiós."],"correcta":1},
+    {"tipo": "opcion","texto": "Está bien dejar que otros empleados usen su registradora durante su turno.","opciones": ["Verdadero", "Falso"],"correcta":1},
+    {"tipo": "multiple","texto": "Cuando maneje una queja de un invitado, los pasos incluyen: (circule todas las respuestas correctas)","opciones": ["Escuche al invitado","Pida disculpas","Agradezca al invitado","Tome acción para resolver la situación","Todas las anteriores"],"correcta":4},
+    {"tipo": "opcion","texto": "La verificación del cajón de efectivo al principio y al final de cada turno es un requisito cada vez que trabaje en la Estación del Cajero.","opciones": ["Verdadero", "Falso"],"correcta":0},
+    {"tipo": "opcion","texto": "¿De qué formas se puede hacer “ventas sugestivas”?","opciones": ["Sugerir un combo","Sugerir un combo de mayor tamaño","Preguntándole al invitado “¿Eso es todo? / Is that all?”"],"correcta":1}
+  ]
+},
+
+  "quimicos": {
+    "area": "Químicos",
+    "preguntas": [
+      {"tipo":"opcion","texto":"¿Cuál es la potencia de la solución sanitizante?","opciones":["200ppm a 400ppm","100ppm a 200 ppm","300ppm"],"correcta":1},
+      {"tipo":"opcion","texto":"¿A qué distancia se almacenan los químicos del piso?","opciones":["2 pulgadas","4 pulgadas","6 pulgadas"],"correcta":2},
+      {"tipo":"abierta","texto":"Menciona el método de lavado en la tarja de 3 compartimientos."},
+      {"tipo":"opcion","texto":"¿Qué son las MSDS?","opciones":["Tarjetas de limpieza","Fichas de datos de seguridad de materiales (Material Safety Date Shets)","Tareas del porter"],"correcta":0},
+      {"tipo":"opcion","texto":"¿Qué químico se utiliza para lavar los utensilios de cocina?","opciones":["Kay Qsr Detergente","Limpiador de pisos baldosa ","Detergente en polvo"],"correcta":0},
+      {"tipo":"opcion","texto":"¿Qué tiempo deben estar sumergidos los utensilios de cocina en la solución sanitizante?","opciones":["1 min","20 seg","5 min"],"correcta":0},
+      {"tipo":"abierta","texto":"¿Cuál es el proceso de preparación de la solucion sanitizante?"},
+      {"tipo":"abierta","texto":"¿Cuándo ocurre contaminación química?"},
+      {"tipo":"opcion","texto":"¿De acuerdo con el procedimiento de uso de químicos se pueden mezclar dos o mas productos al mismo tiempo?","opciones":["Verdadero","Falso"],"correcta":1},
+      {"tipo":"opcion","texto":"¿Qué temperatura debe tener el agua de la tarja para el lavado de los utensilios?","opciones":["100-110°F","100°F","120°F"],"correcta":2}
+    ]
+  },
+
+  "malteadas": {
+    "area": "Malteadas",
+    "preguntas": [
+      {"tipo":"abierta","texto":"¿Cuál es el tiempo de vida y peso de los preboleados para las malteadas?"},
+      {"tipo":"abierta","texto":"Menciona las 3 fechas que debes colocar al bote de helado una vez abierto para su uso"},
+      {"tipo":"opcion","texto":"¿En qué velocidad se deben batir las malteadas?","opciones":["40 revoluciones","45 revoluciones","80 revoluciones"],"correcta":2},
+      {"tipo":"opcion","texto":"¿Cuál es el tiempo de vida del bote de helado una vez abierto?","opciones":["21 días","45 días","5 días"],"correcta":0},
+      {"tipo":"opcion","texto":"¿Cuál es el dialogo correcto para ofrecer las malteadas?","opciones":["¿Quiere una malteada?","¿Malteada de chocolate con crema?","¿Le gustaría probar una de nuestras deliciosas malteadas?"],"correcta":2},
+      {"tipo":"opcion","texto":"¿Cada cuanto se tiene que enjuagar el cucharon en el pozo con agua corriente?","opciones":["Cada 4h","Cada 2h","Después de servir cada bola "],"correcta":2},
+      {"tipo":"abierta","texto":"Menciona el proceso de elaboración de una malteada de oreo."},
+      {"tipo":"opcion","texto":"¿Qué cantidad de crema batida llevan las malteadas?","opciones":["6 oz de crema batida","Llene con crema batida hasta el borde de la tapa","Dos vueltas de crema batida."],"correcta":2},
+      {"tipo":"opcion","texto":"Qué cantidad de leche debe contener la malteada de 12 Oz?","opciones":["Se debe llenar con leche hasta la primera línea del vaso de arriba hacia abajo","Se debe llenar con leche hasta la segunda línea del vaso de arriba hacia abajo","Se debe llenar con leche hasta la primera línea del vaso de abajo hacia arriba"],"correcta":2},
+      {"tipo":"opcion","texto":"¿El agua del vaso para limpiar el aspa de la mix debe llevar solución sanitizante?","opciones":["Verdadero","Falso"],"correcta":1}
+    ]
+  },
+
+  "uber": {
+    "area": "Uber Eats",
+    "preguntas": [
+      {"tipo":"opcion","texto":"¿Cuál es el primer paso que se debe realizar en el turno de apertura en la tableta de UBER EATS?","opciones":["Que estén encendidas","Volumen y cargada de batería","Con internet y en línea","Todas las anteriores"],"correcta":3},
+      {"tipo":"opcion","texto":"Cómo identificas que entro un pedido de Uber East en la tableta?","opciones":["Reviso cada rato","Aviso por el sonido de una alarma","Esperamos que el repartidor nos diga"],"correcta":1},
+      {"tipo":"opcion","texto":"Cúando llega una orden de UBER EATS por medio de la tableta que paso se debe realizar?","opciones":["Presionar el botón de confirmar","Cantar el pedido a la cocina","Presionar el botón de listo"],"correcta":2},
+      {"tipo":"opcion","texto":"Una vez confirmada la recepción de la orden ¿Qué paso sigue?","opciones":["Registrar la orden en la POS","Preparar y empacar la orden","Solicitar autorización"],"correcta":1},
+      {"tipo":"opcion","texto":"Al totalizar la orden ¿Á que destino de pago se envía?","opciones":["Efectivo","Tarjeta de débito","Uber eats"],"correcta":2},
+      {"tipo":"abierta","texto":"Al momento de empacar la orden que condimentos debes colocar en la bolsa?"},
+      {"tipo":"opcion","texto":"¿Qué proceso de seguridad realizas al entregar la orden al repartidor?","opciones":["Revisar la orden en la pantalla","Confirmar la orden con el repartidor, cerrar y sellar la bolsa con las etiquetas autorizadas de seguridad","Solicitar al repartidor su nombre y firma de recibido en el ticket de la sucursal"],"correcta":1},
+      {"tipo":"opcion","texto":"¿Qué haces cuando hay una diferencia en el costo de un producto en la tableta y la caja registradora?","opciones":["Lo ignoras y lo registras con la diferencia","Le notificar al gerente o a la persona a cargo para que lo resuelva","Lo cancelas para evitar diferencias"],"correcta":1},
+      {"tipo":"opcion","texto":"Una vez que termina tu turno ¿Qué haces con los tickets de UBER que cobraste?","opciones":["Los dejas en la gaveta de la caja","Los entregas al gerente","Realizas tu conciliación y guardas los tickets en la capeta del día"],"correcta":1},
+      {"tipo":"opcion","texto":"En el turno de cierre al finalizar el dia de tu turno que paso debes realizar en la tableta?","opciones":["Verificar la tableta que no haya ningún pedido pendiente y apagarla al finalizar la conciliación","Nada","Limpiarla"],"correcta":0}
+    ]
+  }
+}

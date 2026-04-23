@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Matriz Star Performance — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/matriz.css">
+</head>
+<body>
+
+<div class="m-wrap">
+
+  <header class="m-header">
+    <button class="back-btn" onclick="history.back()">← Volver</button>
+    <div class="header-center">
+      <span>⭐</span>
+      <h1 id="tituloMatriz">Star Performance</h1>
+    </div>
+    <div class="header-actions">
+      <button class="btn-export" onclick="exportarCSV()">⬇ CSV</button>
+      <button class="btn-export btn-pdf" id="btnPDFMatriz" onclick="generarPDFMatriz()">📄 PDF</button>
+    </div>
+  </header>
+
+  <!-- Toggle Mis Empleados / Sucursal (solo Star Performance) -->
+  <div id="vistaToggle" class="vista-toggle-bar" style="display:none">
+    <button class="vtoggle-btn active" id="btnVistaM" onclick="cambiarVista('mios')">👤 Mis Empleados</button>
+    <button class="vtoggle-btn" id="btnVistaS" onclick="cambiarVista('sucursal')">🏪 Toda la Sucursal</button>
+  </div>
+
+  <div class="filtros-bar">
+    <input type="text" id="buscarEmp" class="search-inp"
+           placeholder="🔍 Buscar empleado…"
+           oninput="filtrar(this.value)">
+    <button class="btn-baja" id="btnBaja" onclick="toggleBajas()">Ver bajas</button>
+  </div>
+
+  <div class="leyenda-bar">
+    <span class="ley-item"><span class="star-on">★</span> Completado</span>
+    <span class="ley-item"><span class="star-off">☆</span> Pendiente</span>
+    <span class="ley-item ley-group-ob">Orientación</span>
+    <span class="ley-item ley-group-bl">Backline</span>
+    <span class="ley-item ley-group-fl">Frontline</span>
+    <span class="ley-item ley-group-ct">Crew Trainer</span>
+  </div>
+
+  <div class="tabla-scroll">
+    <table class="sp-table" id="spTable">
+      <thead id="sp-thead"></thead>
+      <tbody id="sp-tbody">
+        <tr><td colspan="30" class="loading-cell">Cargando…</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Panel lateral de empleado -->
+  <div class="overlay" id="overlay" onclick="cerrarPanel()"></div>
+  <div class="side-panel" id="sidePanel">
+    <div class="sp-handle"></div>
+    <div class="sp-header-row">
+      <h2 id="panelNombre">—</h2>
+      <button class="btn-cerrar" onclick="cerrarPanel()">✕</button>
+    </div>
+    <div id="panelBody"></div>
+    <button class="btn-dar-baja" id="btnDarBaja" onclick="confirmarBaja()">
+      🚫 Dar de baja
+    </button>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/modulos.js"></script>
+<script src="/js/matriz.js"></script>
+<script src="/js/pdf-matriz.js"></script>
+</body>
+</html>

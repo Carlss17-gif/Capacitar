@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Carl's Jr. — Acceso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body class="auth-page">
+
+<div class="auth-header">
+  <img src="CarlsLogo.png" class="logo" alt="Carl's Jr." onerror="this.style.display='none'">
+  <p class="sub">Sistema de Capacitación · Cero Tenedor</p>
+</div>
+
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Iniciar Sesión</h2>
+    <p class="info">Ingresa tus credenciales para continuar</p>
+
+    <input type="email"    id="email"    placeholder="Correo electrónico" autocomplete="email">
+    <input type="password" id="password" placeholder="Contraseña"         autocomplete="current-password">
+
+    <div class="auth-options">
+      <label><input type="checkbox" id="recordarme"> Recordarme</label>
+    </div>
+
+    <div class="error-msg" id="loginError">Correo o contraseña incorrectos</div>
+
+    <button id="btnEntrar" onclick="login()">Entrar →</button>
+    <button class="secondary" onclick="irRegistro()">Registrarse</button>
+
+    <p class="security">Uso interno · Acceso exclusivo para personal autorizado</p>
+  </div>
+</div>
+
+<footer>
+  Plataforma interna de capacitación · Cero Tenedor
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>

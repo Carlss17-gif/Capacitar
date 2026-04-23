@@ -1,0 +1,1658 @@
+{
+  "version": "1.0",
+  "titulo": "Guía de Estudio Carl's Jr.",
+  "modulos": {
+
+    "coccion": {
+      "id": "coccion",
+      "titulo": "Tiempos de Cocción y Retención",
+      "icono": "⏱",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Cocción en Broiler (Asador)",
+          "columnas": ["PRODUCTO", "TIEMPO DE COCCIÓN", "TEMP. SALIENDO", "TIEMPO RETENCIÓN", "TEMP. RETENCIÓN"],
+          "filas": [
+            ["Carne CKE",      "2:30 a 3:00 min", "160°F", "20 minutos", "140°F"],
+            ["Carne Angus",    "2:30 a 3:00 min", "160°F", "20 minutos", "140°F"],
+            ["Pollo Savory",   "2:30 a 3:00 min", "140°F", "20 minutos", "140°F"],
+            ["Piña",           "2:30 a 3:00 min", "N/A",   "20 minutos", "N/A"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Retención en Prince Castle",
+          "columnas": ["PRODUCTO", "MÁXIMO POR CHAROLA", "TIEMPO RETENCIÓN", "COCINE CUANDO FALTEN"],
+          "filas": [
+            ["Carne CKE",   "12 piezas", "20 minutos", "3 minutos"],
+            ["Carne Angus", "8 piezas",  "20 minutos", "3 minutos"],
+            ["Pollo Savory","6 piezas",  "20 minutos", "3 minutos"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Retención en Vaporera",
+          "columnas": ["PRODUCTO", "RECIPIENTE 1/6 X 6\"", "RECIPIENTE 1/3 X 6\"", "TIEMPO RETENCIÓN"],
+          "filas": [
+            ["Carne CKE",    "12 piezas", "24 piezas", "20 minutos"],
+            ["Carne Angus",  "12 piezas", "24 piezas", "20 minutos"],
+            ["Pollo Savory", "6 piezas",  "12 piezas", "20 minutos"]
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "⚠️ Puntos Importantes",
+          "items": [
+            "Desechar el exceso de líquido cuando el jugo esté a ¼ del recipiente.",
+            "En Prince Castle: cocinar máximo antes de los 3 minutos de vencer.",
+            "Si son dos o más recipientes, cada uno se debe cronometrar por separado.",
+            "DESECHAR producto por debajo de los 140°F.",
+            "Monitorear vaporera: niveles de agua cada 3 horas (debe ser agua caliente)."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Cocinado de Emergencia en Parrilla — Carne Angus",
+          "columnas": ["PARÁMETRO", "VALOR"],
+          "filas": [
+            ["Temperatura parrilla",   "300°F (precalentar 30 min)"],
+            ["Uso de prensa",          "NO se utiliza"],
+            ["Máximo en línea",        "4 piezas"],
+            ["Tiempo de cocción",      "5 minutos (2:30 por cada lado)"],
+            ["Temperatura interna",    "160°F"],
+            ["Tiempo de retención",    "10 minutos"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Cocinado de Emergencia en Parrilla — Carne CKE",
+          "columnas": ["PARÁMETRO", "VALOR"],
+          "filas": [
+            ["Temperatura parrilla",   "300°F (precalentar 30 min)"],
+            ["Precalentamiento prensas","1 minuto"],
+            ["Máximo bajo prensa",     "2 carnes"],
+            ["Tiempo de cocción",      "3 minutos (1:30 por cada lado)"],
+            ["Temperatura interna",    "160°F"],
+            ["Tiempo de retención",    "20 minutos"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Límites Críticos IMPORTANTES",
+          "columnas": ["MEDIDA PREVENTIVA", "LÍMITE CRÍTICO"],
+          "filas": [
+            ["Cocción en el asador",    "Temperatura interna mínima: 160°F (71.1°C)"],
+            ["Recalentado de alimentos","Recalentar a mínimo 165°F (74°C)"],
+            ["Enfriado de alimentos",   "140°F→70°F en 2 horas; 69°F→41°F en 4 horas"],
+            ["Alimentos en vaporera",   "Mantener más de 140°F (60°C)"],
+            ["Alimentos en frío",       "Ensaladas: 41°F (5°C), sin exceder 12 horas"]
+          ]
+        }
+      ]
+    },
+
+    "freidor": {
+      "id": "freidor",
+      "titulo": "Freidoras — Prince Castle",
+      "icono": "🍟",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "info",
+          "texto": "🌡️ TEMPERATURA DEL EQUIPO PRINCE CASTLE: 225°F"
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Cocción y Retención de Productos de Freidora",
+          "columnas": ["PRODUCTO", "TIEMPO COCCIÓN", "TEMP. SALIENDO", "TIEMPO RETENCIÓN", "TEMP. RETENCIÓN", "SHAKE"],
+          "filas": [
+            ["Chicken Tenders", "3:30 min", "165°F", "30 minutos", "140°F", "10 seg"],
+            ["Estrellas",       "2:30 min", "165°F", "30 minutos", "140°F", "30 seg"],
+            ["Filete (Nuevo)",  "4:00 min", "165°F", "30 minutos", "140°F", "10 seg"],
+            ["Quinoa",          "2:00 min", "160°F", "10 minutos", "140°F", "N/A"],
+            ["Aros de Cebolla", "2:00 min", "N/A",   "10 minutos", "N/A",   "30 seg"],
+            ["Papas Cristcut",  "2:30 min", "N/A",   "15 minutos", "N/A",   "30 seg"],
+            ["Popers",          "2:00 min", "N/A",   "20 minutos", "N/A",   "30 seg"],
+            ["Papas Fritas",    "3:00 min", "N/A",   "7 minutos",  "N/A",   "30 seg"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Embolsado de Papa, Crisscut y Aros",
+          "columnas": ["TAMAÑO", "PESO CRISTCUT", "PESO PAPAS", "PORCIÓN AROS"],
+          "filas": [
+            ["Kids",   "—",     "2.9 oz", "—"],
+            ["Chico",  "—",     "3.7 oz", "—"],
+            ["Mediano","4.6 oz","5.2 oz", "4.20 oz"],
+            ["Grande", "5.7 oz","5.7 oz", "—"]
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Porciones y Estándares",
+          "items": [
+            "PAPAS FRITAS: 5 saladas por cesta de ½ — 2 saladas por cesta de ¼",
+            "AROS DE CEBOLLA: Mínimo 8 aros por orden mediana / 10-12 pzas para orden grande / 3 saladas por orden",
+            "PAPAS CHILLI: Peso 7.65 oz"
+          ]
+        }
+      ]
+    },
+
+    "hamburguesas": {
+      "id": "hamburguesas",
+      "titulo": "Preparación de Hamburguesas",
+      "icono": "🍔",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "pasos",
+          "titulo": "Famous Star® con Queso",
+          "pasos": [
+            "Corona (con semillas)",
+            "0.30 oz de mayonesa",
+            "0.62 oz de salsa especial",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "3 aros de cebolla amarilla",
+            "1 rebanada de tomate",
+            "2 hojas de lechuga",
+            "3 rodajas de pepinillo (dill/eneldo)",
+            "0.30 oz de mayonesa",
+            "Talón (con semillas)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Super Star® con Queso",
+          "pasos": [
+            "Corona (con semillas)",
+            "0.30 oz de mayonesa",
+            "0.62 oz de salsa especial",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "3 aros de cebolla amarilla",
+            "2 rebanadas de tomate",
+            "2 hojas de lechuga",
+            "3 rod. pepinillos (dill/eneldo)",
+            "0.30 oz de mayonesa",
+            "Talón (con semillas)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Western Bacon Cheeseburger®",
+          "pasos": [
+            "Corona (con semillas)",
+            "0.50 oz de salsa BBQ",
+            "2 bacon strips",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "2 aros de cebolla frita",
+            "0.50 oz de salsa BBQ",
+            "Talón (con semillas)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Double Western Bacon Cheeseburger®",
+          "pasos": [
+            "Corona (con semillas)",
+            "0.50 oz de salsa BBQ",
+            "2 tiras de tocino",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "2 aros de cebolla frita",
+            "0.50 oz de salsa BBQ",
+            "Talón (con semillas)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "California Classic Double Cheeseburger",
+          "pasos": [
+            "Corona (sencilla)",
+            "0.5 oz de salsa clásica",
+            "Disher #40 — cebollas asadas",
+            "1 queso americano pequeño",
+            "Hamburguesa 9:1",
+            "1 queso americano pequeño",
+            "Hamburguesa 9:1",
+            "2 rebanadas de tomate",
+            "2 hojas de lechuga",
+            "0.5 oz de salsa clásica",
+            "Talón (sencillo)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "The Big Carl®",
+          "pasos": [
+            "Corona (con semillas)",
+            "0.60 oz de salsa clásica",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "1 queso americano grande",
+            "1 hamburguesa",
+            "2 hojas de lechuga",
+            "0.60 oz de salsa clásica",
+            "Talón (con semillas)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Big Hamburger con Queso",
+          "pasos": [
+            "Corona (con semillas)",
+            "0.33 oz de ketchup (3 espirales)",
+            "0.25 oz mostaza (2 formas de Z)",
+            "1 queso americano",
+            "1 hamburguesa",
+            "3 aros de cebolla amarilla",
+            "3 rodajas de pepinillo (dill/eneldo)",
+            "0.33 oz ketchup (3 orde spiral)",
+            "Talón (con semillas)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Double Cheeseburger",
+          "pasos": [
+            "Corona (sencilla)",
+            "0.33 oz de ketchup (3 espirales)",
+            "0.12 oz mostaza (forma de Z)",
+            "Hamburguesa 9:1",
+            "1 queso americano pequeño",
+            "Hamburguesa 9:1",
+            "2 aros de cebolla amarilla",
+            "2 rod. de pepinillo (dill/eneldo)",
+            "0.33 oz de ketchup (3 espirales)",
+            "Talón (sencillo)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Kids Hamburger (para niños)",
+          "pasos": [
+            "Corona (sencilla)",
+            "0.33 oz de ketchup (3 espirales)",
+            "0.12 oz mostaza (forma de Z)",
+            "2 rod. de pepinillo (dill/eneldo)",
+            "8/1 hamburguesa",
+            "Talón (sencillo)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "The Original Thickburger®",
+          "pasos": [
+            "Corona (de primera calidad)",
+            "0.30 oz de mayonesa",
+            "0.33 oz de ketchup (3 espirales)",
+            "0.12 oz mostaza (forma de Z)",
+            "1 queso americano grande",
+            "Hamburguesa Angus de 1/3 lb.",
+            "3 aros de cebolla roja",
+            "2 rebanadas de tomate",
+            "2 hojas de lechuga",
+            "3 rod. de pepinillo (dill/eneldo)",
+            "0.30 oz de mayonesa",
+            "Talón (de primera calidad)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "The Jalapeno Thickburger®",
+          "pasos": [
+            "Corona (de primera calidad)",
+            "0.50 oz de salsa santa fe",
+            "1 cuch transparente de 10\" de jalapeño",
+            "1 queso peperjack",
+            "Hamburguesa Angus de 1/3 lb.",
+            "3 aros de cebolla roja",
+            "2 rebanadas de tomate",
+            "2 hojas de lechuga",
+            "0.50 oz de salsa santa fe",
+            "Talón (de primera calidad)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "The Guacamole Bacon Thickburger®",
+          "pasos": [
+            "Corona (de primera calidad)",
+            "0.50 oz de salsa santa fe",
+            "2 cuch. #60 de guacamole",
+            "2 tiras de tocino",
+            "1 queso peperjack",
+            "Hamburguesa Angus de 1/3 lb.",
+            "3 aros de cebolla roja",
+            "2 rebanadas de tomate",
+            "2 hojas de lechuga",
+            "0.50 oz de salsa santa fe",
+            "Talón (de primera calidad)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "The Lettuce Wrapped Thickburger®",
+          "pasos": [
+            "2 hojas de lechuga (corona)",
+            "3 aros de cebolla roja",
+            "2 rebanadas de tomate",
+            "3 rod. de pepinillo (dill/eneldo)",
+            "1 queso americano grande",
+            "0.12 oz mostaza (forma de Z)",
+            "0.25 oz de ketchup (1 espiral)",
+            "0.30 oz de mayonesa",
+            "Hamburguesa Angus de 1/3 lb.",
+            "2 hojas de lechuga (talón)"
+          ]
+        }
+      ]
+    },
+
+    "sandwiches": {
+      "id": "sandwiches",
+      "titulo": "Sándwiches de Pollo",
+      "icono": "🍗",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "pasos",
+          "titulo": "Charbroiled Chicken Club",
+          "pasos": [
+            "Corona (de trigo)",
+            "0.25 oz de mayonesa",
+            "2 tiras de tocino",
+            "1 queso suizo",
+            "1 pechuga de pollo asada",
+            "1 rebanadas de tomate",
+            "2 hoja de lechuga",
+            "0.25 oz de mayonesa",
+            "Talón (de trigo)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Charbroiled BBQ Chicken Sandwich",
+          "pasos": [
+            "Corona (de trigo)",
+            "0.50 oz de salsa BBQ",
+            "1 pechuga de pollo asada",
+            "1 rebanada de tomate",
+            "2 hojas de lechuga",
+            "Talón (de trigo)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Charbroiled Santa Fe Chicken Sandwich",
+          "pasos": [
+            "Corona (de trigo)",
+            "0.50 oz de salsa santa fe",
+            "1 queso americano grande",
+            "1 pechuga de pollo asada",
+            "½ tira de chile verde",
+            "2 hojas de lechuga",
+            "0.50 oz santa fe sauce",
+            "Talón (de trigo)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Big Chicken Fillet Sandwich",
+          "pasos": [
+            "Corona (de primera calidad)",
+            "0.30 oz de mayonesa",
+            "1 filete de pollo — 5 onzas",
+            "1 rebanada de tomate",
+            "2 hojas de lechuga",
+            "0.30 oz de mayonesa",
+            "Talón (de primera calidad)"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Jalapeno Big Chicken Fillet Sandwich",
+          "pasos": [
+            "Crown (FBB)",
+            "0.50 oz. santa fe sauce",
+            "1-10\" clear plastic",
+            "Spoon jalapeño coins",
+            "1 slice pepperjack cheese",
+            "5 oz. chicken fillet",
+            "3 red onion slices",
+            "1 tomato slice",
+            "2 lettuce leaves",
+            "0.50 oz. santa fe sauce",
+            "Heel (FBB)"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "HB Chicken Tender Sandwich — Variantes",
+          "columnas": ["VARIANTE", "INGREDIENTES ESPECIALES"],
+          "filas": [
+            ["Bacon Swiss",   "0.3975 oz salsa Ranch (espiral mamila) + 2 tiras tocino + 1 rebanada queso suizo + 2 tiras pollo tender"],
+            ["BBQ",           "0.329 oz salsa BBQ + 2 tiras de pollo tender"],
+            ["Ranch",         "0.3975 oz salsa Ranch (espiral mamila) + 2 tiras de pollo tender"],
+            ["Honey Mustard", "0.329 oz Miel Mostaza (espiral mamila) + 2 tiras de pollo tender"]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "⚠️ IMPORTANTE para la LOW (Lettuce Wrapped): Coloque una bandeja de transferencia de color naranja limpia y desinfectada sobre la superficie de trabajo. Coloque la lechuga en la bandeja primero."
+        }
+      ]
+    },
+
+    "vegetales": {
+      "id": "vegetales",
+      "titulo": "Vegetales",
+      "icono": "🥬",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "pasos",
+          "titulo": "Lavado de Vegetales",
+          "pasos": [
+            "Lave, enjuague y desinfecte todas las superficies de la tina del prep antes de uso para evitar contaminación cruzada.",
+            "Separar los vegetales por tipo (lechuga, tomate, cebolla). Solo el mismo producto deberá ser lavado junto.",
+            "Quitar las hojas exteriores, tallos de la lechuga, tomate o cebolla.",
+            "Lavarse bien las manos durante 20 segundos.",
+            "Llenar la tina del prep con agua fría a 50°F.",
+            "Añadir sobre de vegi wash y asegurarse que dé la concentración de 100 ppm.",
+            "Sumergir el producto en la solución de lavado durante 3 minutos. Cambiar la solución cuando esté por debajo de la concentración.",
+            "Enjuagar el producto con agua corriente fría y colocar en un recipiente desinfectado."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "✅ DESPUÉS DE HABER LAVADO Y DESINFECTADO LOS VEGETALES, SEGUIR CON EL PROCESO DE PREPARACIÓN DE CADA PRODUCTO."
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Temperado de Vegetales",
+          "columnas": ["CONCEPTO", "DETALLE"],
+          "filas": [
+            ["Tiempo de vida total",      "4 horas (incluye 2 horas de temperado)"],
+            ["Tiempo de temperado",       "2 horas a temperatura ambiente"],
+            ["Ejemplo — Restaurante abre","10:00 am → sacar verdura a temperar a las 8:00 am"],
+            ["Etiquetado del temperado",  "10:00 am (hora en que termina de temperar)"],
+            ["Etiquetado en la línea",    "12:00 pm (hora de descarte = 4 hrs desde que se sacó)"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Receta de Ensaladas",
+          "columnas": ["PRODUCTO", "RECETA COMPLETA", "MEDIA RECETA"],
+          "filas": [
+            ["Lechuga romana",    "1.600 kg (3.53 lb.)", "0.800 kg (1.75 lb.)"],
+            ["Lechuga orejona",   "700 g (1.54 lb.)",    "350 g (0.75 lb.)"],
+            ["Col morada",        "300 g (0.66 lb.)",    "150 g (0.33 lb.)"],
+            ["Zanahoria",         "400 g (0.88 lb.)",    "200 g (0.44 lb.)"],
+            ["Peso promedio total","3 kg (106 oz.)",      "1.5 kg (53 oz.)"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Armado de Ensalada Verde",
+          "pasos": [
+            "Coloque 6.5 onzas en un contenedor para ensaladas.",
+            "Con cucharon de plástico de 10\", sirva una cucharada de queso cheddar 'a las 12'.",
+            "Coloca 2 aros de cebolla morada 'a las 3', ligeramente empalmadas.",
+            "Coloca 2 rebanadas de pepino 'a las 6', ligeramente empalmadas.",
+            "Coloca 2 cuñas de tomate 'a las 9', ligeramente empalmadas.",
+            "Coloque una tapa y sirva de inmediato o coloque bajo refrigeración con tiempo de vencimiento de 12 horas."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Receta de Salsa Fresca",
+          "columnas": ["INGREDIENTE", "CANTIDAD"],
+          "filas": [
+            ["Tomate",                 "128 onzas"],
+            ["Cebolla blanca",         "64 onzas"],
+            ["Jalapeños congelados",   "24 onzas"],
+            ["Cilantro",               "12 onzas"],
+            ["Sal",                    "1 cuchara copeteada de 10\""],
+            ["Tiempo de vida en refri","48 horas a temperatura de 36-41°F"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Receta de Guacamole",
+          "pasos": [
+            "Poner un interior de guacamole en un recipiente de 6\" de profundidad.",
+            "Llenar una jarra de 32 oz con salsa fresca, BIEN ESCURRIDA.",
+            "Agregar salsa fresca a la pulpa de aguacate.",
+            "Usando una cuchara limpia, mezclar bien la salsa fresca con el guacamole, pasar a un contenedor limpio."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Vida del Guacamole",
+          "columnas": ["LUGAR", "TIEMPO"],
+          "filas": [
+            ["En refrigeración", "36 horas"],
+            ["En línea",         "12 horas"],
+            ["Temperatura",      "36 a 41°F siempre"]
+          ]
+        }
+      ]
+    },
+
+    "descongelacion": {
+      "id": "descongelacion",
+      "titulo": "Descongelación",
+      "icono": "❄️",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Descongelación de Productos",
+          "columnas": ["PRODUCTO", "VIDA EN REFRIGERACIÓN", "TIEMPO DESCONGELACIÓN"],
+          "filas": [
+            ["Carne Angus",             "5 días",  "24 horas"],
+            ["Pollo Savory",            "5 días",  "24 horas"],
+            ["Chicken Tenders",         "5 días",  "48 horas"],
+            ["Pulpa de aguacate",       "7 días",  "24 horas"],
+            ["Salsa Chilli",            "7 días",  "24 horas"],
+            ["Portobello",              "3 días",  "24 horas"],
+            ["Crema batida",            "Fecha caducidad", "Fecha caducidad"],
+            ["Quínoa",                  "3 días",  "24 horas"],
+            ["Filete de pollo empanizado","5 días", "48 horas"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Orden de Colocación en Refrigerador (de arriba hacia abajo)",
+          "columnas": ["POSICIÓN (ARRIBA→ABAJO)", "PRODUCTO"],
+          "filas": [
+            ["1°", "Quinoa Veggie"],
+            ["2°", "Pulpa de Aguacate"],
+            ["3°", "Portobello"],
+            ["4°", "Chilli"],
+            ["5°", "Pollo Savory"],
+            ["6°", "Carne Angus (5 pz)"],
+            ["7°", "Chicken Tenders"],
+            ["8°", "Filete de Pollo"],
+            ["Estante separado", "Huevo Líquido"],
+            ["Estante separado alto", "Tocino"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Descongelación Carne Angus",
+          "pasos": [
+            "Sacar del congelador la cantidad necesaria de carne cruda de 1/3 lb.",
+            "Utilizar una charola negra, limpia y desinfectada para descongelar.",
+            "Cubrir la bandeja con una envoltura de plástico.",
+            "Con guantes desechables, colocar no más de 5 carnes crudas de 1/3 lb. en la charola.",
+            "Cubrir la carne con plástico SOLO EN LA PARTE DE ARRIBA.",
+            "Etiquetar la charola por 24 horas de descongelación.",
+            "Usar una segunda etiqueta para indicar vida útil de 5 días (incluido tiempo de descongelación).",
+            "Colocar la carne previamente descongelada ARRIBA de la carne recién descongelada. Usar siempre la charola superior PRIMERO."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "⚠️ Carne Angus descongelada debe cumplir temperatura de 36 a 41°F."
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Descongelación Pollo Savory",
+          "pasos": [
+            "Remover del congelador la cantidad necesaria de pechugas de pollo.",
+            "Cubrir la bandeja con envoltura de plástico. NO colocar las pechugas directamente sobre la charola.",
+            "Usando guantes limpios desechables, colocar no más de 6 pechugas en la charola.",
+            "Cubrir el pollo con película plástica o doblar la bolsa para cerrar y cubrir las pechugas.",
+            "Etiquetar la charola por 24 horas de descongelación.",
+            "Usar una segunda etiqueta para indicar vida útil de 5 días (incluido tiempo de descongelación)."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "🚨 La pechuga de pollo (Savory) NO está aprobada para métodos de cocción de emergencia. Si el broiler no está funcionando, NO sirva la pechuga de pollo (Savory)."
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Descongelación Quinoa",
+          "pasos": [
+            "Retirar la cantidad necesaria de hamburguesas vegetarianas congeladas del congelador.",
+            "Cubrir la bandeja con envoltura de plástico. NO colocar la quínoa directamente sobre la charola.",
+            "Con guantes desechables limpios, colocar 6 hamburguesas vegetarianas sobre la bandeja.",
+            "Cubrir las hamburguesas con la envoltura de plástico.",
+            "Etiquetar la bandeja con tiempo de descongelamiento de 24 horas.",
+            "Usar segunda etiqueta para indicar vida útil de 3 días (incluido tiempo de descongelamiento)."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "⚠️ Quinoa descongelada debe cumplir temperatura de 36 a 41°F."
+        }
+      ]
+    },
+
+    "tenders": {
+      "id": "tenders",
+      "titulo": "Tenders / Estación de Pollo",
+      "icono": "🍗",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Vida — Estación de Tenders",
+          "columnas": ["PRODUCTO", "TIEMPO DE VIDA", "OBSERVACIONES"],
+          "filas": [
+            ["Pan molido",     "7 días en uso / 14 días bulto abierto", "Cernir cada 4 hrs o cada 2 bolsas de tenders"],
+            ["Chicken Tenders","48 horas",                              "Conservar a 36-41°F"],
+            ["Filete",         "48 horas",                              "Conservar a 36-41°F"],
+            ["Capeado",        "12 horas",                              "24 horas en refrigeración (reserva)"],
+            ["Agua sanitizada","2 horas",                               "100 ppm (temperatura 65°F a 75°F)"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Receta Mezcla Tenders",
+          "columnas": ["PARÁMETRO", "VALOR"],
+          "filas": [
+            ["Agua",           "52 oz (36°F a 41°F)"],
+            ["Mezcla",         "1 bolsa Buttermilk"],
+            ["Reserva",        "24 horas en refrigeración"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Vida — Condimentos y Toppings",
+          "columnas": ["PRODUCTO", "TIEMPO EN USO", "TIEMPO EN REFRIGERACIÓN"],
+          "filas": [
+            ["Salsa BBQ",             "48 horas", "7 días"],
+            ["Salsa Teriyaki",        "48 horas", "14 días"],
+            ["Salsa Santa Fe",        "48 horas", "7 días"],
+            ["Salsa Clásica",         "48 horas", "7 días"],
+            ["Salsa Especial",        "48 horas", "7 días"],
+            ["Mayonesa",              "48 horas", "10 días"],
+            ["Cátsup",                "10 días",  "10 días"],
+            ["Mostaza",               "10 días",  "10 días"],
+            ["Queso americano/suizo/morrón", "4 horas", "7 días"],
+            ["Queso mixto rallado",   "4 horas en agua hielo / 24 horas en refri apoyo", "5 días"],
+            ["Lechuga",               "4 horas",  "24 horas"],
+            ["Tomate",                "4 horas",  "24 horas"],
+            ["Cebolla blanca",        "4 horas",  "24 horas"],
+            ["Cebolla morada",        "4 horas",  "24 horas"],
+            ["Jalapeño en rodajas",   "48 horas", "7 días"],
+            ["Pepinillo",             "48 horas", "10 días cubeta abierta"],
+            ["Chile california",      "48 horas", "3 días"],
+            ["Salsa Ranch",           "48 horas", "5 días"],
+            ["Salsa Honey Mustard",   "48 horas", "14 días"],
+            ["Salsa Verde",           "48 horas", "10 días"],
+            ["Salsa Roja",            "48 horas", "10 días"],
+            ["Queso Nacho",           "6 horas en vaporera", "5 días"],
+            ["Pepino",                "24 horas", "24 horas"],
+            ["Guacamole preparado",   "12 horas", "36 horas"],
+            ["Piña",                  "48 horas", "48 horas"],
+            ["Mantequilla",           "Al final del día en rueda", "21 días bote abierto"],
+            ["Huevo",                 "24 horas en cambro", "5 días bote cerrado"]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "⚠️ ALMACENAR HUEVO EN LA PARTE MÁS BAJA DEL ANAQUEL. NO DEBAJO DE TENDERS Y FILETE."
+        }
+      ]
+    },
+
+    "tocino": {
+      "id": "tocino",
+      "titulo": "Tocino",
+      "icono": "🥓",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Retención y Cocción del Tocino",
+          "columnas": ["PARÁMETRO", "DETALLE"],
+          "filas": [
+            ["Retención ya cocinado",       "1 hora bajo resistencia de calor (2 etapas)"],
+            ["Microondas 1200W — 1 hoja",   "25 segundos (10 tiras)"],
+            ["Microondas 1200W — 2 hojas",  "45 segundos (20 tiras)"],
+            ["Microondas 1700/1800W — 1 hoja","20 segundos (10 tiras)"],
+            ["Microondas 1700/1800W — 2 hojas","35 segundos (20 tiras)"],
+            ["Vida porcionado para calentar","36 horas"],
+            ["Vida bolsa abierta en refri",  "5 días"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Procedimiento de Calentamiento del Tocino",
+          "pasos": [
+            "Lávese y desinféctese las manos en el fregadero designado.",
+            "Con guantes desechables limpios, retirar 10 rebanadas de tocino del papel vegetal y colocarlas en la rejilla para tocino.",
+            "Extender el tocino uniformemente sobre las ranuras de la rejilla.",
+            "Repetir hasta colocar máximo 5 capas (50 tiras) en la misma dirección.",
+            "NUNCA colocar más de 50 rebanadas (5 hojas) en la rejilla a la vez — no se calentará correctamente.",
+            "PASO 5: Colocar EL TOCINO EN LA DIVISIÓN 1 BAJO LA LÁMPARA DE CALOR (máximo 50 tiras).",
+            "PASO 6: Pasados los 5 minutos, pasar a la DIVISIÓN 2 con tiempo de vida de 1 hora."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "🚨 El tocino siempre DEBE calentarse. NUNCA colocar tocino frío sobre un sándwich o producto de desayuno."
+        }
+      ]
+    },
+
+    "panes": {
+      "id": "panes",
+      "titulo": "Panes y Estación Feeder",
+      "icono": "🍞",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Tipos de Pan",
+          "columnas": ["PAN", "DESCRIPCIÓN"],
+          "filas": [
+            ["Pan Tradicional", "Pan redondo con semillas — uso hamburguesas estándar"],
+            ["Pan Integral",    "Honey Wheat 4.0\" — para sándwiches de pollo"],
+            ["Pan Bun",         "Pan sencillo chico (Plain Bun) 4.0\""],
+            ["Pan Horneado",    "Pan premium 4.25\" — requiere mantequilla"],
+            ["Sourdough",       "Pan artesanal — requiere mantequilla"]
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Reglas del Pan",
+          "items": [
+            "Los panes que se deben untar con mantequilla son: HORNEADO y SOURDOUGH.",
+            "El pan debe enviarse al asador: TACÓN lado IZQUIERDO, CORONA lado DERECHO.",
+            "Los panes tostados tienen un tiempo de retención de 5 minutos.",
+            "RETENCIÓN de pan tostado: 5 minutos máximo."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Procedimiento para Panes Congelados",
+          "columnas": ["PARÁMETRO", "DETALLE"],
+          "filas": [
+            ["Almacenamiento",       "Congelador"],
+            ["Tiempo de descongelación","6 horas a temperatura ambiente"],
+            ["Tiempo de vida",       "5 días (incluido tiempo de descongelación)"],
+            ["Temperatura congelador","0 a 10°F"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Estación Feeder — Reglas",
+          "pasos": [
+            "IMPORTANTE: Siempre antes de entrar a la estación → LAVADO DE MANOS y USAR GUANTES.",
+            "Usar siempre las pinzas o espátula designada para cada producto.",
+            "CARNE CKE, CARNE ANGUS Y POLLO SAVORY: Deberán enviarse al principio de la cadena del asador.",
+            "NO PONER PRODUCTO MÁS CERCA DE 2\" PULGADAS DE LA ORILLA DE LA CADENA.",
+            "DEJAR POR LO MENOS 1\" PULGADA ENTRE CADA PRODUCTO."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Dispensador Sal y Pimienta Angus",
+          "columnas": ["PASO", "INSTRUCCIÓN"],
+          "filas": [
+            ["1", "Llenar dispensador limpio, desinfectado y seco con mezcla Sal-Pimienta. Colocar tiempo de descarte de 7 días."],
+            ["2", "Cerrar y sellar la bolsa. Colocar en almacenamiento seco."],
+            ["3", "Colocar dispensador cerca de la parrilla para condimentar las hamburguesas Angus."],
+            ["4", "Limpiar semanalmente o según necesario. NO desarmar. Dejar secar al aire durante la noche."],
+            ["Aplicación", "Sostener a 6 pulgadas (15 cm) de altura. Aplicar 1 clic en el centro de cada hamburguesa ANTES de colocarla en la parrilla."]
+          ]
+        }
+      ]
+    },
+
+    "postres": {
+      "id": "postres",
+      "titulo": "Postres y Helados",
+      "icono": "🍦",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Preparación de Malteadas",
+          "columnas": ["TAMAÑO", "PREP"],
+          "filas": [
+            ["Malteada Grande", "8 oz (2 bolas bien hechas de 4 oz c/u)"],
+            ["Malteada Chica",  "6 oz (2 bolas bien hechas de 3 oz c/u)"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Proceso de Malteada",
+          "pasos": [
+            "Ajustar el control de la batidora a '40' antes de preparar.",
+            "Obtener una porción de helado sabor vainilla preparado en un vaso.",
+            "Añadir una cucharada de oreo molido (si aplica) o un push de jarabe de vainilla.",
+            "Verter leche fresca hasta la línea de llenado. Presionar ligeramente los lados para remover burbujas de aire.",
+            "Colocar la tapa de cúpula transparente.",
+            "Asegurarse de ajustar la velocidad de la mezcladora en 40.",
+            "Colocar el vaso alrededor del eje de la batidora, hasta la mitad del vaso.",
+            "Encender la batidora y mezclar bien, moviendo el vaso hacia arriba y abajo.",
+            "Apagar la batidora. La malteada debe ser ESPESA, no aguada. Si no tiene textura adecuada, desechar y preparar de nuevo.",
+            "Llenar la tapa transparente con crema batida.",
+            "Servir con un popote."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Datos Clave de Malteadas",
+          "columnas": ["PARÁMETRO", "VALOR"],
+          "filas": [
+            ["Velocidad máquina (versión anterior)",    "40 RPM"],
+            ["Velocidad máquina (versión actualizada)", "80 RPM"],
+            ["Tiempo de vida del vaso metálico",        "4 horas"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Helado (Super Conos)",
+          "columnas": ["PARÁMETRO", "DETALLE"],
+          "filas": [
+            ["Bola sencilla",    "Debe pesar 4 oz"],
+            ["Agua para cuchara","Charola 1/6 con agua tibia — etiqueta de descarte 4 horas"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Área del Mostrador — Tiempos de Vida",
+          "columnas": ["PRODUCTO", "TIEMPO EN USO", "OBSERVACIONES"],
+          "filas": [
+            ["Oreo cookie crumbs",        "48 horas",        "7 días bolsa abierta en almacén"],
+            ["Conos para helado",         "48 horas",        "10 días caja abierta"],
+            ["Helados fresa/vainilla/choc","21 días abierto", "45 días en congelador — 3 fechas: apertura, recepción, caducidad"],
+            ["Jarabe de vainilla",        "30 días",         "No exceder fecha del envase"],
+            ["Galleta",                   "72 horas",        ""],
+            ["Leche",                     "7 días en uso",   "Fecha indicada del bote o la caja"],
+            ["Prep de malteadas",         "12 horas",        ""],
+            ["Crema batida",              "Fecha del bote",  ""],
+            ["Café",                      "1 hora",          "Mantener arriba de 165°F"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Nueva: Chocolate Chip Cookie — Descongelación",
+          "columnas": ["OPCIÓN", "MÉTODO"],
+          "filas": [
+            ["Opción 1 — Contenedor plástico", "Refrigeración 36-41°F durante 6 horas. Descarte: 72 horas."],
+            ["Opción 2 — Charola metálica",    "Mínimo 10 galletas, máximo 20. Refrigeración 6 horas. Descarte: 3 días."]
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "⚠️ Cuidados con las Galletas",
+          "items": [
+            "No almacenar el producto descongelado en refrigeración.",
+            "No dejes las galletas descongeladas fuera sin empacar — se secan y se quiebran.",
+            "No recongelar el producto una vez descongelado.",
+            "Usar solo utensilios y charolas limpias y sanitizadas.",
+            "Cualquier galleta con aspecto seco, roto o alterado debe desecharse."
+          ]
+        }
+      ]
+    },
+
+    "aguas": {
+      "id": "aguas",
+      "titulo": "Aguas Frescas",
+      "icono": "💧",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "lista",
+          "titulo": "Sabores Disponibles",
+          "items": ["Limonada Dragon Fruit", "Jamaica", "Tamarindo", "Fresa"]
+        },
+        {
+          "tipo": "info",
+          "texto": "📏 PUNTO CLAVE: Preparar con 14 LITROS DE AGUA exactos. Marcar el nivel en la cubeta con plumón Sharpie para referencia permanente."
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Preparación de Aguas Frescas (6 pasos)",
+          "pasos": [
+            "PASO 1: Utilizar la cubeta de 20 litros limpia y desinfectada. Retirar el agua fría del refrigerador.",
+            "PASO 2: Verter 14 litros de agua fría en la cubeta de 20L. Agregar una botella de azúcar líquida.",
+            "PASO 3: Mezclar con un batidor hasta obtener una mezcla homogénea.",
+            "PASO 4: Agregar 1 litro de concentrado F-Díaz sin azúcar añadida y agitar hasta obtener color uniforme.",
+            "PASO 5: Dividir la receta preparada en dos con apoyo de una cubeta de 10 litros.",
+            "PASO 6: Tapar el recipiente, colocar etiqueta de 48 horas de vida útil y llevar a refrigeración."
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Llenado de la Máquina de Bebidas",
+          "items": [
+            "Usar la cubeta de 10L para llenar la máquina. Con el equipo APAGADO, verter la mezcla en el dispensador Vollrath.",
+            "Respetar los niveles mínimos y máximos.",
+            "Prender los bowls individuales para que las aspas de cada tina comiencen a circular.",
+            "Tapar los contenedores y probar el flujo mediante los grifos.",
+            "Resurtir el dispensador cuando llegue al 1/3 de su capacidad para no congelar el agua."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Vida y Limpieza",
+          "columnas": ["PARÁMETRO", "DETALLE"],
+          "filas": [
+            ["Tiempo de vida en tolvas",       "7 días — se desechan los lunes"],
+            ["Tiempo bajo refrigeración",      "48 horas"],
+            ["Limpieza del equipo",            "Lunes, Miércoles y Viernes"],
+            ["Temperatura de agua para mezcla","33°F a 41°F (previamente enfriada)"]
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "🚨 NUNCA agregar agua con hielos dispersos en el equipo — esto lo dañará. El equipo mantiene temperatura pero NO enfría."
+        }
+      ]
+    },
+
+    "pinzas": {
+      "id": "pinzas",
+      "titulo": "Pinzas y Utensilios",
+      "icono": "🥢",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Guía de Pinzas por Color / Tipo",
+          "columnas": ["PINZA", "USO EXCLUSIVO"],
+          "filas": [
+            ["Pinzas dentadas metálicas (sin mango de color)", "Carne congelada"],
+            ["Pinzas con mango AZUL",                          "Pollo Savory"],
+            ["Pinzas con mango ROJO",                          "Chicken Tenders"],
+            ["Pinzas metálicas de uso genérico",               "Uso general"],
+            ["Pinzas metálicas mango AMARILLO",                "Quinoa"],
+            ["Espátula larga",                                 "Carne Big Angus"]
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Reglas del Congelador",
+          "items": [
+            "Las carnes de hamburguesa NO deberán rebasar los 10°F.",
+            "Las carnes no deben rebasar la línea de congelación.",
+            "Las pinzas se deberán cambiar cada 4 hrs para su lavado y sanitizado."
+          ]
+        }
+      ]
+    },
+
+    "zonapeligro": {
+      "id": "zonapeligro",
+      "titulo": "Zona de Peligro de Temperatura",
+      "icono": "🌡",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "alerta",
+          "texto": "🚨 ZONA DE PELIGRO: De 41°F a 140°F — Es la temperatura donde las bacterias se desarrollan con rapidez y provocan enfermedades."
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Temperaturas de Referencia",
+          "columnas": ["TEMPERATURA", "EQUIPO / USO"],
+          "filas": [
+            ["700-750°F",  "Broiler (asador de carne)"],
+            ["475-500°F",  "Platina del pan"],
+            ["350°F",      "Freidoras (±5°F)"],
+            ["325°F",      "Horno Blodget (pan horneado, tocino)"],
+            ["325°F",      "Cocción de galletas"],
+            ["300-325°F",  "Parrilla de desayunos: 300°F (huevo) / 325°F (carnes y hotcakes)"],
+            ["225°F",      "Prince Castle (retención)"],
+            ["190-200°F",  "Agua para cafetera"],
+            ["180-200°F",  "Steamer (vaporera)"],
+            ["165°F",      "Cocción de Chicken Tenders, Estrellas, Filete / Chilli, Porto y Salsa Queso en horno"],
+            ["160°F",      "Cocción de Carne CKE, Carne Angus y Quinoa"],
+            ["140°F",      "Cocción de Pollo Savory y productos en retención"],
+            ["120°F",      "Agua de tarja de lavado"],
+            ["110°F",      "Agua lavamanos"],
+            ["36-41°F",    "Temperatura de refrigeración"],
+            ["0-10°F",     "Temperatura de congelación"]
+          ]
+        }
+      ]
+    },
+
+    "lavado": {
+      "id": "lavado",
+      "titulo": "Lavado de Manos",
+      "icono": "🙌",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "pasos",
+          "titulo": "Procedimiento de Lavado de Manos",
+          "pasos": [
+            "Dispensar toalla de papel ANTES. Mojar las manos con agua caliente y jabón líquido del dispensador montado en la pared.",
+            "Hacer espuma y frotarse manos, muñecas y antebrazos por 20 SEGUNDOS. Enjuagar totalmente con agua caliente.",
+            "Utilizar las toallas de papel del dispensador. Secar manos totalmente. Usar una toalla para cerrar la llave — tirarla a la basura.",
+            "Con manos secas, aplicar gel anti-bacterial del dispensador montado en la pared.",
+            "Con manos limpias, desinfectadas y secas, ponerse guantes de plástico limpios."
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "⚠️ Momentos Obligatorios de Lavado de Manos",
+          "items": [
+            "CADA 20 MINUTOS durante el turno.",
+            "ANTES de entrar al turno.",
+            "ANTES de manipular alimentos.",
+            "ANTES de entrar a tu estación de trabajo.",
+            "SI TE TOCAS alguna parte de tu cuerpo.",
+            "DESPUÉS de usar el baño.",
+            "DESPUÉS de comer.",
+            "Regularmente durante el turno."
+          ]
+        }
+      ]
+    },
+
+    "limpieza": {
+      "id": "limpieza",
+      "titulo": "Limpieza y Sanitización",
+      "icono": "🧼",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "pasos",
+          "titulo": "Lavado y Desinfección de Charolas, Recipientes y Utensilios (3 Compartimentos)",
+          "pasos": [
+            "Asegurarse de que todos los fregaderos estén limpios y desinfectados antes de usarse.",
+            "COMPARTIMENTO 1 — LAVADO: Llenar con suficiente agua jabonosa caliente (120°F) para cubrir las charolas.",
+            "COMPARTIMENTO 2 — ENJUAGADO: Mantener el compartimiento central vacío (enjuague con agua limpia).",
+            "COMPARTIMENTO 3 — DESINFECCIÓN: Llenar con solución desinfectante. Verificar 50-100 ppm.",
+            "Sumergir la TIRA en el desinfectante por 10 SEGUNDOS — NO mover ni agitar la tira.",
+            "Colocar los utensilios en el tercer compartimiento y sumergir por completo durante 60 SEGUNDOS.",
+            "Remover los utensilios y dejar secar escurriendo — NO usar toallas."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "🚨 LOS UTENSILIOS DE COCINA DEBEN HIGIENIZARSE CADA 4 HORAS. En ese tiempo se pudieron propagar las bacterias."
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "KAY® Sink Sanitizer — Preparación",
+          "columnas": ["PARÁMETRO", "VALOR"],
+          "filas": [
+            ["Agua en tercer compartimiento", "38 litros a 65-75°F"],
+            ["Sanitizante",                   "1 sobre"],
+            ["Concentración requerida",       "100 ppm"],
+            ["Tiempo de inmersión de la tira","10 segundos (NO mover)"],
+            ["Tiempo de inmersión utensilios","60 segundos"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Guía Código de Colores — Herramientas de Limpieza",
+          "columnas": ["COLOR", "ÁREA DE USO"],
+          "filas": [
+            ["ROJO",   "Áreas de comedor, center post y mostrador"],
+            ["VERDE",  "Áreas de cocina (contacto con el alimento)"],
+            ["AZUL",   "Sanitarios y actividades de limpieza"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Vida Cubetas de Sanitizante",
+          "columnas": ["ÁREA", "TIEMPO"],
+          "filas": [
+            ["Comedor y cocina",    "4 horas"],
+            ["Cubeta de tenders",   "2 horas"]
+          ]
+        }
+      ]
+    },
+
+    "alergenos": {
+      "id": "alergenos",
+      "titulo": "Alérgenos y Seguridad",
+      "icono": "⚠️",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "info",
+          "texto": "Un alérgeno es un agente que, al ingresar al organismo humano lo deja vulnerable, y es capaz de originar una reacción alérgica."
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Los 9 Alérgenos Principales",
+          "items": [
+            "Le — Leche (Lácteos)",
+            "Tri — Trigo (Gluten)",
+            "So — Soja / Soya",
+            "Hue — Huevo",
+            "Pes — Pescado",
+            "Ma — Mariscos (Crustáceos y Moluscos)",
+            "Ca — Cacahuate",
+            "Nu — Nueces (Frutos de cáscara)",
+            "Sésamo — Granos de sésamo"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "¿Qué significa CHATTO?",
+          "columnas": ["LETRA", "CONDICIÓN IDEAL PARA BACTERIAS"],
+          "filas": [
+            ["C", "COMIDA"],
+            ["H", "HUMEDAD"],
+            ["A", "ACIDEZ"],
+            ["T", "TIEMPO"],
+            ["T", "TEMPERATURA"],
+            ["O", "OXÍGENO"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "¿Qué significa RAPA?",
+          "columnas": ["LETRA", "CONDICIÓN IDEAL PARA PLAGAS"],
+          "filas": [
+            ["R", "REFUGIO"],
+            ["A", "ALIMENTO"],
+            ["P", "PAREJA"],
+            ["A", "AGUA"]
+          ]
+        }
+      ]
+    },
+
+    "enfermedades": {
+      "id": "enfermedades",
+      "titulo": "Enfermedades por Alimentos",
+      "icono": "🏥",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "lista",
+          "titulo": "Enfermedades con Diagnóstico Médico que Impiden Trabajar",
+          "items": [
+            "NOROVIRUS — Gripe estomacal",
+            "HEPATITIS A",
+            "SALMONELLA — Fiebre Tifoidea",
+            "SALMONELLOSIS",
+            "E. COLI",
+            "SHIGELOSIS",
+            "TUBERCULOSIS u otra enfermedad transmitida a través de alimentos"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Síntomas de Infección Causada por Alimentos",
+          "items": [
+            "Dolor abdominal",
+            "Ictericia",
+            "Pérdida de apetito",
+            "Dolor de garganta",
+            "Diarrea",
+            "Llagas en la piel",
+            "Fiebre",
+            "Infección respiratoria aguda",
+            "Vómito"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Tipos de Contaminación de Alimentos",
+          "columnas": ["TIPO", "CAUSA", "EJEMPLO"],
+          "filas": [
+            ["Bacterial", "Provocada por gérmenes que se crean en la comida", "Bacteria, Virus, Moho"],
+            ["Física",    "Causada por una partícula sólida ajena al alimento", "Un alambre en la comida"],
+            ["Química",   "Causada por substancias que entran en contacto con los alimentos", "Químicos de limpieza"]
+          ]
+        }
+      ]
+    },
+
+    "Feeder": {
+      "id": "Feeder",
+      "titulo": "Estación Feeder",
+      "icono": "🔥",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "lista",
+          "titulo": "Reglas de la Estación Feeder",
+          "items": [
+            "Usar siempre las pinzas o espátula designada para CADA producto.",
+            "CARNE CKE, CARNE ANGUS Y POLLO SAVORY: Deberán enviarse al PRINCIPIO de la cadena del asador.",
+            "NO PONER PRODUCTO MÁS CERCA DE 2\" PULGADAS DE LA ORILLA DE LA CADENA.",
+            "DEJAR POR LO MENOS 1\" PULGADA ENTRE CADA PRODUCTO.",
+            "IMPORTANTE: Siempre antes de entrar → LAVADO DE MANOS y USAR GUANTES en el área."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Asador (Broiler) — Especificaciones",
+          "columnas": ["PARÁMETRO", "VALOR"],
+          "filas": [
+            ["Temperatura interna del broiler", "700 a 750°F"],
+            ["Temperatura placa del pan",       "475 a 500°F"],
+            ["Distancia de la orilla de cadena","2\" pulgadas mínimo"],
+            ["Espacio entre productos",         "1\" pulgada mínimo"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Calibración del Asador",
+          "pasos": [
+            "Asegurarse de que todas las piezas del asador estén en su lugar y que esté enchufado.",
+            "Encender el asador con campana extractora encendida.",
+            "PASO 2: Establecer temperatura en 1000°F. Dejar el asador a 1000°F durante 60 minutos (NO cocinar).",
+            "Una vez transcurridos los 60 minutos, usar las flechas para poner el punto de ajuste 20°F por debajo de la temperatura real.",
+            "El número inferior es la temperatura establecida — el número superior es la temperatura real."
+          ]
+        }
+      ]
+    },
+
+    "autoservicio": {
+      "id": "autoservicio",
+      "titulo": "Auto Servicio — Drive Thru",
+      "icono": "🚗",
+      "cat": "servicio",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Estándares de Tiempo Drive Thru",
+          "columnas": ["PUNTO", "ESTÁNDAR"],
+          "filas": [
+            ["Saludo en bocina",              "Inmediatamente"],
+            ["Tablero del menú (saludo + orden)", "45 segundos o menos"],
+            ["Tiempo en ventanilla (por vehículo)","1:00 minuto o menos"],
+            ["Tiempo en cola (por auto)",         "4:00 minutos o menos"]
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "5 Conductas Clave del Drive Thru",
+          "items": [
+            "1. Las BEBIDAS están listas para cuando el vehículo llega a la ventanilla.",
+            "2. Las BEBIDAS y POPOTES son lo primero que sale de la ventana al recibir el pago.",
+            "3. Los CONDIMENTOS están listos antes de que los alimentos lleguen a la zona de preparación.",
+            "4. Los ALIMENTOS y CONDIMENTOS están listos antes de que se complete el pago.",
+            "5. Los ALIMENTOS y CONDIMENTOS se entregan cuando se entrega el cambio."
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Actitud del Equipo",
+          "items": [
+            "Saludar amistosamente.",
+            "Sonreír y mirar a los ojos.",
+            "Usar las frases apropiadas.",
+            "Decir 'Por favor' y 'Gracias'."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Guión SMART de Cajas (Venta Sugerida)",
+          "columnas": ["LETRA", "ACCIÓN"],
+          "filas": [
+            ["S — Sonríe y sugiere", "Hola. ¿Le gustaría probar nuestra nueva hamburguesa The Team Burger?"],
+            ["M — Combo, Tamaño, Pan Horneado", "¿Le gustaría que sea en combo? ¿Grande le parece bien?"],
+            ["A — Adicionales", "¿Le gustaría agregar una malteada grande a su orden?"],
+            ["R — Repite la orden", "REPITA LA ORDEN PARA CONFIRMAR. ¿Para comer aquí o para llevar?"],
+            ["T — Gracias", "Gracias, que tenga buen provecho. Vuelva pronto."]
+          ]
+        }
+      ]
+    },
+
+    "delivery": {
+      "id": "delivery",
+      "titulo": "Delivery / Uber Eats",
+      "icono": "🛵",
+      "cat": "servicio",
+      "secciones": [
+        {
+          "tipo": "lista",
+          "titulo": "Rol del Líder de Delivery",
+          "items": [
+            "Escuchar el tono de notificación del pedido.",
+            "Revisar el pedido y confirmar que todos los productos están disponibles.",
+            "Confirmar la hora deseada del pedido por el invitado.",
+            "Ingresar el pedido en el POS y comunicar a cocina cuándo prepararlo.",
+            "Reunir condimentos y bebidas solicitadas.",
+            "Notificar al cocinero que prepare el pedido. Empacar y sellar antes que llegue el repartidor.",
+            "Al llegar el repartidor, dirigirlo al área de DELIVERY y confirmar el código de pedido.",
+            "Garantizar todos los aspectos de velocidad del servicio."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Empaque — Hamburguesas y Sándwiches Delivery",
+          "columnas": ["PRODUCTO", "EMPAQUE"],
+          "filas": [
+            ["Famous Star, Super Star, Western, Double Western, Teriyaki, Big Carl", "Envolver en papel actual → colocar en clamshell Big Angus Burger con etiqueta del producto"],
+            ["Big Angus Burgers / Big Chicken Fillet",                               "Sin cambio de empaque"],
+            ["Papas Fritas Chico",  "Caja de Tenders Pequeña"],
+            ["Papas Fritas Mediano","Caja de Tenders Grande"],
+            ["Papas Fritas Grande", "Caja de Tender Grande"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Responsabilidades del Equipo de Delivery",
+          "columnas": ["COMO EQUIPO", "COMO LÍDER"],
+          "filas": [
+            ["Llegada de pedidos confirmados",         "Observar el desempeño del equipo"],
+            ["Los pedidos están preparados",           "Entrenar al equipo"],
+            ["Los pedidos están embolsados",           "Ayudarlos según sea necesario"],
+            ["Llegada de repartidores — código confirmado", "Mantener el equipo enfocado"],
+            ["Los pedidos se entregan al repartidor",  "Enfocarse en velocidad y precisión"]
+          ]
+        }
+      ]
+    },
+
+    "Super Star": {
+      "id": "Super Star",
+      "titulo": "Servicio Super Star",
+      "icono": "⭐",
+      "cat": "servicio",
+      "secciones": [
+        {
+          "tipo": "info",
+          "texto": "MISIÓN DE CARL'S JR: HACER FELIZ AL INVITADO. — REGLA DE ORO: TRATAR A LOS DEMÁS COMO TE GUSTARÍA SER TRATADO."
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Los 5 Picos de la Estrella",
+          "columnas": ["PICO", "SIGNIFICADO"],
+          "filas": [
+            ["#1", "El invitado es siempre lo primero (PRIORIDAD #1 SIEMPRE)"],
+            ["#2", "Hazlo bien desde la primera vez (Exactitud de la orden)"],
+            ["#3", "No discuta, haga lo correcto (Deje contento al invitado)"],
+            ["#4", "Es un placer servir a los invitados (Mi estupenda actitud de servicio)"],
+            ["#5", "Yo soy el Responsable del servicio que doy a los invitados"]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Significado de SUPER",
+          "columnas": ["LETRA", "VALOR"],
+          "filas": [
+            ["S", "SONRISAS — Las sonrisas son gratis, todos merecen una"],
+            ["U", "URGENCIA — Trabajar rápido para dar un gran servicio"],
+            ["P", "ES UN PLACER — 'Por favor', 'Gracias' y 'Es un placer' hace la diferencia"],
+            ["E", "ENFOCADO — Conecta y reconoce, contacto visual, concéntrate en el invitado"],
+            ["R", "RECUPERAR — Escuchar, Disculpar, Satisfacer, Agradecer"]
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Manejo de Quejas — Pasos EDSA",
+          "pasos": [
+            "ESCUCHAR — Nunca interrumpir al invitado, no dar impresión de estar distraído.",
+            "DISCULPARSE — Sin admitir culpa. Decir: 'Siento que haya tenido una mala experiencia'.",
+            "SATISFACER — Preguntar qué puede hacerse. Hacer todo lo posible por el invitado.",
+            "AGRADECER — Siempre agradecer al invitado que haya notificado la situación."
+          ]
+        }
+      ]
+    },
+
+    "recepcion": {
+      "id": "recepcion",
+      "titulo": "Recepción de Mercancía y Control de Calidad",
+      "icono": "📦",
+      "cat": "cocina",
+      "secciones": [
+        {
+          "tipo": "lista",
+          "titulo": "Puntos de Control de Calidad",
+          "items": [
+            "Centro de distribución → Restaurante → Almacenamiento → Tiempo de vida → Descongelado → Preparación → Armado de la orden → Invitado"
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Recepción de Productos",
+          "pasos": [
+            "REVISAR la calidad del producto, caja o embolsado, y la temperatura en productos refrigerados o congelados.",
+            "ALMACENAR el producto con el sistema PEPS (Primeras Entradas, Primeras Salidas). Todo producto que llegó primero debe salir primero.",
+            "DISTANCIAS de almacenaje: Cajas a 6 pulgadas del suelo y a 2 pulgadas de la pared (evitar humedad y descongelación).",
+            "TEMPERATURAS para recibir: Congelados 0°F a 10°F / Refrigerados 36°F a 41°F.",
+            "Los productos al recibirse NO deben estar fuera del camión o cámara MÁS DE 10 MINUTOS."
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Temperaturas de Recepción",
+          "columnas": ["TIPO DE PRODUCTO", "TEMPERATURA DE RECEPCIÓN"],
+          "filas": [
+            ["Productos CONGELADOS",    "0°F a 10°F"],
+            ["Productos REFRIGERADOS",  "36°F a 41°F"]
+          ]
+        }
+      ]
+    },
+
+    "datos": {
+      "id": "datos",
+      "titulo": "Datos Importantes",
+      "icono": "📖",
+      "cat": "servicio",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Definiciones Clave",
+          "columnas": ["SIGLA/TÉRMINO", "SIGNIFICADO"],
+          "filas": [
+            ["PCC",       "Punto Crítico de Control"],
+            ["OPM",       "Manual de Operaciones"],
+            ["MSDS",      "Fichas de datos de seguridad de los químicos (Material Safety Data Sheets)"],
+            ["R&M",       "Manual de reparación y mantenimiento"],
+            ["QFM",       "Quality Food Management (Administración de la calidad de los alimentos)"],
+            ["SOUND OFF", "Medición de tiempos de servicio. Anuncia tiempos de preparación a la cocina para generar sentido de urgencia."],
+            ["ANSUL",     "Sistema supresor de incendios que actúa en plancha, freidora y asador (solución acuosa de sales orgánicas con PH bajo)."],
+            ["R.O.S",     "Restaurant Operational System — tablero de organización basado en número de empleados y posiciones por turno."],
+            ["REGLA DE ORO","Tratar a los demás como te gustaría ser tratado."],
+            ["MISIÓN",    "Hacer feliz al invitado."]
+          ]
+        }
+      ]
+    },
+
+    "quejas": {
+      "id": "quejas",
+      "titulo": "Manejo de Quejas",
+      "icono": "🗣",
+      "cat": "servicio",
+      "secciones": [
+        {
+          "tipo": "pasos",
+          "titulo": "Procedimiento EDSA para Quejas",
+          "pasos": [
+            "ESCUCHAR — Siempre escuche, nunca interrumpa al invitado. No dé la impresión de estar distraído.",
+            "DISCULPARSE — Mantenga la calma, no se ponga a la defensiva. Use: 'Siento que haya tenido una mala experiencia' (NO 'Perdón por haberle provocado este inconveniente').",
+            "SATISFACER — Pregunte qué puede hacer para resolver. Obtenga toda la información posible y transmítala al equipo.",
+            "AGRADECER — Siempre agradezca al invitado que notificó la situación y dio la oportunidad de arreglarla."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "⚠️ IMPORTANTE: Si un invitado solicita un número para quejarse o comentar sobre alguna sucursal, proporcionar el número del Gerente de Operaciones."
+        }
+      ]
+    },
+
+    "mostrador": {
+      "id": "mostrador",
+      "titulo": "Área del Mostrador",
+      "icono": "🏪",
+      "cat": "servicio",
+      "secciones": [
+        {
+          "tipo": "tabla",
+          "titulo": "Tiempos de Vida — Área del Mostrador",
+          "columnas": ["PRODUCTO", "TIEMPO EN USO", "OBSERVACIONES"],
+          "filas": [
+            ["Oreo cookie crumbs",        "48 horas",     "7 días bolsa abierta en almacén"],
+            ["Conos para helado",         "48 horas",     "10 días caja abierta"],
+            ["Helados (fresa/vainilla/choc)","21 días abierto","45 días congelador — 3 fechas: apertura, recepción y caducidad"],
+            ["Jarabe de vainilla",        "30 días",      "No exceder fecha del envase"],
+            ["Galleta",                   "72 horas",     ""],
+            ["Leche",                     "7 días en uso","Fecha indicada del bote o la caja"],
+            ["Prep de malteadas",         "12 horas",     "8 oz grande (2 bolas 4oz) / 6 oz chica (2 bolas 3oz)"],
+            ["Crema batida",              "Fecha del bote",""],
+            ["Café",                      "1 hora",       "Mantener arriba de 165°F"],
+            ["Cubetas de sanitizante comedor/cocina","4 horas","100 ppm a 65-75°F"],
+            ["Cubetas de sanitizante tenders","2 horas",  ""],
+            ["Aguas Frescas en tolvas",   "7 días",       "Se desechan los lunes — Limpieza: Lunes, Miércoles, Viernes"],
+            ["Aguas Frescas en refrigeración","48 horas", ""]
+          ]
+        }
+      ]
+    }
+
+    ,
+
+    "politica_uniforme": {
+      "id": "politica_uniforme",
+      "titulo": "Política de Uso del Uniforme",
+      "icono": "👕",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "alerta",
+          "texto": "No está permitido portar el uniforme de trabajo después de la jornada laboral si vas a realizar actividades personales."
+        },
+        {
+          "tipo": "parrafos",
+          "titulo": "Memorándum — Julio 2025",
+          "items": [
+            "Se solicita reforzar o implementar la política del uso del uniforme fuera de los restaurantes. Este lineamiento busca cuidar la imagen de nuestra marca y mantener una adecuada separación entre el ámbito laboral y personal.",
+            "El uso indebido del uniforme fuera de las funciones laborales es responsabilidad exclusiva del individuo. Cero Tenedor S.A.P.I. de C.V se deslinda de cualquier acto, incidente o responsabilidad civil, penal o administrativa que pudiera derivarse del porte no autorizado de los logotipos institucionales.",
+            "El colaborador tiene la obligación de proteger el prestigio de la marca y abstenerse de utilizar su imagen de forma indebida fuera del horario de trabajo."
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Puntos Clave",
+          "items": [
+            "Al terminar tu turno, cámbiate el uniforme antes de salir del restaurante.",
+            "No uses el uniforme en tiendas, transporte público, eventos personales ni redes sociales fuera del contexto laboral.",
+            "Cuida y reporta cualquier daño en tu uniforme a tu supervisor.",
+            "El uniforme es propiedad de la empresa; trátalo con respeto."
+          ]
+        }
+      ]
+    },
+
+    "politica_enfermedad": {
+      "id": "politica_enfermedad",
+      "titulo": "Política de Reporte de Enfermedad",
+      "icono": "🏥",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "parrafos",
+          "titulo": "Objetivo",
+          "items": [
+            "Todos los empleados deben estar familiarizados y comprender esta Política antes de comenzar a trabajar en el restaurante.",
+            "Los empleados deben reportar la información médica relevante de manera oportuna para que la persona a cargo pueda reducir el riesgo de transmisión de enfermedades transmitidas por alimentos.",
+            "Es responsabilidad del supervisor asegurarse de que sus subordinados estén familiarizados y entiendan esta Política."
+          ]
+        },
+        {
+          "tipo": "parrafos",
+          "titulo": "Informando a la Persona a Cargo",
+          "items": [
+            "Los empleados que manipulan alimentos deben informar los siguientes síntomas, afecciones, enfermedades diagnosticadas y exposiciones de alto riesgo a la persona a cargo.",
+            "Los empleados deben reportar de inmediato cualquier problema antes de comenzar un turno, o tan pronto como comiencen los síntomas durante el turno. Esto reducirá la posibilidad de contaminar alimentos, transmitir enfermedades a otros empleados o clientes, o causar un brote asociado con el restaurante."
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Síntomas y Condiciones (causadas por infección)",
+          "items": [
+            "Calambre abdominal",
+            "Pérdida del apetito (más de 3 días)",
+            "Diarrea",
+            "Fiebre",
+            "Vómito",
+            "Ojos o Piel amarilla (Ictericia)",
+            "Dolor de garganta con fiebre",
+            "Llagas en la mano, muñeca o parte del cuerpo expuesta (forúnculos, heridas infectadas) que no pueden vendarse",
+            "Infección respiratoria aguda (tos o secreción nasal)"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Enfermedades Diagnosticadas Médicamente",
+          "items": [
+            "Norovirus",
+            "Hepatitis A",
+            "Fiebre Tifoidea (Salmonella typhi)",
+            "Salmonelosis (Salmonella spp.)",
+            "E. coli O157:H7 (u otra infección por Escherichia coli/STEC productora de toxinas SHIGA)",
+            "Shigelosis (Shigella spp.)",
+            "Cualquier enfermedad transmisible a través de los alimentos (ej. Tuberculosis)"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Exposiciones de Alto Riesgo",
+          "items": [
+            "Exposición o sospecha de causar un brote confirmado por consumo/preparación de alimentos implicados, o por consumo de alimentos preparados por una persona infectada con fiebre tifoidea, shigelosis, E. coli O157:H7 o hepatitis A.",
+            "Diagnóstico de fiebre tifoidea en los últimos 3 meses sin recibir tratamiento con antibióticos.",
+            "Un miembro del hogar diagnosticado con fiebre tifoidea, shigelosis, E. coli O157:H7 o hepatitis A.",
+            "Un miembro del hogar que asiste o trabaja en un entorno con brote confirmado de fiebre tifoidea, shigelosis, E. coli O157:H7 o hepatitis A."
+          ]
+        },
+        {
+          "tipo": "alerta",
+          "texto": "LA PERSONA A CARGO DEBE EXCLUIR DEL TRABAJO AL EMPLEADO QUE MANIPULA ALIMENTOS CUANDO ES SINTOMÁTICO Y CAPAZ DE TRANSMITIR ENFERMEDADES."
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Volver al Trabajo",
+          "pasos": [
+            "No mostrar síntomas ni condiciones reportables durante al menos 24 horas (asintomático), O",
+            "Presentar documentación de un proveedor de atención médica autorizado que indique que el empleado ya no es infeccioso.",
+            "En casos de enfermedades de alto riesgo, esperar la autorización de la autoridad reguladora de alimentos local."
+          ]
+        },
+        {
+          "tipo": "pasos",
+          "titulo": "Si la Autoridad de Salud te Notifica de un Empleado Enfermo",
+          "pasos": [
+            "Regresa al empleado a casa de inmediato si aún está en el restaurante.",
+            "Anota el nombre y teléfono del funcionario de salud con quien hablaste.",
+            "Registra el nombre exacto de la enfermedad (pide que te lo deletreen si es necesario).",
+            "Anota la fecha en que creen que el empleado estuvo expuesto o se volvió contagioso.",
+            "Revisa al resto del equipo; envía a casa a cualquier empleado con síntomas.",
+            "Contacta a tu FBC con toda esta información y sigue sus instrucciones."
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "Reconocimiento del Empleado",
+          "items": [
+            "He leído y entiendo los requisitos de esta Política.",
+            "Me comprometo a seguir buenas prácticas de higiene, especialmente el lavado de manos.",
+            "Acepto las restricciones o exclusiones laborales que se me impongan.",
+            "Cumpliré con los requisitos de informes sobre síntomas y diagnósticos.",
+            "Entiendo que el incumplimiento puede resultar en acción disciplinaria, incluyendo terminación del contrato."
+          ]
+        }
+      ]
+    }
+
+  }
+}

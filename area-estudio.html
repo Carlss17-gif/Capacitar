@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Área de Estudio — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/area-estudio.css"/>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <button class="btn-back" id="btnBack" onclick="irAtras()">← Volver</button>
+  <span class="topbar-titulo" id="topbarTitulo">Cargando…</span>
+  <span class="dia-badge" id="diaBadge" style="display:none"></span>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="heroSection">
+  <div class="hero-area-badge" id="heroAreaBadge">
+    <span class="area-dot" id="areaDot"></span>
+    <span id="heroAreaLabel">—</span>
+  </div>
+  <h1 class="hero-titulo" id="heroTitulo">Cargando…</h1>
+  <p class="hero-subtitulo" id="heroSubtitulo"></p>
+</section>
+
+<!-- TABS DE ÁREA (solo en modo área general) -->
+<div class="area-tabs-wrap" id="areaTabsWrap" style="display:none">
+  <div class="area-tabs" id="areaTabs"></div>
+</div>
+
+<!-- TABS DE MÓDULO (cuando el día tiene varios módulos) -->
+<div class="modulos-nav" id="modulosNav" style="display:none"></div>
+
+<!-- CONTENIDO -->
+<main class="contenido" id="contenido">
+  <div class="loading-wrap">⏳ Cargando contenido…</div>
+</main>
+
+<script src="/js/modulos.js"></script>
+<script src="/js/area-estudio.js"></script>
+</body>
+</html>

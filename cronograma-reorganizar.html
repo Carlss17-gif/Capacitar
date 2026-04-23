@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Reorganizar Cronograma — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/cronograma-reorganizar.css"/>
+</head>
+<body>
+<div class="reorg-wrap">
+
+  <header class="reorg-header">
+    <button class="back-btn" onclick="window.location.href='panel-entrenador.html'">← Volver</button>
+    <div class="header-center"><span>🔀</span><h1>Reorganizar Cronograma</h1></div>
+    <div id="empleadoChip" class="emp-chip">—</div>
+  </header>
+
+  <div class="sel-bar">
+    <label class="sel-lbl">Empleado:</label>
+    <select id="empSel" class="sel-box">
+      <option value="">Selecciona un empleado…</option>
+    </select>
+  </div>
+
+  <div class="instrucciones" id="instrucciones" style="display:none">
+    <span class="inst-icon">👆</span>
+    <div class="inst-texto">
+      <strong>¿Cómo reorganizar?</strong><br>
+      1. Toca <strong>"Seleccionar"</strong> en el día que quieres mover.<br>
+      2. Toca <strong>"Intercambiar aquí"</strong> en el día destino.<br>
+      3. Repite cuantas veces quieras.<br>
+      4. Toca <strong>"💾 Guardar cambios"</strong> para confirmar.
+    </div>
+  </div>
+
+  <div class="sel-indicador" id="selIndicador" style="display:none">—</div>
+
+  <div class="acciones-bar" id="accionesBar" style="display:none">
+    <button class="btn-restablecer" onclick="restablecerDefault()">↺ Plan base</button>
+    <button class="btn-guardar" onclick="guardarTodo()">💾 Guardar cambios</button>
+  </div>
+
+  <div class="reorg-grid" id="reorgGrid">
+    <div class="loading-msg">Selecciona un empleado para comenzar…</div>
+  </div>
+
+</div>
+
+<div class="toast" id="toastMsg"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/modulos.js"></script>
+<script src="/js/cronograma-motor.js"></script>
+<script src="/js/cronograma-reorganizar.js"></script>
+</body>
+</html>

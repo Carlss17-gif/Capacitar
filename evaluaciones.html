@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Evaluaciones — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/evaluaciones.css">
+</head>
+<body>
+
+<div class="eval-wrap">
+
+  <header class="eval-header">
+    <button class="back-btn" onclick="history.back()">← Volver</button>
+    <div class="header-center">
+      <span>📝</span>
+      <h1>Análisis de Evaluaciones</h1>
+    </div>
+    <div class="total-chip" id="totalChip">—</div>
+  </header>
+
+  <!-- Selectores -->
+  <div class="filtros-bar">
+    <div class="sel-row">
+      <label class="sel-label">Examen / Área</label>
+      <select id="filtroArea" class="select-box" onchange="cambiarArea()">
+        <option value="">Selecciona un examen…</option>
+      </select>
+    </div>
+    <div class="sel-row" id="rowPregunta" style="display:none">
+      <label class="sel-label">Pregunta</label>
+      <select id="filtroPregunta" class="select-box" onchange="cambiarPregunta()">
+        <option value="">— Ver todas las preguntas —</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Resumen del área -->
+  <div id="resumenArea" class="resumen-area" style="display:none">
+    <div class="res-grid">
+      <div class="res-item">
+        <div class="res-num" id="resIntentos">0</div>
+        <div class="res-lbl">Intentos</div>
+      </div>
+      <div class="res-item">
+        <div class="res-num" id="resEmpleados">0</div>
+        <div class="res-lbl">Empleados</div>
+      </div>
+      <div class="res-item">
+        <div class="res-num res-yellow" id="resProm">0%</div>
+        <div class="res-lbl">Promedio</div>
+      </div>
+      <div class="res-item">
+        <div class="res-num res-red" id="resPeor">—</div>
+        <div class="res-lbl">Pregunta difícil</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lista de preguntas -->
+  <div id="listaPreguntasWrap" style="display:none">
+    <div class="section-title">Todas las preguntas — % de aciertos</div>
+    <div id="listaPreguntas"></div>
+  </div>
+
+  <!-- Detalle de una pregunta -->
+  <div id="detallePregunta" style="display:none" class="detalle-preg">
+    <div class="dp-numero" id="dpNumero">Pregunta 1</div>
+    <p class="dp-texto" id="dpTexto">—</p>
+
+    <div class="dp-pastel-wrap">
+      <div class="pastel-container">
+        <canvas id="canvasPastel" width="180" height="180"></canvas>
+      </div>
+      <div class="pastel-stats">
+        <div class="ps-row ps-green">
+          <span class="ps-dot dot-green"></span>
+          <span>Correctas</span>
+          <strong id="psCorrectas">0%</strong>
+        </div>
+        <div class="ps-row ps-red">
+          <span class="ps-dot dot-red"></span>
+          <span>Incorrectas</span>
+          <strong id="psIncorrectas">0%</strong>
+        </div>
+        <div class="ps-total">Total: <strong id="psTotal">0</strong> resp.</div>
+      </div>
+    </div>
+
+    <div id="opcionesDetalle" class="opciones-detalle"></div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/evaluaciones.js"></script>
+</body>
+</html>

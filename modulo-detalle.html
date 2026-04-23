@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carl's Jr. — Módulo de Capacitación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/modulo-detalle.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="btn-back" href="javascript:history.back()" id="btnRegresar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Regresar
+    </a>
+    <div class="topbar-divider"></div>
+    <span class="topbar-titulo" id="topbarTitulo">Cargando…</span>
+    <span class="topbar-dia" id="topbarDia" style="display:none"></span>
+  </header>
+
+  <section class="modulo-hero">
+    <div class="hero-inner">
+      <div class="hero-icono" id="heroIcono">⏳</div>
+      <div class="hero-info">
+        <div class="hero-cat"   id="heroCat"></div>
+        <h1 class="hero-titulo" id="heroTitulo">Cargando módulo…</h1>
+        <p class="hero-subtitulo" id="heroSub"></p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="filtro-bar" id="filtroBar"></nav>
+
+  <main class="contenido" id="contenido">
+    <div class="estado-vacio">
+      <div class="icono-grande">⏳</div>
+      <p>Cargando contenido…</p>
+    </div>
+  </main>
+
+  <div class="footer-modulo"></div>
+
+  <script src="/js/modulo-detalle.js"></script>
+</body>
+</html>

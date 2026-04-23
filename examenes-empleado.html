@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Exámenes — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/examenes-empleado.css"/>
+</head>
+<body>
+<div class="exam-wrap">
+
+  <header class="exam-header">
+    <button class="back-btn" onclick="history.back()">← Volver</button>
+    <div class="header-center"><span>📝</span><h1>Exámenes</h1></div>
+    <div class="welcome-chip" id="welcomeChip">—</div>
+  </header>
+
+  <div class="exam-intro">
+    <p>Selecciona el examen que corresponde a tu etapa de capacitación. Asegúrate de haber estudiado el material antes.</p>
+  </div>
+
+  <!-- NIVEL BÁSICO -->
+  <div class="nivel-section">
+    <div class="nivel-header nivel-basico">
+      <span class="nivel-icon">📗</span>
+      <div>
+        <div class="nivel-titulo">Nivel Básico</div>
+        <div class="nivel-sub">Primeros 31 días de capacitación</div>
+      </div>
+    </div>
+    <div class="chips-grid">
+      <button class="exam-chip" onclick="irExamen('AutoServicio')">
+        <span class="chip-icon">🚗</span>
+        <span class="chip-label">Auto Servicio</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('SeguridadAlimentaria')">
+        <span class="chip-icon">🛡</span>
+        <span class="chip-label">Seguridad Alimentaria</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('Feeder')">
+        <span class="chip-icon">🍔</span>
+        <span class="chip-label">Feeder</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('Freír')">
+        <span class="chip-icon">🍟</span>
+        <span class="chip-label">Freír</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('Cocinero')">
+        <span class="chip-icon">🔥</span>
+        <span class="chip-label">Cocinero</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('Tenders')">
+        <span class="chip-icon">🍗</span>
+        <span class="chip-label">Tenders</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('Comedor')">
+        <span class="chip-icon">🍽</span>
+        <span class="chip-label">Comedor</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('Cajero')">
+        <span class="chip-icon">💳</span>
+        <span class="chip-label">Cajero</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- NIVEL MEDIO -->
+  <div class="nivel-section">
+    <div class="nivel-header nivel-medio">
+      <span class="nivel-icon">📙</span>
+      <div>
+        <div class="nivel-titulo">Nivel Medio</div>
+        <div class="nivel-sub">Etapa de profundización (90 días)</div>
+      </div>
+    </div>
+    <div class="chips-grid">
+      <button class="exam-chip" onclick="irExamen('vegetales')">
+        <span class="chip-icon">🥬</span>
+        <span class="chip-label">Vegetales</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('quimicos')">
+        <span class="chip-icon">🧴</span>
+        <span class="chip-label">Químicos</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('malteadas')">
+        <span class="chip-icon">🥤</span>
+        <span class="chip-label">Malteadas</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('uber')">
+        <span class="chip-icon">📱</span>
+        <span class="chip-label">Uber Eats</span>
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<script src="/js/examenes-empleado.js"></script>
+</body>
+</html>

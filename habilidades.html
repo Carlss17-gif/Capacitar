@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Habilidades — Carl's Jr.</title>
+  <link rel="stylesheet" href="/css/habilidades.css">
+</head>
+<body>
+
+  <div class="header">
+    <button class="back-btn" onclick="history.back()">← Volver</button>
+    <h1>Evaluación de Habilidades</h1>
+  </div>
+
+  <div class="container">
+
+    <div class="selector-card">
+      <label>Selecciona la estación</label>
+      <select id="selectEstacion"></select>
+    </div>
+
+    <div id="contenido">
+      <div id="sinSeleccion">Selecciona una estación para comenzar.</div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/supabase.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/habilidades.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Mi Capacitación — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/empleado-index.css"/>
+</head>
+<body>
+
+<div class="emp-wrap">
+
+  <!-- HEADER -->
+  <header class="emp-header">
+    <div class="header-left">
+      <div class="star-badge">★</div>
+      <div>
+        <p class="welcome-label">Bienvenido/a</p>
+        <h2 class="welcome-name" id="welcomeName">Empleado</h2>
+      </div>
+    </div>
+    <button class="logout-btn" onclick="cerrarSesion()">Salir</button>
+  </header>
+
+  <!-- BANNER DE DÍAS -->
+  <div class="dias-banner" id="diasBanner">
+    <div class="dias-num" id="diasNum">—</div>
+    <div class="dias-label">días en el equipo</div>
+    <div class="dias-sub" id="diasSub">Ingreso: —</div>
+  </div>
+
+  <!-- MENÚ PRINCIPAL -->
+  <main class="emp-menu">
+
+    <!-- Cronología de entrenamiento -->
+    <a href="cronograma.html" class="emp-card card-crono">
+      <div class="emp-card-icon">📅</div>
+      <div class="emp-card-body">
+        <h3>Cronología de Entrenamiento</h3>
+        <p>Tu plan de capacitación de 31 días. Ve qué debes aprender cada día según tu fecha de ingreso.</p>
+      </div>
+      <div class="emp-card-arrow">→</div>
+    </a>
+
+    <!-- Evaluaciones -->
+    <a href="Indice.html" class="emp-card card-eval">
+      <div class="emp-card-icon">📖</div>
+      <div class="emp-card-body">
+        <h3>Material de Estudio</h3>
+        <p>Módulos de cocina, seguridad alimentaria y servicio al cliente para estudiar antes de tu examen.</p>
+      </div>
+      <div class="emp-card-arrow">→</div>
+    </a>
+
+    <!-- Exámenes -->
+    <a href="examenes-empleado.html" class="emp-card card-examenes">
+      <div class="emp-card-icon">📝</div>
+      <div class="emp-card-body">
+        <h3>Exámenes y Evaluaciones</h3>
+        <p>Presenta tus exámenes por estación. Nivel básico y nivel medio disponibles.</p>
+      </div>
+      <div class="emp-card-arrow">→</div>
+    </a>
+
+  </main>
+
+  <footer class="emp-footer">Operado por <strong>Cero Tenedor</strong></footer>
+
+</div>
+
+<script src="/js/panel-empleado.js"></script>
+</body>
+</html>

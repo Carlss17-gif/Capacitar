@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Carl's Jr. — Capacitación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/empleado-login.css"/>
+</head>
+<body>
+
+<div class="login-wrap">
+
+  <div class="login-brand">
+    <img src="CarlsLogo.png" class="logo" alt="Carl's Jr." onerror="this.style.display='none'"/>
+    <div class="brand-star">★</div>
+    <h1 class="brand-title">Carl's Jr.</h1>
+    <p class="brand-sub">Programa de Capacitación</p>
+  </div>
+
+  <div class="login-card">
+    <h2 class="card-title">¿Cuál es tu nombre?</h2>
+    <p class="card-hint">Escribe tu nombre completo para ingresar</p>
+
+    <input
+      type="text"
+      id="nombreInput"
+      class="nombre-input"
+      placeholder="Ej: María García"
+      autocomplete="off"
+      onkeydown="if(event.key==='Enter') entrar()"
+    />
+
+    <div class="error-msg" id="errorMsg">Por favor escribe tu nombre</div>
+
+    <button class="btn-entrar" onclick="entrar()">Entrar →</button>
+  </div>
+
+  <div class="login-footer">
+    ¿Eres entrenador? <a href="index.html">Acceso entrenadores</a>
+  </div>
+
+</div>
+
+<script>window.location.replace('index.html');</script>
+</body>
+</html>

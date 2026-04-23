@@ -1,0 +1,131 @@
+/* ============================================================
+   dashboard-evaluaciones.css
+   Carl's Jr. Capacitación
+   Antes: Entrenadores.css
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0f0f0f;
+  color: #f0f0f0;
+  font-family: 'DM Sans', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* ── HEADER ──────────────────────────────────────────────── */
+.header {
+  background: #1a1a1a;
+  border-bottom: 2px solid #ffde21;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header h1 { font-size: 20px; font-weight: 700; color: #fff; }
+
+.back-btn {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #aaa;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.back-btn:hover { background: #333; color: #fff; }
+
+/* ── CONTENIDO ───────────────────────────────────────────── */
+.container { max-width: 960px; margin: 0 auto; padding: 20px 16px; }
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* ── CONTROLES DE EMPLEADO ───────────────────────────────── */
+.empleado-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 160px;
+}
+.control-group label { font-size: 12px; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.empleado-controls select {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #f0f0f0;
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-size: 14px;
+  width: 100%;
+}
+.empleado-controls select:focus { outline: none; border-color: #ffde21; }
+
+.control-btns {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.empleado-controls button {
+  background: #ffde21;
+  border: none;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.empleado-controls button:hover { opacity: 0.85; }
+
+/* ── GRÁFICAS ────────────────────────────────────────────── */
+.graficas-wrapper {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.grafica-barra { flex: 2; min-width: 280px; }
+.grafica-pastel { flex: 1; min-width: 220px; }
+
+canvas {
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+/* ── DETALLE EXAMEN ──────────────────────────────────────── */
+.pregunta {
+  background: #232323;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.correcta   { color: #4caf50; }
+.incorrecta { color: #ef4444; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .graficas-wrapper { flex-direction: column; }
+  .control-btns     { flex-wrap: wrap; }
+}

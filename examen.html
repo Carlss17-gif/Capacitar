@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Examen — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/examenpp.css">
+</head>
+<body>
+
+<div id="contenedor">
+
+  <header class="exam-top-bar">
+    <button class="exam-back-btn" id="btnVolver" onclick="volver()">← Volver</button>
+    <div class="exam-brand">📝 Examen</div>
+    <div class="exam-emp-chip" id="empChip">—</div>
+  </header>
+
+  <div class="exam-titulo-wrap">
+    <h2 id="titulo">Cargando…</h2>
+    <img id="logo" src="CarlsLogo.png" alt="Carl's Jr." onerror="this.style.display='none'">
+  </div>
+
+  <div id="preguntas"></div>
+
+  <div class="exam-submit-wrap">
+    <button class="exam-submit-btn" onclick="enviar()">Enviar respuestas</button>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/examen.js"></script>
+</body>
+</html>

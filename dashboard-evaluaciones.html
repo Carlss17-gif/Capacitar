@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Evaluaciones — Carl's Jr.</title>
+  <link rel="stylesheet" href="/css/dashboard-evaluaciones.css">
+</head>
+<body>
+
+  <div class="header">
+    <button class="back-btn" onclick="history.back()">← Volver</button>
+    <h1>Reporte de Evaluaciones</h1>
+  </div>
+
+  <main class="container">
+
+    <div class="card">
+      <div class="empleado-controls">
+
+        <div class="control-group">
+          <label>Empleado</label>
+          <select id="empleadoSelect">
+            <option value="">Selecciona empleado</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label>Área</label>
+          <select id="areaSelect">
+            <option value="">— Selecciona área —</option>
+          </select>
+        </div>
+
+        <div class="control-btns">
+          <button onclick="irAHabilidades()">Evaluación de Habilidades</button>
+          <!--
+            BUG CORREGIDO: Antes llamaba a generarPDF() que leía localStorage('empleado').
+            Ahora llama a generarPDFEmpleado() que usa los datos del empleado seleccionado.
+          -->
+          <button onclick="generarPDFEmpleado()">Generar PDF</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="graficas-wrapper">
+      <div class="card grafica-barra">
+        <h2>Resultados por área</h2>
+        <canvas id="graficaBarra"></canvas>
+      </div>
+      <div class="card grafica-pastel" id="cardPastel" style="display:none;">
+        <h2>Detalle del área</h2>
+        <canvas id="graficaPastel"></canvas>
+      </div>
+    </div>
+
+    <div class="card" id="zonaPDF">
+      <h2 id="tituloExamen"></h2>
+      <div id="detalleExamen"></div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="/js/supabase.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/pdf-reporte.js"></script>
+  <script src="/js/dashboard-entrenador.js"></script>
+</body>
+</html>

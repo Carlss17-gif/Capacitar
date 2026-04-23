@@ -1,0 +1,219 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+.header {
+  background: #111;
+  padding: 15px 20px;
+  border-bottom: 3px solid #facc15;
+}
+
+.header h1 { color: #facc15; font-size: 20px; font-weight: 700; }
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 15px 60px;
+}
+
+/* SELECTOR */
+.selector-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.selector-card label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.selector-card select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.selector-card select:focus { outline: none; border-color: #facc15; }
+
+/* ENCABEZADO EXAMEN */
+.examen-header {
+  background: #111;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.examen-header h2 { font-size: 17px; color: #facc15; font-weight: 700; }
+
+.badge-puntaje {
+  background: #facc15;
+  color: #111;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+/* FILAS HABILIDADES */
+.habilidad-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #facc15;
+  margin-bottom: 10px;
+  gap: 12px;
+  background: #fff;
+  transition: background 0.15s;
+}
+
+.habilidad-row.cumple { border-left-color: #22c55e; background: #f0fdf4; }
+.habilidad-row.mejora { border-left-color: #ef4444; background: #fef2f2; }
+
+.habilidad-numero {
+  font-size: 12px;
+  font-weight: 700;
+  color: #bbb;
+  flex-shrink: 0;
+  min-width: 20px;
+}
+
+.habilidad-texto { font-size: 14px; color: #111; flex: 1; line-height: 1.5; }
+
+.habilidad-btns { display: flex; gap: 8px; flex-shrink: 0; }
+
+.hab-btn {
+  padding: 7px 13px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.hab-btn:hover { border-color: #aaa; }
+.hab-btn.cumple-activo { background: #22c55e; border-color: #22c55e; color: #fff; }
+.hab-btn.mejora-activo { background: #ef4444; border-color: #ef4444; color: #fff; }
+
+/* NOTAS */
+.notas-area { margin-top: 18px; }
+
+.notas-area label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.notas-area textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 70px;
+  background: #fafafa;
+  font-family: Arial, sans-serif;
+  color: #111;
+}
+
+.notas-area textarea:focus { outline: none; border-color: #facc15; background: #fff; }
+
+/* BOTONES */
+.btn-resultado {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: #facc15;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 22px;
+  transition: background 0.2s;
+}
+
+.btn-resultado:hover { background: #222; }
+
+.btn-reiniciar {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.btn-reiniciar:hover { background: #f5f5f5; }
+
+/* RESULTADO */
+.resultado-box {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.resultado-score { font-size: 42px; font-weight: 700; color: #111; }
+.resultado-score span { color: #aaa; font-size: 28px; }
+.resultado-label { font-size: 14px; color: #666; margin-top: 6px; }
+
+.resultado-estado {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.aprobado { background: #dcfce7; color: #166534; }
+.reprobado { background: #fee2e2; color: #991b1b; }
+
+#sinSeleccion { text-align: center; color: #aaa; font-size: 15px; padding: 50px 20px; }
+
+@media (max-width: 600px) {
+  .habilidad-row { flex-wrap: wrap; }
+  .habilidad-btns { width: 100%; }
+  .hab-btn { flex: 1; text-align: center; }
+}

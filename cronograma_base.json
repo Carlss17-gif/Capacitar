@@ -1,0 +1,313 @@
+{
+  "version": 2,
+  "dias": [
+    {
+      "dia": 1,
+      "titulo": "Orientación + Feeder Inducción",
+      "icono": "📖",
+      "categoria": "onboarding",
+      "modulos": ["Feeder"],
+      "subtitulo": "Recorrido de Seguridad · DVD Alimentador",
+      "obligatorio": true
+    },
+    {
+      "dia": 2,
+      "titulo": "Seguridad Alimentaria + Feeder",
+      "icono": "🛡",
+      "categoria": "onboarding",
+      "modulos": ["lavado", "Feeder"],
+      "subtitulo": "Seguridad Alimentaria · Alimentador Práctica",
+      "obligatorio": true
+    },
+    {
+      "dia": 3,
+      "titulo": "Super Star + Feeder Evaluación",
+      "icono": "⭐",
+      "categoria": "servicio",
+      "modulos": ["Super Star", "Feeder"],
+      "subtitulo": "Servicio Super Star · Alimentador Evaluación",
+      "obligatorio": true
+    },
+    {
+      "dia": 4,
+      "titulo": "Descanso",
+      "icono": "🌙",
+      "categoria": "descanso",
+      "modulos": ["DESCANSO"],
+      "subtitulo": "",
+      "obligatorio": false
+    },
+    {
+      "dia": 5,
+      "titulo": "Descongelación + Vegetales",
+      "icono": "❄️",
+      "categoria": "cocina",
+      "modulos": ["descongelacion", "vegetales"],
+      "subtitulo": "Descongelación · Vegetales",
+      "obligatorio": false
+    },
+    {
+      "dia": 6,
+      "titulo": "Freidora — Inducción",
+      "icono": "🍟",
+      "categoria": "cocina",
+      "modulos": ["freidor"],
+      "subtitulo": "Freidora · Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 7,
+      "titulo": "Freidora — Práctica",
+      "icono": "🍟",
+      "categoria": "cocina",
+      "modulos": ["freidor"],
+      "subtitulo": "Freidora · Práctica",
+      "obligatorio": false
+    },
+    {
+      "dia": 8,
+      "titulo": "Freidora — Evaluación",
+      "icono": "🍟",
+      "categoria": "cocina",
+      "modulos": ["freidor"],
+      "subtitulo": "Freidora · Evaluación",
+      "obligatorio": false
+    },
+    {
+      "dia": 9,
+      "titulo": "Tenders — Inducción",
+      "icono": "🍗",
+      "categoria": "tenders",
+      "modulos": ["tenders"],
+      "subtitulo": "Tenders · DVD / Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 10,
+      "titulo": "Descanso",
+      "icono": "🌙",
+      "categoria": "descanso",
+      "modulos": ["DESCANSO"],
+      "subtitulo": "",
+      "obligatorio": false
+    },
+    {
+      "dia": 11,
+      "titulo": "Tenders — Práctica",
+      "icono": "🍗",
+      "categoria": "tenders",
+      "modulos": ["tenders"],
+      "subtitulo": "Tenders · Práctica",
+      "obligatorio": false
+    },
+    {
+      "dia": 12,
+      "titulo": "Tenders — Evaluación",
+      "icono": "🍗",
+      "categoria": "tenders",
+      "modulos": ["tenders"],
+      "subtitulo": "Tenders · Evaluación",
+      "obligatorio": false
+    },
+    {
+      "dia": 13,
+      "titulo": "Cocina — Inducción",
+      "icono": "🍔",
+      "categoria": "cocina",
+      "modulos": ["coccion", "hamburguesas"],
+      "subtitulo": "Cocina · DVD / Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 14,
+      "titulo": "Cocina — Práctica",
+      "icono": "🍔",
+      "categoria": "cocina",
+      "modulos": ["coccion", "hamburguesas", "sandwiches"],
+      "subtitulo": "Cocina · Práctica",
+      "obligatorio": false
+    },
+    {
+      "dia": 15,
+      "titulo": "Cocina — Evaluación",
+      "icono": "🍔",
+      "categoria": "cocina",
+      "modulos": ["coccion", "hamburguesas"],
+      "subtitulo": "Cocina · Evaluación",
+      "obligatorio": false
+    },
+    {
+      "dia": 16,
+      "titulo": "Descanso · Aguas Frescas",
+      "icono": "🌙",
+      "categoria": "descanso",
+      "modulos": ["aguas"],
+      "subtitulo": "Aguas Frescas · Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 17,
+      "titulo": "Aguas Frescas y Postres",
+      "icono": "💧",
+      "categoria": "cocina",
+      "modulos": ["aguas", "postres"],
+      "subtitulo": "Aguas Frescas · Práctica",
+      "obligatorio": false
+    },
+    {
+      "dia": 18,
+      "titulo": "Comedor — Inducción",
+      "icono": "🍽",
+      "categoria": "frontline",
+      "modulos": ["mostrador"],
+      "subtitulo": "Comedor · DVD / Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 19,
+      "titulo": "Comedor — Práctica",
+      "icono": "🍽",
+      "categoria": "frontline",
+      "modulos": ["mostrador", "quejas"],
+      "subtitulo": "Comedor · Práctica",
+      "obligatorio": false
+    },
+    {
+      "dia": 20,
+      "titulo": "Comedor — Evaluación",
+      "icono": "🍽",
+      "categoria": "frontline",
+      "modulos": ["mostrador"],
+      "subtitulo": "Comedor · Evaluación",
+      "obligatorio": false
+    },
+    {
+      "dia": 21,
+      "titulo": "Cajero — Inducción",
+      "icono": "💳",
+      "categoria": "frontline",
+      "modulos": ["datos"],
+      "subtitulo": "Cajero · DVD / Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 22,
+      "titulo": "Cajero — Práctica",
+      "icono": "💳",
+      "categoria": "frontline",
+      "modulos": ["datos", "quejas"],
+      "subtitulo": "Cajero · Práctica",
+      "obligatorio": false
+    },
+    {
+      "dia": 23,
+      "titulo": "Cajero — Evaluación",
+      "icono": "💳",
+      "categoria": "frontline",
+      "modulos": ["datos"],
+      "subtitulo": "Cajero · Evaluación",
+      "obligatorio": false
+    },
+    {
+      "dia": 24,
+      "titulo": "Descanso",
+      "icono": "🌙",
+      "categoria": "descanso",
+      "modulos": ["DESCANSO"],
+      "subtitulo": "",
+      "obligatorio": false
+    },
+    {
+      "dia": 25,
+      "titulo": "Auto Servicio — Inducción",
+      "icono": "🚗",
+      "categoria": "frontline",
+      "modulos": ["autoservicio"],
+      "subtitulo": "Auto Servicio · DVD / Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 26,
+      "titulo": "Auto Servicio — Práctica",
+      "icono": "🚗",
+      "categoria": "frontline",
+      "modulos": ["autoservicio"],
+      "subtitulo": "Auto Servicio · Práctica",
+      "obligatorio": false
+    },
+    {
+      "dia": 27,
+      "titulo": "Auto Servicio — Evaluación",
+      "icono": "🚗",
+      "categoria": "frontline",
+      "modulos": ["autoservicio"],
+      "subtitulo": "Auto Servicio · Evaluación",
+      "obligatorio": false
+    },
+    {
+      "dia": 28,
+      "titulo": "Delivery — Inducción",
+      "icono": "📱",
+      "categoria": "frontline",
+      "modulos": ["delivery"],
+      "subtitulo": "Delivery · DVD / Inducción",
+      "obligatorio": false
+    },
+    {
+      "dia": 29,
+      "titulo": "Delivery — Evaluación",
+      "icono": "📱",
+      "categoria": "frontline",
+      "modulos": ["delivery"],
+      "subtitulo": "Delivery · Evaluación",
+      "obligatorio": false
+    },
+    {
+      "dia": 30,
+      "titulo": "Certificación Final",
+      "icono": "🏆",
+      "categoria": "onboarding",
+      "modulos": ["enfermedades", "alergenos", "limpieza"],
+      "subtitulo": "Certificación General",
+      "obligatorio": true
+    }
+  ],
+
+  "areas": {
+    "cocina": {
+      "label": "Cocina",
+      "icono": "🍔",
+      "color": "#ff9800",
+      "descripcion": "Hamburguesas, sándwiches, freidoras, vegetales y tiempos de cocción",
+      "modulos": ["coccion", "hamburguesas", "sandwiches", "tocino", "panes", "postres", "aguas", "pinzas", "freidor", "vegetales", "descongelacion", "recepcion"]
+    },
+    "tenders": {
+      "label": "Tenders",
+      "icono": "🍗",
+      "color": "#ff5722",
+      "descripcion": "Estación de Tenders y Filetitos de Pollo Empanizados",
+      "modulos": ["tenders"]
+    },
+    "feeder": {
+      "label": "Feeder",
+      "icono": "🔥",
+      "color": "#f44336",
+      "descripcion": "Estación del Alimentador (Asador / Broiler)",
+      "modulos": ["Feeder"]
+    },
+    "seguridad": {
+      "label": "Seguridad Alimentaria",
+      "icono": "🛡",
+      "color": "#4caf50",
+      "descripcion": "Zona de peligro, lavado de manos, limpieza, alérgenos y enfermedades",
+      "modulos": ["zonapeligro", "lavado", "limpieza", "alergenos", "enfermedades"]
+    },
+    "frontline": {
+      "label": "Servicio al Invitado",
+      "icono": "⭐",
+      "color": "#9c27b0",
+      "descripcion": "Super Star, Auto Servicio, Delivery, Cajero, Comedor y Quejas",
+      "modulos": ["Super Star", "autoservicio", "delivery", "datos", "quejas", "mostrador"]
+    }
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Panel Entrenador — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/panel-entrenador.css">
+</head>
+<body>
+
+<div class="panel-wrap">
+
+  <header class="panel-header">
+    <div class="header-brand">
+      <div class="star-badge">★</div>
+      <div>
+        <p class="brand-sub">Panel de Entrenador</p>
+        <h1 class="brand-name" id="trainerName">—</h1>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="sucursal-chip" id="sucursalChip">—</span>
+      <button class="logout-btn" onclick="cerrarSesion()">Salir</button>
+    </div>
+  </header>
+
+  <section class="welcome-banner">
+    <div>
+      <h2>¿Qué quieres hacer?</h2>
+      <p>Gestiona el avance de tu equipo</p>
+    </div>
+    <div style="font-size:40px">🏆</div>
+  </section>
+
+  <main class="nav-grid">
+
+    <a href="dashboard-evaluaciones.html" class="nav-card c-dashboard">
+      <div class="nc-icon">📊</div>
+      <div class="nc-body">
+        <h3>Dashboard</h3>
+        <p>Resultados de exámenes y gráficas de desempeño de tus empleados</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+
+    <a href="matriz.html" class="nav-card c-matriz">
+      <div class="nc-icon">⭐</div>
+      <div class="nc-body">
+        <h3>Star Performance</h3>
+        <p>Avance por estación de tus empleados o de toda la sucursal</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+
+    <a href="cronograma.html" class="nav-card c-crono">
+      <div class="nc-icon">📅</div>
+      <div class="nc-body">
+        <h3>Cronograma 31 Días</h3>
+        <p>Personaliza el plan de capacitación de cada empleado</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+
+    <a href="evaluaciones.html" class="nav-card c-eval">
+      <div class="nc-icon">📝</div>
+      <div class="nc-body">
+        <h3>Evaluaciones</h3>
+        <p>Análisis por pregunta, % de aciertos y gráficas de desempeño</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+
+    <a href="ayuda-visual.html" class="nav-card c-ayuda">
+      <div class="nc-icon">🖼</div>
+      <div class="nc-body">
+        <h3>Ayuda Visual</h3>
+        <p>Recursos visuales y guías de apoyo por estación</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+
+    <a href="matriz.html?general=1" class="nav-card c-general">
+      <div class="nc-icon">🗂</div>
+      <div class="nc-body">
+        <h3>Matriz</h3>
+        <p>Vista completa auto-poblada desde el cronograma de toda la sucursal</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+
+  </main>
+
+  <div class="separador-personal">
+    <span>Tu área personal</span>
+  </div>
+
+  <div class="nav-grid personal-grid">
+    <a href="cronograma.html?modo=empleado" class="nav-card c-crono-personal">
+      <div class="nc-icon">📚</div>
+      <div class="nc-body">
+        <h3>Mi Capacitación</h3>
+        <p>Accede a tu propio cronograma de estudio como empleado</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+    <a href="examenes-empleado.html" class="nav-card c-examenes-personal">
+      <div class="nc-icon">📝</div>
+      <div class="nc-body">
+        <h3>Mis Exámenes</h3>
+        <p>Presenta tus exámenes de certificación de estación</p>
+      </div>
+      <span class="nc-arrow">→</span>
+    </a>
+  </div>
+
+  <footer class="panel-footer">Operado por <strong>Cero Tenedor</strong></footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/panel-entrenador.js"></script>
+</body>
+</html>

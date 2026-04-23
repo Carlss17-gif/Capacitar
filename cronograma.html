@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Cronograma — Carl's Jr.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/cronograma.css"/>
+</head>
+<body>
+<div class="crono-wrap">
+
+  <header class="crono-header">
+    <button class="back-btn" onclick="window.location.href='panel-entrenador.html'">← Volver</button>
+    <div class="header-center"><span>📅</span><h1>Cronograma 31 Días</h1></div>
+    <div id="rolBadge" class="rol-badge">—</div>
+  </header>
+
+  <div class="top-bar">
+    <div id="infoEmpleado" class="info-emp hidden">
+      <div class="emp-avatar" id="empAvatar">—</div>
+      <div>
+        <p class="emp-nombre" id="empNombre">—</p>
+        <p class="emp-ingreso" id="empIngreso">—</p>
+      </div>
+    </div>
+    <div id="selectorEnt" class="selector-ent hidden">
+      <label class="sel-label">Empleado:</label>
+      <select id="empleadoSel" class="sel-box">
+        <option value="">Selecciona un empleado…</option>
+      </select>
+      <button class="btn-sm" onclick="resetearCronograma()" title="Volver al plan base">↺</button>
+    </div>
+  </div>
+
+  <div class="prog-bar-wrap" id="progBarWrap" style="display:none">
+    <div class="prog-info">
+      <span class="prog-label">Progreso</span>
+      <span class="prog-num" id="progNum">0 / 31</span>
+    </div>
+    <div class="prog-rail"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+  </div>
+
+  <div class="fecha-hoy" id="fechaHoy"></div>
+
+  <div class="vista-tabs">
+    <button class="vtab active" onclick="setVista('grid',this)">⊞ Lista</button>
+    <button class="vtab" onclick="setVista('cal',this)">📅 Calendario</button>
+  </div>
+
+  <div id="wrapReorganizar" style="display:none;padding:8px 16px 0;">
+    <button onclick="window.location.href='cronograma-reorganizar.html'"
+      style="width:100%;padding:13px 16px;background:transparent;border:1.5px solid #e65100;
+             color:#e65100;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;
+             font-family:'DM Sans',sans-serif;touch-action:manipulation;min-height:48px;">
+      🔀 Reorganizar cronograma
+    </button>
+  </div>
+
+  <!-- VISTA GRID -->
+  <div id="vistaGrid" class="dias-grid">
+    <div class="loading-msg">Selecciona un empleado o inicia sesión…</div>
+  </div>
+
+  <!-- VISTA CALENDARIO -->
+  <div id="vistaCal" class="cal-wrap hidden">
+    <div class="cal-nav">
+      <button class="cal-nav-btn" id="btnMesAnt" onclick="irMes(-1)">‹</button>
+      <span class="cal-mes-label" id="calMesLabel">—</span>
+      <button class="cal-nav-btn" id="btnMesSig" onclick="irMes(+1)">›</button>
+    </div>
+    <div class="cal-nombres-dias">
+      <span>Dom</span><span>Lun</span><span>Mar</span>
+      <span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span>
+    </div>
+    <div class="cal-grid" id="calGrid"></div>
+  </div>
+
+</div>
+
+<!-- PANEL DETALLE -->
+<div class="overlay" id="overlay" onclick="cerrarPanel()"></div>
+<div class="side-panel" id="sidePanel">
+  <div class="sp-handle"></div>
+  <div class="sp-header">
+    <div>
+      <p class="sp-dia-label" id="spDiaLabel">Día 1</p>
+      <h2 class="sp-titulo" id="spTitulo">—</h2>
+      <p class="sp-fecha-completado" id="spFechaCompletado"></p>
+    </div>
+    <button class="sp-close" onclick="cerrarPanel()">✕</button>
+  </div>
+  <div id="spContenidoModulo"></div>
+  <div id="spModulos"></div>
+  <div id="spAccionCompletar" class="sp-accion hidden">
+    <button class="btn-completar" onclick="marcarCompleto()">★ Marcar como completado</button>
+  </div>
+</div>
+
+<!-- MODAL EDITOR -->
+<div class="modal-overlay" id="modalOverlay" onclick="cerrarEditor()"></div>
+<div class="modal-editor" id="modalEditor">
+  <div class="modal-header">
+    <div>
+      <p class="modal-dia-label" id="modalDiaLabel">Día 1</p>
+      <h3 class="modal-titulo">Asignar contenido</h3>
+    </div>
+    <button class="sp-close" onclick="cerrarEditor()">✕</button>
+  </div>
+  <div class="modal-nota"><span id="modalNotaTxt">—</span></div>
+
+  <div class="editor-layout">
+    <div class="editor-col col-disponibles">
+      <div class="col-titulo">📚 Módulos disponibles</div>
+      <input type="text" id="buscarModulo" class="buscar-input" placeholder="🔍 Buscar…" oninput="filtrarModulos(this.value)"/>
+      <div class="modulos-lista" id="modulosDisp"></div>
+    </div>
+    <div class="editor-arrow">→</div>
+    <div class="editor-col col-asignados">
+      <div class="col-titulo">📌 Asignados al día</div>
+      <div class="drop-zone" id="dropZone"
+        ondragover="event.preventDefault(); this.classList.add('drag-over')"
+        ondragleave="this.classList.remove('drag-over')"
+        ondrop="soltar(event)">
+        <div class="drop-hint" id="dropHint">Toca o arrastra módulos aquí</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-actions">
+    <button class="btn-guardar" onclick="guardarAsignacion()">💾 Guardar asignación</button>
+    <button class="btn-cancelar" onclick="cerrarEditor()">Cancelar</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/js/supabase.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/modulos.js"></script>
+<script src="/js/cronograma-motor.js"></script>
+<script src="/js/cronograma.js"></script>
+</body>
+</html>
