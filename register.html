@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="auth.css">
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+
+<body class="auth-page">
+
+<div class="auth-header">
+  <img src="imagenes/CarlsLogo.png" class="logo center">
+  <p class="sub">Operado por Cero Tenedor</p>
+</div>
+
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Registro de Personal</h2>
+
+    <p class="info">
+      Completa correctamente la información. Este registro es personal e intransferible.
+    </p>
+
+    <input id="id_empleado" placeholder="ID empleado">
+    <small>ID asignado por la empresa</small>
+
+    <input id="nombre" placeholder="Nombre completo">
+
+    <input id="fecha" type="date">
+
+    <input id="entrenador" placeholder="Entrenador">
+
+    <input id="distrito" placeholder="Distrito">
+    <input id="sucursal" placeholder="Sucursal">
+
+    <input id="email" placeholder="Correo electrónico">
+    <small>Debe ser un correo activo</small>
+
+    <input id="password" type="password" placeholder="Contraseña">
+    <small>Mínimo 8 caracteres</small>
+
+    <button onclick="registrar()">Registrar</button>
+  </div>
+</div>
+
+<footer>
+  © 2026 Cero Tenedor, S.A.P.I. de C.V.
+</footer>
+
+<script src="supabase.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>
