@@ -39,12 +39,15 @@ function getExamenId(item) {
 function irExamenOEstudio(item) {
   const examId = getExamenId(item);
   const back   = encodeURIComponent(window.location.href);
-  if (examId) {
-    const nom = encodeURIComponent(EMPLEADO?.nombre || '');
-    window.location.href = `examen.html?id=${encodeURIComponent(examId)}&nom=${nom}&back=${back}`;
-  } else {
-    window.location.href = `area-estudio.html?dia=${item.posicion}&back=${back}`;
-  }
+  const nom    = encodeURIComponent(EMPLEADO?.nombre || '');
+  let url = `area-estudio.html?dia=${item.posicion}&back=${back}`;
+  if (examId) url += `&examen=${encodeURIComponent(examId)}&nom=${nom}`;
+  window.location.href = url;
+}
+
+function volverAtras() {
+  if (ROL === 'empleado') window.location.href = 'empleado-index.html';
+  else window.location.href = 'panel-entrenador.html';
 }
 
 // Determina la columna star a partir de los módulos del día (más preciso que solo categoría)
@@ -522,3 +525,4 @@ function limpiarVista() {
   document.getElementById('vistaGrid').innerHTML =
     '<div class="loading-msg">Selecciona un empleado para ver su cronograma</div>';
 }
+
