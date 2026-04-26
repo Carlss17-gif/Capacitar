@@ -99,6 +99,11 @@
       "cat": "cocina",
       "secciones": [
         {
+          "tipo": "video",
+          "titulo": "Video de Inducción — Estación de Freír",
+          "url": "https://drive.google.com/file/d/1m35LqmHilYyO0dhfXN-iMpI4cxJIbXwP/preview"
+        },
+        {
           "tipo": "info",
           "texto": "🌡️ TEMPERATURA DEL EQUIPO PRINCE CASTLE: 225°F"
         },
@@ -146,6 +151,11 @@
       "icono": "🍔",
       "cat": "cocina",
       "secciones": [
+        {
+          "tipo": "video",
+          "titulo": "Video de Inducción — Estación del Cocinero",
+          "url": "https://drive.google.com/file/d/1DxE3kJJJhe2Pep4dNpdMUhLUzKbl_BRt/preview"
+        },
         {
           "tipo": "pasos",
           "titulo": "Famous Star® con Queso",
@@ -647,6 +657,11 @@
       "cat": "cocina",
       "secciones": [
         {
+          "tipo": "video",
+          "titulo": "Video de Inducción — Estación de Tenders",
+          "url": "https://drive.google.com/file/d/1Y1IdScdmCmagwJGs-NHrANuGVqrGF_54/preview"
+        },
+        {
           "tipo": "tabla",
           "titulo": "Tiempos de Vida — Estación de Tenders",
           "columnas": ["PRODUCTO", "TIEMPO DE VIDA", "OBSERVACIONES"],
@@ -1034,6 +1049,11 @@
       "cat": "seguridad",
       "secciones": [
         {
+          "tipo": "video",
+          "titulo": "Video — Seguridad Alimentaria",
+          "url": "https://drive.google.com/file/d/11_87WSOghXiz8O052aL1kkYG_ef83e1o/preview"
+        },
+        {
           "tipo": "pasos",
           "titulo": "Procedimiento de Lavado de Manos",
           "pasos": [
@@ -1224,6 +1244,11 @@
       "cat": "cocina",
       "secciones": [
         {
+          "tipo": "video",
+          "titulo": "Video de Inducción — Estación Feeder",
+          "url": "https://drive.google.com/file/d/1B5fk9508Tz2lvWp7LCbY_g6fuIQ95YvW/preview"
+        },
+        {
           "tipo": "lista",
           "titulo": "Reglas de la Estación Feeder",
           "items": [
@@ -1265,6 +1290,11 @@
       "icono": "🚗",
       "cat": "servicio",
       "secciones": [
+        {
+          "tipo": "video",
+          "titulo": "Video de Inducción — Auto Servicio",
+          "url": "https://drive.google.com/file/d/1EDNmpfy4wu0sbasl5cZkks9pzmn6C5hw/preview"
+        },
         {
           "tipo": "tabla",
           "titulo": "Estándares de Tiempo Drive Thru",
@@ -1449,6 +1479,11 @@
       "cat": "servicio",
       "secciones": [
         {
+          "tipo": "video",
+          "titulo": "Video de Inducción — Estación del Cajero",
+          "url": "https://drive.google.com/file/d/10uXzfC_G16-WSAbeIHwWecUIcip4PkcC/preview"
+        },
+        {
           "tipo": "tabla",
           "titulo": "Definiciones Clave",
           "columnas": ["SIGLA/TÉRMINO", "SIGNIFICADO"],
@@ -1497,6 +1532,11 @@
       "icono": "🏪",
       "cat": "servicio",
       "secciones": [
+        {
+          "tipo": "video",
+          "titulo": "Video de Inducción — Estación del Comedor",
+          "url": "https://drive.google.com/file/d/1MtA9EBvynThMv7A2dYB7xTwWGa5YBISP/preview"
+        },
         {
           "tipo": "tabla",
           "titulo": "Tiempos de Vida — Área del Mostrador",
@@ -1650,6 +1690,30 @@
             "Cumpliré con los requisitos de informes sobre síntomas y diagnósticos.",
             "Entiendo que el incumplimiento puede resultar en acción disciplinaria, incluyendo terminación del contrato."
           ]
+        }
+      ]
+    },
+
+    "orientacion": {
+      "id": "orientacion",
+      "titulo": "Orientación e Inducción",
+      "icono": "📖",
+      "cat": "seguridad",
+      "secciones": [
+        {
+          "tipo": "video",
+          "titulo": "Video 1 — Inducción Día 1",
+          "url": "https://drive.google.com/file/d/1EKaq0H4JSQ1A00tjaSTODU5qhZCHHFSb/preview"
+        },
+        {
+          "tipo": "video",
+          "titulo": "Video 2 — Recorrido de Seguridad",
+          "url": "https://drive.google.com/file/d/1OUkdfgqhHAZZ9t6iMgrYYA7qPuuIhJA7/preview"
+        },
+        {
+          "tipo": "video",
+          "titulo": "Video 3 — Presentación Carl's Jr.",
+          "url": "https://drive.google.com/file/d/1alSd0gA8ReUldW-E0icnWYWCstd_Xl2M/preview"
         }
       ]
     }
