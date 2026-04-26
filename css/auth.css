@@ -1,6 +1,3 @@
-/* =========================
-   RESET
-========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,7 +29,7 @@
 }
 
 .auth-header .logo {
-  width: 140px;
+  width: min(260px, 72%);
 }
 
 .auth-header .sub {
@@ -218,6 +215,6 @@ footer {
   }
 
   .auth-header .logo {
-    width: 110px;
+    width: min(200px, 70%);
   }
 }
