@@ -1,7 +1,3 @@
-/* ============================================================
-   matriz.css — Star Performance compacta
-   Estilo basado en el formato físico Carl's Jr.
-   ============================================================ */
 
 :root {
   --negro:    #0f0f0f;
@@ -118,16 +114,17 @@ body {
 .tabla-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .sp-table {
   border-collapse: collapse;
   width: max-content;
-  min-width: 100%;
-  font-size: 11px;
+  font-size: 13px;
   background: var(--negro2);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -158,33 +155,69 @@ body {
   color: var(--amarillo);
 }
 
-/* LOGO + HEADER */
+/* LOGO + HEADER — colspan=2 cubre fecha+nombre */
 .th-logo {
   background: var(--negro3) !important;
-  padding: 6px 4px;
+  padding: 0;
   text-align: center;
-  min-width: 64px;
-  max-width: 64px;
-  vertical-align: middle;
-  border-right: 1px solid var(--gris2);
+  min-width: 160px;
+  vertical-align: top;
+  border-right: 2px solid var(--amarillo);
+  position: sticky;
+  left: 0;
+  z-index: 12;
 }
 .logo-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  justify-content: space-between;
+  height: 100%;
+  padding: 12px 0 0;
 }
 .logo-box img {
-  width: 44px;
+  width: 110px;
   height: auto;
   object-fit: contain;
 }
 .star-perf-label {
-  font-size: 7px;
+  font-size: 11px;
   color: var(--amarillo);
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.4;
+  letter-spacing: .3px;
+  margin: 6px 0;
+}
+/* Fila inferior del logo: FECHA DE INGRESO | NOMBRE DEL EMPLEADO */
+.logo-labels {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid var(--gris2);
+  margin-top: auto;
+}
+.logo-lbl-fecha {
+  width: 76px;            /* mismo ancho que td-hire */
+  min-width: 76px;
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--amarillo);
+  text-align: center;
+  padding: 6px 3px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  border-right: 1px solid var(--gris2);
+}
+.logo-lbl-nombre {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--amarillo);
+  text-align: left;
+  padding: 6px 12px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .th-hire {
@@ -193,42 +226,47 @@ body {
   font-size: 8px;
   font-weight: 800;
   text-align: center;
-  padding: 4px 3px;
-  min-width: 44px;
-  max-width: 44px;
+  padding: 6px 3px;
+  min-width: 50px;
+  max-width: 50px;
   border-right: 1px solid var(--gris2);
   vertical-align: middle;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.4;
+  position: sticky;
+  left: 96px;
+  z-index: 12;
 }
 
 .th-emp-name {
   background: var(--negro3) !important;
   color: var(--amarillo);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
   text-align: left;
-  padding: 4px 8px;
-  min-width: 105px;
-  max-width: 105px;
+  padding: 6px 10px;
+  min-width: 140px;
+  max-width: 140px;
   position: sticky;
-  left: 0;
-  z-index: 10;
-  border-right: 2px solid var(--gris2);
+  left: 146px;
+  z-index: 12;
+  border-right: 2px solid var(--amarillo);
   vertical-align: middle;
   text-transform: uppercase;
+  letter-spacing: .5px;
 }
 
 /* Cabecera de grupos */
 .th-grupo {
   color: #fff;
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 900;
   text-align: center;
-  padding: 6px 4px;
-  letter-spacing: 1px;
+  padding: 10px 6px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  border-left: 1px solid rgba(255,255,255,.15);
+  border-left: 1px solid rgba(255,255,255,.2);
+  white-space: nowrap;
 }
 
 /* Columnas individuales (rotadas) */
@@ -237,19 +275,19 @@ body {
   padding: 4px 2px;
   vertical-align: bottom;
   text-align: center;
-  width: 38px;
-  min-width: 38px;
-  max-width: 38px;
+  width: 56px;
+  min-width: 56px;
+  max-width: 56px;
   border-left: 1px solid var(--gris2);
 }
 .th-col-inner {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--blanco);
-  line-height: 1.1;
-  height: 80px;
+  line-height: 1.2;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,68 +306,72 @@ body {
 #sp-tbody tr.hidden-row { display: none; }
 
 .td-hire {
-  font-size: 9px;
+  font-size: 13px;
   color: var(--gris);
   text-align: center;
-  padding: 4px 3px;
+  padding: 8px 6px;
   white-space: nowrap;
   border-right: 1px solid var(--gris2);
-  min-width: 44px;
-  max-width: 44px;
-}
-
-.td-nombre {
+  width: 76px;
+  min-width: 76px;
+  max-width: 76px;
+  overflow: hidden;
   position: sticky;
   left: 0;
   background: var(--negro2);
-  padding: 4px 8px;
+  z-index: 5;
+}
+#sp-tbody tr:hover .td-hire { background: var(--negro3); }
+#sp-tbody tr.fila-par .td-hire { background: rgba(255,255,255,.02); }
+
+.td-nombre {
+  position: sticky;
+  left: 76px;
+  background: var(--negro2);
+  padding: 8px 14px;
   cursor: pointer;
-  border-right: 2px solid var(--gris2);
-  min-width: 105px;
-  max-width: 115px;
+  border-right: 2px solid var(--amarillo);
+  white-space: nowrap;
   z-index: 5;
 }
 #sp-tbody tr:hover .td-nombre { background: var(--negro3); }
 .td-nombre-txt {
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   display: block;
   color: var(--blanco);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .td-nombre-sub {
-  font-size: 8px;
+  font-size: 11px;
   color: var(--gris);
   display: block;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-top: 2px;
 }
 
 /* ── CELDAS DE ESTRELLA ──────────────────────────────────── */
 .td-star {
   text-align: center;
-  padding: 3px 1px;
+  padding: 6px 2px;
   border-left: 1px solid var(--gris2);
-  width: 38px;
-  min-width: 38px;
+  width: 56px;
+  min-width: 56px;
 }
 
 .star-btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
   border: 1.5px solid #444;
   background: transparent;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all .15s;
-  color: #666;        /* visible pero discreto cuando está vacío */
+  color: #666;
   margin: 0 auto;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
@@ -343,31 +385,31 @@ body {
 .th-pct {
   background: var(--negro3) !important;
   color: var(--amarillo);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 800;
   text-align: center;
-  padding: 4px 4px;
-  min-width: 44px;
-  max-width: 50px;
+  padding: 6px 6px;
+  min-width: 62px;
+  max-width: 70px;
   border-left: 2px solid var(--gris2);
   vertical-align: middle;
 }
 .td-pct {
   text-align: center;
-  padding: 3px 2px;
+  padding: 5px 4px;
   border-left: 2px solid var(--gris2);
-  min-width: 44px;
+  min-width: 62px;
 }
 .pct-porcent {
   display: block;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--amarillo);
   line-height: 1.2;
 }
 .pct-fraccion {
   display: block;
-  font-size: 8px;
+  font-size: 11px;
   color: var(--gris);
   line-height: 1.2;
 }
