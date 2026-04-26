@@ -1,31 +1,10 @@
-/* ============================================================
-   area-estudio.js — Área de estudio por día
-   Carl's Jr. Capacitación
 
-   Antes: inline en area-estudio.html
-
-   PARÁMETROS URL:
-   ?dia=6&back=cronograma.html  → muestra módulos del día 6
-   ?area=cocina&back=...        → muestra todos los módulos del área
-   ============================================================ */
-
-/* ============================================================
-   area-estudio.js — lógica interna de area-estudio.html
-   
-   PARÁMETROS DE URL:
-   ?dia=6&back=cronograma.html
-     → muestra el contenido del día 6 del cronograma
-     → carga guia_estudio.json y renderiza los módulos del día
-
-   ?area=cocina&back=cronograma.html
-     → muestra todos los módulos del área "cocina"
-     → tabs para navegar entre módulos del área
-   ============================================================ */
-
-const params   = new URLSearchParams(window.location.search);
-const DIA      = params.get('dia')  ? parseInt(params.get('dia'))  : null;
-const AREA     = params.get('area') || null;
-const BACK_URL = params.get('back') || '';
+const params    = new URLSearchParams(window.location.search);
+const DIA       = params.get('dia')  ? parseInt(params.get('dia'))  : null;
+const AREA      = params.get('area') || null;
+const BACK_URL  = params.get('back') || '';
+const EXAMEN_ID = params.get('examen') || null;
+const NOM_EMP   = params.get('nom') || '';
 
 // Colores por área
 const AREA_COLORS = {
@@ -118,6 +97,9 @@ function mostrarDia(dia) {
   // Renderizar el primer módulo por defecto
   _modActivo = modIds[0];
   renderModulo(_modActivo);
+
+  // Botón examen si el día lo requiere
+  if (EXAMEN_ID) mostrarBotonExamen();
 }
 
 function construirModulosNav(modIds) {
@@ -229,6 +211,24 @@ const CAT_LABEL = {
 
 function crearSeccion(sec, idx) {
   // Alertas e Info: sin colapsable, solo el bloque
+  if (sec.tipo === 'video') {
+    const div = document.createElement('div');
+    div.className = 'video-wrap';
+    div.style.animationDelay = `${idx * 50}ms`;
+    if (sec.titulo) {
+      const label = document.createElement('div');
+      label.className = 'video-label';
+      label.textContent = sec.titulo;
+      div.appendChild(label);
+    }
+    const iframe = document.createElement('iframe');
+    iframe.src = sec.url;
+    iframe.allow = 'autoplay';
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('frameborder', '0');
+    div.appendChild(iframe);
+    return div;
+  }
   if (sec.tipo === 'alerta') {
     const div = document.createElement('div');
     div.className = 'alerta-box';
@@ -283,8 +283,19 @@ function crearSeccion(sec, idx) {
 }
 
 function tipoLabel(tipo) {
-  const m = { tabla:'Tabla', pasos:'Pasos', lista:'Lista', temperaturas:'Temperaturas', alerta:'Aviso', info:'Información' };
+  const m = { tabla:'Tabla', pasos:'Pasos', lista:'Lista', temperaturas:'Temperaturas', alerta:'Aviso', info:'Información', video:'Video' };
   return m[tipo] || tipo;
+}
+
+function mostrarBotonExamen() {
+  const cta = document.getElementById('examCta');
+  if (!cta) return;
+  cta.style.display = '';
+  cta.querySelector('.btn-examen').onclick = () => {
+    const back = encodeURIComponent(BACK_URL);
+    const nom  = encodeURIComponent(NOM_EMP);
+    window.location.href = `examen.html?id=${encodeURIComponent(EXAMEN_ID)}&nom=${nom}&back=${back}`;
+  };
 }
 
 function renderTabla(sec) {
