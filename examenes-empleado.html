@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/examenes-empleado.css"/>
 </head>
 <body>
-<div class="exam-wrap">
+  <div class="exam-wrap">
 
   <header class="exam-header">
     <button class="back-btn" onclick="history.back()">← Volver</button>
@@ -27,33 +27,29 @@
       <span class="nivel-icon">📗</span>
       <div>
         <div class="nivel-titulo">Nivel Básico</div>
-        <div class="nivel-sub">Primeros 31 días de capacitación</div>
+        <div class="nivel-sub">Primeros 30 días de capacitación</div>
       </div>
     </div>
     <div class="chips-grid">
-      <button class="exam-chip" onclick="irExamen('AutoServicio')">
-        <span class="chip-icon">🚗</span>
-        <span class="chip-label">Auto Servicio</span>
-      </button>
       <button class="exam-chip" onclick="irExamen('SeguridadAlimentaria')">
         <span class="chip-icon">🛡</span>
         <span class="chip-label">Seguridad Alimentaria</span>
       </button>
       <button class="exam-chip" onclick="irExamen('Feeder')">
-        <span class="chip-icon">🍔</span>
+        <span class="chip-icon">🔥</span>
         <span class="chip-label">Feeder</span>
       </button>
       <button class="exam-chip" onclick="irExamen('Freír')">
         <span class="chip-icon">🍟</span>
         <span class="chip-label">Freír</span>
       </button>
-      <button class="exam-chip" onclick="irExamen('Cocinero')">
-        <span class="chip-icon">🔥</span>
-        <span class="chip-label">Cocinero</span>
-      </button>
       <button class="exam-chip" onclick="irExamen('Tenders')">
         <span class="chip-icon">🍗</span>
-        <span class="chip-label">Tenders</span>
+        <span class="chip-label">Tenders / Filetitos de Pollo</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('Cocinero')">
+        <span class="chip-icon">🍔</span>
+        <span class="chip-label">Cocinero</span>
       </button>
       <button class="exam-chip" onclick="irExamen('Comedor')">
         <span class="chip-icon">🍽</span>
@@ -62,6 +58,10 @@
       <button class="exam-chip" onclick="irExamen('Cajero')">
         <span class="chip-icon">💳</span>
         <span class="chip-label">Cajero</span>
+      </button>
+      <button class="exam-chip" onclick="irExamen('AutoServicio')">
+        <span class="chip-icon">🚗</span>
+        <span class="chip-label">Auto Servicio</span>
       </button>
     </div>
   </div>
@@ -76,13 +76,13 @@
       </div>
     </div>
     <div class="chips-grid">
+      <button class="exam-chip" onclick="irExamen('quimicos')">
+        <span class="chip-icon">🧴</span>
+        <span class="chip-label">Productos Químicos</span>
+      </button>
       <button class="exam-chip" onclick="irExamen('vegetales')">
         <span class="chip-icon">🥬</span>
         <span class="chip-label">Vegetales</span>
-      </button>
-      <button class="exam-chip" onclick="irExamen('quimicos')">
-        <span class="chip-icon">🧴</span>
-        <span class="chip-label">Químicos</span>
       </button>
       <button class="exam-chip" onclick="irExamen('malteadas')">
         <span class="chip-icon">🥤</span>
