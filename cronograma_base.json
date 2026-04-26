@@ -6,7 +6,7 @@
       "titulo": "Orientación + Feeder Inducción",
       "icono": "📖",
       "categoria": "onboarding",
-      "modulos": ["Feeder"],
+      "modulos": ["orientacion", "Feeder"],
       "subtitulo": "Recorrido de Seguridad · DVD Alimentador",
       "obligatorio": true
     },
