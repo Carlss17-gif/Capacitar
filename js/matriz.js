@@ -1,6 +1,3 @@
-/* ============================================================
-   matriz.js — Star Performance + Matriz
-   ============================================================ */
 
 let _sesion         = null;
 let _datos          = [];
@@ -49,33 +46,36 @@ function cambiarVista(vista) {
 function construirTabla() {
   const thead = document.getElementById('sp-thead');
   const gruposOrden = _esGeneral
-    ? ['ob', 'bl', 'fl']          // Matriz: sin Crew Trainer
-    : ['ob', 'bl', 'fl', 'ct'];   // Star Performance: todos los grupos
+    ? ['ob', 'bl', 'fl']
+    : ['ob', 'bl', 'fl', 'ct'];
 
   const colsFiltradas = COLUMNAS_STAR.filter(c => gruposOrden.includes(c.grupo));
   const conteo = {};
   colsFiltradas.forEach(c => { conteo[c.grupo] = (conteo[c.grupo] || 0) + 1; });
 
-  // Fila 1: logo + título + grupos + promedio
+  // ── FILA 1: logo colspan=2+rowspan=2 (cubre cols fecha+nombre) + grupos + % ──
+  // El logo abarca las 2 columnas de datos fijos (fecha + nombre), sin celda vacía
   let f1 = `<tr>
-    <th class="th-logo" rowspan="2">
+    <th class="th-logo" rowspan="2" colspan="2">
       <div class="logo-box">
         <img src="CarlsLogo.png" alt="Carl's Jr." onerror="this.style.display='none'">
         <span class="star-perf-label">"Be A Star!"</span>
+        <div class="logo-labels">
+          <span class="logo-lbl-fecha">FECHA<br>DE INGRESO</span>
+          <span class="logo-lbl-nombre">NOMBRE DEL EMPLEADO</span>
+        </div>
       </div>
-    </th>
-    <th class="th-hire" rowspan="2">FECHA</th>
-    <th class="th-emp-name" rowspan="2">EMPLEADO</th>`;
+    </th>`;
 
   gruposOrden.forEach(g => {
     const cnt = conteo[g] || 0;
     if (!cnt) return;
-    const col = GRUPOS_STAR[g].color;
-    f1 += `<th class="th-grupo" colspan="${cnt}" style="background:${col}">${GRUPOS_STAR[g].label.toUpperCase()}</th>`;
+    const grp = GRUPOS_STAR[g];
+    f1 += `<th class="th-grupo" colspan="${cnt}" style="background:${grp.color}">${grp.label.toUpperCase()}</th>`;
   });
   f1 += `<th class="th-pct" rowspan="2">%</th></tr>`;
 
-  // Fila 2: columnas individuales (rotadas)
+  // ── FILA 2: columnas individuales (rotadas) — fecha+nombre cubiertos por logo ──
   let f2 = '<tr>';
   colsFiltradas.forEach(col => {
     const col_color = GRUPOS_STAR[col.grupo].color;
@@ -86,7 +86,6 @@ function construirTabla() {
   f2 += '</tr>';
 
   thead.innerHTML = f1 + f2;
-  // Guardar las columnas filtradas para usarlas en el render
   window._colsRender = colsFiltradas;
 }
 
@@ -96,29 +95,44 @@ async function cargarDatos() {
   const tbody = document.getElementById('sp-tbody');
   tbody.innerHTML = '<tr><td colspan="30" class="loading-cell">Cargando…</td></tr>';
 
+  const esVistaSucursal = _esGeneral || _vistaEmpleados === 'sucursal';
+
   let q = mysupabase.from('empleados')
-    .select('id, nombre, fecha_ingreso, entrenador, sucursal, activo');
+    .select('id, nombre, fecha_ingreso, entrenador, sucursal, activo, email');
 
   if (_esGeneral) {
-    // Matriz: todos los empleados de la misma sucursal del entrenador
     const sucKey = normalizarSucursal(_sesion.sucursal || '');
-    if (sucKey) {
-      q = q.ilike('sucursal', `%${sucKey}%`);
-    }
+    if (sucKey) q = q.ilike('sucursal', `%${sucKey}%`);
   } else if (_vistaEmpleados === 'mios') {
-    // Star Performance — solo mis empleados
     const filtro = _sesion.nombre_entrenador || _sesion.nombre;
     q = q.eq('entrenador', filtro);
   } else {
     // Star Performance — toda la sucursal
     const sucKey = normalizarSucursal(_sesion.sucursal || '');
-    if (sucKey) {
-      q = q.ilike('sucursal', `%${sucKey}%`);
+    if (sucKey) q = q.ilike('sucursal', `%${sucKey}%`);
+  }
+
+  let { data: empleados, error } = await q.order('fecha_ingreso');
+  if (error) {
+    tbody.innerHTML = '<tr><td colspan="30" class="loading-cell">No hay empleados registrados</td></tr>';
+    return;
+  }
+  empleados = empleados || [];
+
+  // Asegurar que el entrenador actual aparezca en vistas de sucursal completa
+  if (esVistaSucursal && _sesion.email) {
+    const yaEsta = empleados.some(e => e.email === _sesion.email);
+    if (!yaEsta) {
+      const { data: propioRec } = await mysupabase
+        .from('empleados')
+        .select('id, nombre, fecha_ingreso, entrenador, sucursal, activo, email')
+        .eq('email', _sesion.email)
+        .maybeSingle();
+      if (propioRec) empleados.unshift(propioRec);
     }
   }
 
-  const { data: empleados, error } = await q.order('fecha_ingreso');
-  if (error || !empleados?.length) {
+  if (!empleados.length) {
     tbody.innerHTML = '<tr><td colspan="30" class="loading-cell">No hay empleados registrados</td></tr>';
     return;
   }
@@ -168,7 +182,10 @@ function renderTabla() {
   tbody.innerHTML = '';
   const cols = window._colsRender || COLUMNAS_STAR;
 
-  const filtrados = _verBajas ? _datos : _datos.filter(d => d.empleado.activo !== false);
+  const emailSesion = _sesion?.email || '';
+  const filtrados = _verBajas
+    ? _datos
+    : _datos.filter(d => d.empleado.activo !== false || d.empleado.email === emailSesion);
   if (!filtrados.length) {
     tbody.innerHTML = '<tr><td colspan="30" class="loading-cell">Sin empleados</td></tr>';
     return;
@@ -251,7 +268,7 @@ function _appendFilaTotales(cols, filtrados) {
   tr.classList.add('fila-totales');
 
   const tdLbl = document.createElement('td');
-  tdLbl.colSpan = 3;
+  tdLbl.colSpan = 2;
   tdLbl.className = 'td-total-lbl';
   tdLbl.textContent = 'Promedio Sucursal';
   tr.appendChild(tdLbl);
