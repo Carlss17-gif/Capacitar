@@ -1,7 +1,3 @@
-/* ============================================================
-   modulos.js — Catálogo de módulos y configuración base
-   Carl's Jr. Capacitación
-   ============================================================ */
 
 const MODULOS_INDEX = [
   { id: 'coccion',        titulo: 'Tiempos de Cocción y Retención', icono: '⏱', cat: 'cocina'    },
@@ -24,6 +20,7 @@ const MODULOS_INDEX = [
   { id: 'alergenos',      titulo: 'Alérgenos y Seguridad',          icono: '⚠️', cat: 'seguridad' },
   { id: 'enfermedades',   titulo: 'Enfermedades por Alimentos',     icono: '🏥', cat: 'seguridad' },
   { id: 'Feeder',         titulo: 'Feeder / Producción',            icono: '🔥', cat: 'cocina'    },
+  { id: 'orientacion',   titulo: 'Orientación e Inducción',        icono: '📖', cat: 'seguridad' },
   { id: 'autoservicio',   titulo: 'Auto Servicio — Drive Thru',     icono: '🚗', cat: 'servicio'  },
   { id: 'delivery',       titulo: 'Delivery / Uber Eats',           icono: '🛵', cat: 'servicio'  },
   { id: 'Super Star',     titulo: 'Servicio Super Star',            icono: '⭐', cat: 'servicio'  },
