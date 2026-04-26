@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="/css/cronograma.css"/>
 </head>
 <body>
+
 <div class="crono-wrap">
 
   <header class="crono-header">
-    <button class="back-btn" onclick="window.location.href='panel-entrenador.html'">← Volver</button>
-    <div class="header-center"><span>📅</span><h1>Cronograma 31 Días</h1></div>
+    <button class="back-btn" onclick="volverAtras()">← Volver</button>
+    <div class="header-center"><span>📅</span><h1>Cronograma 30 Días</h1></div>
     <div id="rolBadge" class="rol-badge">—</div>
   </header>
 
@@ -37,7 +38,7 @@
   <div class="prog-bar-wrap" id="progBarWrap" style="display:none">
     <div class="prog-info">
       <span class="prog-label">Progreso</span>
-      <span class="prog-num" id="progNum">0 / 31</span>
+      <span class="prog-num" id="progNum">0 / 30</span>
     </div>
     <div class="prog-rail"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
   </div>
