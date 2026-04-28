@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/excel.py": {
+      "runtime": "python3.9"
+    }
+  }
+}
