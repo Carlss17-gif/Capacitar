@@ -1,32 +1,4 @@
-/* ============================================================
-   utils.js — Utilidades compartidas · Carl's Jr. Capacitación
 
-   Antes: core.js
-
-   EXPORTA (globales):
-   ─────────────────────────────────────────────────────────────
-   Sesión:
-     getSesionEntrenador()
-     getSesionEmpleado()
-     requireEntrenador()
-     cerrarSesion()
-
-   Supabase helpers:
-     queryEmpleadosPorEntrenador(sesion, campos?)
-     queryStarPerformance(empIds)
-     upsertStar(empId, empNombre, columna, valor, sesion)
-
-   UI:
-     toast(msg, dur?)
-     mostrarFechaHoy(elId)
-
-   Formato:
-     formatFecha(isoStr)
-     cortar(str, max)
-     abreviar(str, max)   ← alias de cortar
-   ============================================================ */
-
-// ── SESIÓN ────────────────────────────────────────────────────
 
 function getSesionEntrenador() {
   return JSON.parse(localStorage.getItem('sesion_entrenador') || 'null');
@@ -36,10 +8,6 @@ function getSesionEmpleado() {
   return JSON.parse(localStorage.getItem('empleado') || 'null');
 }
 
-/**
- * Protege páginas de entrenador.
- * Si no hay sesión válida redirige a index.html.
- */
 function requireEntrenador() {
   const s = getSesionEntrenador();
   if (!s || !s.nombre) {
@@ -54,18 +22,21 @@ function cerrarSesion() {
   window.location.href = 'index.html';
 }
 
-// ── SUPABASE HELPERS ──────────────────────────────────────────
 
-/**
- * Devuelve los empleados asignados al entrenador de la sesión.
- */
 async function queryEmpleadosPorEntrenador(sesion, campos = 'id, nombre, fecha_ingreso, sucursal, entrenador') {
   const filtro = sesion.nombre_entrenador || sesion.nombre;
-  return mysupabase
-    .from('empleados')
-    .select(campos)
-    .eq('entrenador', filtro)
-    .order('nombre');
+
+  const palabras = filtro.split(/\s+/).filter(p => p.length > 2);
+  let query = mysupabase.from('empleados').select(campos);
+
+  if (palabras.length > 0) {
+    const condiciones = palabras.map(p => `entrenador.ilike.%${p}%`).join(',');
+    query = query.or(condiciones);
+  } else {
+    query = query.ilike('entrenador', `%${filtro}%`);
+  }
+
+  return query.order('nombre');
 }
 
 /**
@@ -76,10 +47,6 @@ async function queryStarPerformance(empIds) {
   return mysupabase.from('star_performance').select('*').in('empleado_id', empIds);
 }
 
-/**
- * Hace upsert de una columna de star_performance
- * y registra en avance_capacitacion si el valor es true.
- */
 async function upsertStar(empId, empNombre, columna, nuevoValor, sesion) {
   const { error } = await mysupabase
     .from('star_performance')
@@ -107,11 +74,6 @@ async function upsertStar(empId, empNombre, columna, nuevoValor, sesion) {
   return error;
 }
 
-// ── UI ────────────────────────────────────────────────────────
-
-/**
- * Notificación flotante temporal.
- */
 function toast(msg, dur = 2800) {
   let t = document.getElementById('_toast_global');
   if (!t) {
@@ -137,9 +99,6 @@ function toast(msg, dur = 2800) {
   }, dur);
 }
 
-/**
- * Escribe la fecha de hoy dentro del elemento con el id dado.
- */
 function mostrarFechaHoy(elId) {
   const el = document.getElementById(elId);
   if (!el) return;
@@ -150,7 +109,6 @@ function mostrarFechaHoy(elId) {
   el.innerHTML = `Hoy es <span style="font-weight:700">${dias[hoy.getDay()]}, ${hoy.getDate()} de ${meses[hoy.getMonth()]} de ${hoy.getFullYear()}</span>`;
 }
 
-// ── FORMATO ───────────────────────────────────────────────────
 
 const _MESES_CORTO = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
 
