@@ -1,5 +1,4 @@
 
-
 function getSesionEntrenador() {
   return JSON.parse(localStorage.getItem('sesion_entrenador') || 'null');
 }
@@ -22,10 +21,8 @@ function cerrarSesion() {
   window.location.href = 'index.html';
 }
 
-
 async function queryEmpleadosPorEntrenador(sesion, campos = 'id, nombre, fecha_ingreso, sucursal, entrenador') {
   const filtro = sesion.nombre_entrenador || sesion.nombre;
-
   const palabras = filtro.split(/\s+/).filter(p => p.length > 2);
   let query = mysupabase.from('empleados').select(campos);
 
@@ -39,9 +36,7 @@ async function queryEmpleadosPorEntrenador(sesion, campos = 'id, nombre, fecha_i
   return query.order('nombre');
 }
 
-/**
- * Obtiene filas de star_performance para un array de IDs.
- */
+
 async function queryStarPerformance(empIds) {
   if (!empIds?.length) return { data: [], error: null };
   return mysupabase.from('star_performance').select('*').in('empleado_id', empIds);
@@ -74,6 +69,11 @@ async function upsertStar(empId, empNombre, columna, nuevoValor, sesion) {
   return error;
 }
 
+// ── UI ────────────────────────────────────────────────────────
+
+/**
+ * Notificación flotante temporal.
+ */
 function toast(msg, dur = 2800) {
   let t = document.getElementById('_toast_global');
   if (!t) {
@@ -99,6 +99,9 @@ function toast(msg, dur = 2800) {
   }, dur);
 }
 
+/**
+ * Escribe la fecha de hoy dentro del elemento con el id dado.
+ */
 function mostrarFechaHoy(elId) {
   const el = document.getElementById(elId);
   if (!el) return;
@@ -109,6 +112,7 @@ function mostrarFechaHoy(elId) {
   el.innerHTML = `Hoy es <span style="font-weight:700">${dias[hoy.getDay()]}, ${hoy.getDate()} de ${meses[hoy.getMonth()]} de ${hoy.getFullYear()}</span>`;
 }
 
+// ── FORMATO ───────────────────────────────────────────────────
 
 const _MESES_CORTO = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
 
@@ -122,5 +126,4 @@ function cortar(str, max) {
   return str?.length > max ? str.substring(0, max) + '…' : (str || '');
 }
 
-// Alias para compatibilidad
 const abreviar = cortar;
