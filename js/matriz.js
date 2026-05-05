@@ -4,18 +4,13 @@ let _datos          = [];
 let _esGeneral      = false;
 let _verBajas       = false;
 let _empPanel       = null;
-let _vistaEmpleados = 'mios'; // 'mios' | 'sucursal' (solo Star Performance)
+let _vistaEmpleados = 'mios'; 
 
-/* Extrae la clave de sucursal para comparar sin importar el nombre exacto */
 function normalizarSucursal(s) {
   const str = (s || '').toLowerCase();
   if (/oaxaca/.test(str))              return 'oaxaca';
   if (/tehuac[aá]n/.test(str))         return 'tehuacan';
   if (/puebla/.test(str))              return 'puebla';
-  if (/monterrey|mty/.test(str))       return 'monterrey';
-  if (/guadalajara|gdl/.test(str))     return 'guadalajara';
-  if (/veracruz/.test(str))            return 'veracruz';
-  // Quita "Carl's Jr." y deja lo que queda
   return str.replace(/carl[s']?\s*jr\.?\s*/i, '').trim() || str;
 }
 
@@ -24,7 +19,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   _esGeneral = new URLSearchParams(window.location.search).get('general') === '1';
   document.getElementById('tituloMatriz').textContent = _esGeneral ? 'Matriz' : 'Star Performance';
 
-  // Mostrar/ocultar toggle de vista según el modo
   const toggleBar = document.getElementById('vistaToggle');
   if (toggleBar) toggleBar.style.display = _esGeneral ? 'none' : 'flex';
 
@@ -32,16 +26,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   await cargarDatos();
 });
 
-// ── CAMBIAR VISTA (Star Performance) ─────────────────────────
-
 function cambiarVista(vista) {
   _vistaEmpleados = vista;
   document.getElementById('btnVistaM').classList.toggle('active',  vista === 'mios');
   document.getElementById('btnVistaS').classList.toggle('active', vista === 'sucursal');
   cargarDatos();
 }
-
-// ── CONSTRUCCIÓN DE CABECERA ──────────────────────────────────
 
 function construirTabla() {
   const thead = document.getElementById('sp-thead');
@@ -105,7 +95,15 @@ async function cargarDatos() {
     if (sucKey) q = q.ilike('sucursal', `%${sucKey}%`);
   } else if (_vistaEmpleados === 'mios') {
     const filtro = _sesion.nombre_entrenador || _sesion.nombre;
-    q = q.eq('entrenador', filtro);
+    // Busca por cada palabra del nombre del entrenador, ignorando mayúsculas
+    // Así "Jose Israel Neri Cervantes" encuentra empleados registrados como "israel neri" o "jose israel"
+    const palabras = filtro.split(/\s+/).filter(p => p.length > 2);
+    if (palabras.length > 0) {
+      const condiciones = palabras.map(p => `entrenador.ilike.%${p}%`).join(',');
+      q = q.or(condiciones);
+    } else {
+      q = q.ilike('entrenador', `%${filtro}%`);
+    }
   } else {
     // Star Performance — toda la sucursal
     const sucKey = normalizarSucursal(_sesion.sucursal || '');
@@ -292,8 +290,6 @@ function _appendFilaTotales(cols, filtrados) {
   tbody.appendChild(tr);
 }
 
-// ── TOGGLE ESTRELLA ───────────────────────────────────────────
-
 async function toggleEstrella(empId, empNombre, columna, nuevoValor, tdEl, grupo, btn) {
   const color = GRUPOS_STAR[grupo].color;
 
@@ -321,9 +317,6 @@ async function toggleEstrella(empId, empNombre, columna, nuevoValor, tdEl, grupo
 
   toast(nuevoValor ? '★ Estrella asignada' : '☆ Removida');
 }
-
-// ── PANEL LATERAL ─────────────────────────────────────────────
-
 function abrirPanel(empleado, star) {
   _empPanel = empleado;
   const cols = window._colsRender || COLUMNAS_STAR;
@@ -373,7 +366,6 @@ async function confirmarBaja() {
   await cargarDatos();
 }
 
-// ── FILTROS ───────────────────────────────────────────────────
 
 function filtrar(texto) {
   const q = texto.toLowerCase().trim();
@@ -386,27 +378,4 @@ function toggleBajas() {
   _verBajas = !_verBajas;
   document.getElementById('btnBaja').textContent = _verBajas ? 'Ocultar bajas' : 'Ver bajas';
   renderTabla();
-}
-
-// ── EXPORTAR CSV ──────────────────────────────────────────────
-
-function exportarCSV() {
-  const cols    = window._colsRender || COLUMNAS_STAR;
-  const headers = ['Nombre', 'Entrenador', 'Sucursal', 'Ingreso', ...cols.map(c => c.label), '%'];
-  const filas   = _datos.map(({ empleado, star }) => {
-    const doneCt = cols.filter(c => !!star[c.id]).length;
-    const pct    = Math.round((doneCt / cols.length) * 100);
-    return [
-      empleado.nombre || '', empleado.entrenador || '',
-      empleado.sucursal || '', empleado.fecha_ingreso || '',
-      ...cols.map(c => star[c.id] ? '★' : '☆'),
-      `${pct}%`,
-    ];
-  });
-  const csv = [headers, ...filas].map(r => r.map(c => `"${c}"`).join(',')).join('\n');
-  const a = Object.assign(document.createElement('a'), {
-    href:     URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' })),
-    download: `${_esGeneral ? 'matriz' : 'star_performance'}_${new Date().toISOString().split('T')[0]}.csv`,
-  });
-  a.click();
 }
