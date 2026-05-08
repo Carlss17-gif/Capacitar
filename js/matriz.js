@@ -8,8 +8,13 @@ let _vistaEmpleados = 'mios'; // 'mios' | 'sucursal' (solo Star Performance)
 
 /* Normaliza un string para comparación: minúsculas, sin acentos, sin espacios extra */
 function normalizarTexto(s) {
-  return (s || '').toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  return (s || '')
+    .toLowerCase()
+    .normalize('NFC')          // primero composición canónica
+    .normalize('NFD')          // luego descomposición para separar acentos
+    .replace(/[\u0300-\u036f]/g, '')  // quita los acentos sueltos
+    .replace(/[^a-z0-9\s]/g, '')      // quita cualquier otro carácter raro
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
@@ -399,4 +404,3 @@ function exportarCSV() {
   });
   a.click();
 }
-
