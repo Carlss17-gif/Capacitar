@@ -1,7 +1,6 @@
 {
-  "functions": {
-    "api/excel.py": {
-      "runtime": "python3.12"
-    }
-  }
+  "version": 2,
+  "builds": [
+    { "src": "**/*", "use": "@vercel/static" }
+  ]
 }
