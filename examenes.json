@@ -19,7 +19,7 @@
     "area": "Seguridad Alimentaria",
     "preguntas": [
       {"tipo":"opcion","texto":"¿Cuáles son las maneras en que se puede contaminar los alimentos?","opciones":["De manera física y química.","De manera química y bacterial.","De manera física, química, y bacterial."],"correcta":2},
-      {"tipo":"opcion","texto":"Su meta es saludar al invitado INMEDIATAMENTE que llegue al tablero del menú.","opciones":["Se utiliza un químico en las superficies de comida.","Algo que no es parte de la comida se encuentra presente (como pelo, uñas, vidrio, metal).","Un invitado se enferma físicamente."],"correcta":1},
+      {"tipo":"opcion","texto":"Contaminación física ocurre cuando: ","opciones":["Se utiliza un químico en las superficies de comida.","Algo que no es parte de la comida se encuentra presente (como pelo, uñas, vidrio, metal).","Un invitado se enferma físicamente."],"correcta":1},
       {"tipo":"opcion","texto":"¿Cómo puede usted ayudar a prevenir la contaminación química en el restaurante?","opciones":["Mantenga los químicos en áreas adecuadas de almacenaje.","Enjuague las verduras antes de usar.","Use químicos debidamente, de acuerdo a las normas de SDS.","Todas las anteriores"],"correcta":3},
       {"tipo":"opcion","texto":"¿Qué representan las siglas “PHF” en inglés?","opciones":["Alimentos que han sido físicamente tocados. (Physically handled food).","Calor y congelación adecuada. (Proper heating and freezing).","Alimentos que pueden ser dañinos. (Potentially hazardous food)."],"correcta":2},
       {"tipo":"opcion","texto":"¿A qué distancia del piso se deben almacenar alimentos y cajas?","opciones":["Seis pies.","Seis pulgadas.","Una pulgada."],"correcta":1},
