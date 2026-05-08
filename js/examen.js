@@ -116,20 +116,31 @@ async function enviar() {
 
   const total = examenData.preguntas.filter(p => p.tipo === 'opcion').length;
 
-  const { error } = await mysupabase
-    .from('resultados_examen')
-    .insert([{
-      nombre:    empNombre,
-      examen:    examId,
-      area:      examenData.area,
-      respuestas,
-      correctas,
-      total:     examenData.preguntas.length,
-    }]);
+  // ── Delegar lógica de límite y mejor puntuación a Supabase ──
+  const { data: resultado, error } = await mysupabase
+    .rpc('insertar_resultado_examen', {
+      p_nombre:     empNombre,
+      p_examen:     examId,
+      p_area:       examenData.area,
+      p_respuestas: respuestas,
+      p_correctas:  correctas,
+      p_total:      examenData.preguntas.length,
+    });
 
   if (error) {
     btn.disabled = false; btn.textContent = 'Enviar respuestas';
     alert('Error al guardar. Intenta de nuevo.');
+    return;
+  }
+
+  if (!resultado.ok) {
+    btn.disabled = false; btn.textContent = 'Enviar respuestas';
+    if (resultado.motivo === 'espera') {
+      const d = resultado.dias_restantes;
+      alert(`Ya realizaste este examen recientemente.\nPodrás volver a intentarlo en ${d} día${d !== 1 ? 's' : ''}.`);
+    } else if (resultado.motivo === 'peor_puntuacion') {
+      alert(`Tu resultado anterior fue ${resultado.pct_actual}%.\nEsta respuesta obtuvo ${resultado.pct_nuevo}%, por lo que no se guardó.\nSolo se conserva la mejor puntuación.`);
+    }
     return;
   }
 
