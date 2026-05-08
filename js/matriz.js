@@ -6,17 +6,11 @@ let _verBajas       = false;
 let _empPanel       = null;
 let _vistaEmpleados = 'mios'; // 'mios' | 'sucursal' (solo Star Performance)
 
-/* Extrae la clave de sucursal para comparar sin importar el nombre exacto */
-function normalizarSucursal(s) {
-  const str = (s || '').toLowerCase();
-  if (/oaxaca/.test(str))              return 'oaxaca';
-  if (/tehuac[aá]n/.test(str))         return 'tehuacan';
-  if (/puebla/.test(str))              return 'puebla';
-  if (/monterrey|mty/.test(str))       return 'monterrey';
-  if (/guadalajara|gdl/.test(str))     return 'guadalajara';
-  if (/veracruz/.test(str))            return 'veracruz';
-  // Quita "Carl's Jr." y deja lo que queda
-  return str.replace(/carl[s']?\s*jr\.?\s*/i, '').trim() || str;
+/* Normaliza un string para comparación: minúsculas, sin acentos, sin espacios extra */
+function normalizarTexto(s) {
+  return (s || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .trim();
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -96,20 +90,22 @@ async function cargarDatos() {
   tbody.innerHTML = '<tr><td colspan="30" class="loading-cell">Cargando…</td></tr>';
 
   const esVistaSucursal = _esGeneral || _vistaEmpleados === 'sucursal';
+  const sucursalSesion  = (_sesion.sucursal || '').trim();
 
   let q = mysupabase.from('empleados')
     .select('id, nombre, fecha_ingreso, entrenador, sucursal, activo, email');
 
-  if (_esGeneral) {
-    const sucKey = normalizarSucursal(_sesion.sucursal || '');
-    if (sucKey) q = q.ilike('sucursal', `%${sucKey}%`);
-  } else if (_vistaEmpleados === 'mios') {
-    // Sin filtro en Supabase — traemos todos y filtramos en JS
-    // para máxima flexibilidad con nombres escritos de cualquier forma
+  if (esVistaSucursal) {
+    // Vista sucursal completa o Matriz: filtra por la misma sucursal del entrenador logueado
+    if (sucursalSesion) {
+      q = q.eq('sucursal', sucursalSesion);
+    }
   } else {
-    // Star Performance — toda la sucursal
-    const sucKey = normalizarSucursal(_sesion.sucursal || '');
-    if (sucKey) q = q.ilike('sucursal', `%${sucKey}%`);
+    // Vista "Mis empleados": filtra por sucursal + luego filtra por entrenador en JS
+    // Filtrar por sucursal en DB reduce el set antes del filtro JS, evitando el límite de 1000
+    if (sucursalSesion) {
+      q = q.eq('sucursal', sucursalSesion);
+    }
   }
 
   let { data: empleados, error } = await q.order('fecha_ingreso');
@@ -119,21 +115,18 @@ async function cargarDatos() {
   }
   empleados = empleados || [];
 
-  // Filtro JS para vista mis empleados: compara palabras del nombre del entrenador
-  // con lo que el empleado escribio en su campo entrenador, ignorando mayusculas
-  if (_vistaEmpleados === "mios" && !_esGeneral) {
-    const nombreEntrenador = (_sesion.nombre_entrenador || _sesion.nombre || "").toLowerCase();
-    const palabrasEntrenador = nombreEntrenador.split(/ +/).filter(p => p.length > 2);
+  // Filtro JS para "Mis empleados": compara el campo entrenador del empleado
+  // contra el nombre del entrenador logueado, sin acentos ni mayúsculas
+  if (_vistaEmpleados === 'mios' && !_esGeneral) {
+    const nombreNorm = normalizarTexto(_sesion.nombre_entrenador || _sesion.nombre || '');
 
     empleados = empleados.filter(e => {
-      const entrenadorEmpleado = (e.entrenador || "").toLowerCase();
-      const palabrasEmpleado   = entrenadorEmpleado.split(/ +/).filter(p => p.length > 2);
-
-      // Coincide si al menos UNA palabra del campo entrenador del empleado
-      // aparece en el nombre del entrenador logueado, o viceversa
-      return palabrasEmpleado.some(pe => palabrasEntrenador.some(pt =>
-        pt.includes(pe) || pe.includes(pt)
-      ));
+      const entNorm = normalizarTexto(e.entrenador || '');
+      // Coincide si el nombre normalizado del entrenador logueado
+      // está contenido en el campo entrenador del empleado, o viceversa
+      return entNorm === nombreNorm ||
+             entNorm.includes(nombreNorm) ||
+             nombreNorm.includes(entNorm);
     });
   }
 
@@ -428,3 +421,4 @@ function exportarCSV() {
   });
   a.click();
 }
+
