@@ -90,57 +90,35 @@ async function cargarDatos() {
   tbody.innerHTML = '<tr><td colspan="30" class="loading-cell">Cargando…</td></tr>';
 
   const esVistaSucursal = _esGeneral || _vistaEmpleados === 'sucursal';
-  const sucursalSesion  = (_sesion.sucursal || '').trim();
+  const sucursalNorm    = normalizarTexto(_sesion.sucursal || '');
 
-  let q = mysupabase.from('empleados')
-    .select('id, nombre, fecha_ingreso, entrenador, sucursal, activo, email');
+  // Traemos todos los empleados y filtramos en JS normalizando ambos lados
+  // Esto resuelve variaciones de acentos: "Tehuacan" == "Tehuacán"
+  let { data: todos, error } = await mysupabase
+    .from('empleados')
+    .select('id, nombre, fecha_ingreso, entrenador, sucursal, activo, email')
+    .order('fecha_ingreso');
 
-  if (esVistaSucursal) {
-    // Vista sucursal completa o Matriz: filtra por la misma sucursal del entrenador logueado
-    if (sucursalSesion) {
-      q = q.eq('sucursal', sucursalSesion);
-    }
-  } else {
-    // Vista "Mis empleados": filtra por sucursal + luego filtra por entrenador en JS
-    // Filtrar por sucursal en DB reduce el set antes del filtro JS, evitando el límite de 1000
-    if (sucursalSesion) {
-      q = q.eq('sucursal', sucursalSesion);
-    }
-  }
-
-  let { data: empleados, error } = await q.order('fecha_ingreso');
   if (error) {
     tbody.innerHTML = '<tr><td colspan="30" class="loading-cell">No hay empleados registrados</td></tr>';
     return;
   }
-  empleados = empleados || [];
+  todos = todos || [];
 
-  // Filtro JS para "Mis empleados": compara el campo entrenador del empleado
-  // contra el nombre del entrenador logueado, sin acentos ni mayúsculas
+  // Filtro de sucursal en JS: compara ambos lados normalizados
+  let empleados = sucursalNorm
+    ? todos.filter(e => normalizarTexto(e.sucursal || '') === sucursalNorm)
+    : todos;
+
+  // Filtro adicional para "Mis empleados"
   if (_vistaEmpleados === 'mios' && !_esGeneral) {
     const nombreNorm = normalizarTexto(_sesion.nombre_entrenador || _sesion.nombre || '');
-
     empleados = empleados.filter(e => {
       const entNorm = normalizarTexto(e.entrenador || '');
-      // Coincide si el nombre normalizado del entrenador logueado
-      // está contenido en el campo entrenador del empleado, o viceversa
       return entNorm === nombreNorm ||
              entNorm.includes(nombreNorm) ||
              nombreNorm.includes(entNorm);
     });
-  }
-
-  // Asegurar que el entrenador actual aparezca en vistas de sucursal completa
-  if (esVistaSucursal && _sesion.email) {
-    const yaEsta = empleados.some(e => e.email === _sesion.email);
-    if (!yaEsta) {
-      const { data: propioRec } = await mysupabase
-        .from('empleados')
-        .select('id, nombre, fecha_ingreso, entrenador, sucursal, activo, email')
-        .eq('email', _sesion.email)
-        .maybeSingle();
-      if (propioRec) empleados.unshift(propioRec);
-    }
   }
 
   if (!empleados.length) {
