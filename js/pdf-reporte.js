@@ -1,24 +1,3 @@
-/* ============================================================
-   pdf-reporte.js — Generador de PDF de evaluaciones
-   Carl's Jr. Capacitación
-
-   Antes: pdf.js
-
-   BUG CORREGIDO:
-   ─────────────────────────────────────────────────────────────
-   Antes: leía datos del empleado desde localStorage('empleado'),
-   lo cual solo funciona cuando el empleado está logueado en su
-   propio dispositivo. Si el entrenador lo abre desde su sesión,
-   localStorage('empleado') está vacío o tiene sus propios datos.
-
-   Ahora: generarPDF(empleadoObj, resultados) recibe directamente
-   el objeto del empleado seleccionado y sus resultados,
-   sin depender de localStorage ni de variables globales externas.
-   ─────────────────────────────────────────────────────────────
-
-   DEPENDE DE: supabase.js
-   SE LLAMA DESDE: dashboard-entrenador.js
-   ============================================================ */
 
 /**
  * Genera el PDF de reporte para un empleado.
@@ -78,10 +57,36 @@ async function generarPDF(empleadoObj, resultados) {
     .eq('nombre', empleado.nombre)
     .order('created_at', { ascending: false });
 
-  const habilidadesPorArea = {};
+  // Normaliza texto para comparar áreas sin importar acentos, mayúsculas o palabras extra
+  const normArea = s => (s || '').toLowerCase()
+    .normalize('NFC').normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+
+  // Indexar habilidades por área normalizada (la más reciente por área)
+  const habilidadesPorAreaNorm = {};
   (habilidadesData || []).forEach(h => {
-    if (!habilidadesPorArea[h.area]) habilidadesPorArea[h.area] = h;
+    const key = normArea(h.area);
+    if (!habilidadesPorAreaNorm[key]) habilidadesPorAreaNorm[key] = h;
   });
+
+  // Helper para buscar habilidad por área aunque los nombres no sean idénticos
+  const buscarHabilidad = (area) => {
+    // 1. Coincidencia exacta normalizada
+    const key = normArea(area);
+    if (habilidadesPorAreaNorm[key]) return habilidadesPorAreaNorm[key];
+    // 2. Coincidencia parcial: el área de habilidades está contenida en el área del examen o viceversa
+    for (const [k, h] of Object.entries(habilidadesPorAreaNorm)) {
+      if (key.includes(k) || k.includes(key)) return h;
+      // 3. Coincidencia por palabras clave (al menos 3 palabras en común)
+      const palabrasKey  = key.split(' ').filter(p => p.length > 3);
+      const palabrasArea = k.split(' ').filter(p => p.length > 3);
+      const comunes = palabrasKey.filter(p => palabrasArea.includes(p));
+      if (comunes.length >= 2) return h;
+    }
+    return null;
+  };
 
   // Una entrada por área (la más reciente)
   const areasUnicas = [...new Map(resultados.map(r => [r.area, r])).values()];
@@ -142,7 +147,7 @@ async function generarPDF(empleadoObj, resultados) {
     y = 25;
     y = await _agregarEncabezado(pdf, `Evaluación de Habilidades — ${registro.area}`, marginX, maxWidth, y);
 
-    const habRegistro = habilidadesPorArea[registro.area];
+    const habRegistro = buscarHabilidad(registro.area);
 
     if (!habRegistro) {
       pdf.setFontSize(10);
