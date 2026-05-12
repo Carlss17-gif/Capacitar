@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="/css/matriz.css">
 </head>
 <body>
-
+ 
 <div class="m-wrap">
-
+ 
   <header class="m-header">
     <button class="back-btn" onclick="history.back()">← Volver</button>
     <div class="header-center">
@@ -19,25 +19,24 @@
       <h1 id="tituloMatriz">Star Performance</h1>
     </div>
     <div class="header-actions">
-      <button class="btn-export" id="btnExcelStar" onclick="generarExcelStarPerformance()">Excel Star Performance</button>
-      <button class="btn-export" id="btnExcelMatriz" onclick="generarExcelMatriz()">Excel Matriz</button>
-      <button class="btn-export btn-pdf" id="btnPDFMatriz" onclick="generarPDFMatriz()"> PDF</button>
+      <button class="btn-export btn-pdf" id="btnPDFStar" onclick="generarPDFStarPerformance()">📄 PDF Star</button>
+      <button class="btn-export btn-pdf" id="btnPDFMatriz" onclick="generarPDFMatriz()">📄 PDF Matriz</button>
     </div>
   </header>
-
+ 
   <!-- Toggle Mis Empleados / Sucursal (solo Star Performance) -->
   <div id="vistaToggle" class="vista-toggle-bar" style="display:none">
     <button class="vtoggle-btn active" id="btnVistaM" onclick="cambiarVista('mios')">👤 Mis Empleados</button>
     <button class="vtoggle-btn" id="btnVistaS" onclick="cambiarVista('sucursal')">🏪 Toda la Sucursal</button>
   </div>
-
+ 
   <div class="filtros-bar">
     <input type="text" id="buscarEmp" class="search-inp"
            placeholder="🔍 Buscar empleado…"
            oninput="filtrar(this.value)">
     <button class="btn-baja" id="btnBaja" onclick="toggleBajas()">Ver bajas</button>
   </div>
-
+ 
   <div class="leyenda-bar">
     <span class="ley-item"><span class="star-on">★</span> Completado</span>
     <span class="ley-item"><span class="star-off">☆</span> Pendiente</span>
@@ -46,7 +45,7 @@
     <span class="ley-item ley-group-fl">Frontline</span>
     <span class="ley-item ley-group-ct">Crew Trainer</span>
   </div>
-
+ 
   <div class="tabla-scroll">
     <table class="sp-table" id="spTable">
       <thead id="sp-thead"></thead>
@@ -55,7 +54,7 @@
       </tbody>
     </table>
   </div>
-
+ 
   <!-- Panel lateral de empleado -->
   <div class="overlay" id="overlay" onclick="cerrarPanel()"></div>
   <div class="side-panel" id="sidePanel">
@@ -69,12 +68,11 @@
       🚫 Dar de baja
     </button>
   </div>
-
+ 
 </div>
-
+ 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
-<script src="/js/excel-matriz.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="/js/supabase.js"></script>
 <script src="/js/utils.js"></script>
 <script src="/js/modulos.js"></script>
